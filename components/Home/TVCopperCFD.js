@@ -1,7 +1,7 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from "react";
 
-function CopperETFTradingViewWidget() {
+function CopperCFDTradingViewWidget() {
   const container = useRef();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function CopperETFTradingViewWidget() {
         {
           "width": "100%",
           "height": "250",
-          "symbol": "MGH1!",
+          "symbol": "COPPERFXCM",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
@@ -34,17 +34,8 @@ function CopperETFTradingViewWidget() {
   return (
     <div className="tradingview-widget-container" ref={container}>
       <div className="tradingview-widget-container__widget"></div>
-      {/* <div className="tradingview-widget-copyright">
-        <a
-          href="https://www.tradingview.com/"
-          rel="noopener nofollow"
-          target="_blank"
-        >
-          <span className="blue-text">Track all markets on TradingView</span>
-        </a>
-      </div> */}
     </div>
   );
 }
 
-export default memo(CopperETFTradingViewWidget);
+export default memo(CopperCFDTradingViewWidget);

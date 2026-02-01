@@ -1,12 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import Hero from "@/components/Home/Hero";
-import LatestNews from "@/components/Home/LatestNews";
 import StockNews from "@/components/Home/StockNews";
 import Navbar from "@/components/Navbar";
 import MostFollowed from "@/components/Home/MostFollowed";
 import CopperLivePrice from "@/components/Home/CopperLivePrice";
-import CopperTradingviewChart from "@/components/Home/CopperTradingviewChart";
 import StayAhead from "@/components/Home/StayAhead";
 import PressReleaseNews from "@/components/Home/PressReleaseNews";
 import PopularTools from "@/components/Home/PopularTools";
@@ -14,13 +11,8 @@ import MostPopularNews from "@/components/Home/MostPopularNews";
 import Substacks from "@/components/Home/Substacks";
 import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import Footer from "@/components/Footer";
-import TVCopper from "@/components/Home/TVCopper";
-import TVCopperETF from "@/components/Home/TVCopperETF";
+import TVCopperCFD from "@/components/Home/TVCopperCFD";
 import PlainNews from "@/components/Home/PlainNews";
-import HomeInsiderTransactionTable from "@/components/Home/HomeInsiderTransactionTable";
-import ChartIridium from "@/components/Home/ChartIridium";
-import ChartRhodium from "@/components/Home/ChartRhodium";
-import ChartRuthenium from "@/components/Home/ChartRuthenium";
 import HomeCopperPrice from "@/components/Home/HomeCopperPrice";
 
 const home = () => {
@@ -35,23 +27,9 @@ const home = () => {
         <div className="w-full md:w-[24%] flex flex-col space-y-14">
           <div>
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Copper Price Chart
+              CFDs on Copper
             </h1>
-            <TVCopper />
-          </div>
-
-          <div>
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Iridium Price Chart
-            </h1>
-            <ChartIridium />
-          </div>
-
-          <div>
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Rhodium Price Chart
-            </h1>
-            <ChartRhodium />
+            <TVCopperCFD />
           </div>
           <DailyNewsletterAd />
         </div>
@@ -72,15 +50,9 @@ const home = () => {
         <div className="w-full md:w-[24%] flex flex-col space-y-14  ">
           <div>
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Copper ETF Chart
+              CFDs on Copper
             </h1>
-            <TVCopperETF />
-          </div>
-          <div>
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Ruthenium Price Chart
-            </h1>
-            <ChartRuthenium />
+            <TVCopperCFD />
           </div>
           <Substacks />
         </div>
