@@ -31,4 +31,4 @@ const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'packa
 console.log(`\n📦 Next.js Version: ${packageJson.dependencies.next}`);
 console.log(`📦 React Version: ${packageJson.dependencies.react}`);
 
-console.log('\n✨ Build check complete!');
+console.log('\n✨ Build check complete!') ;

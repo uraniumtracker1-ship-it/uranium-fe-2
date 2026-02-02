@@ -27,7 +27,7 @@ function CopperTradingViewWidget() {
           "calendar": false,
           "hide_volume": true,
           "support_host": "https://www.tradingview.com"
-        }`;
+        }`; 
     container.current.appendChild(script);
   }, []);
 

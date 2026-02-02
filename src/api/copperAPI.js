@@ -30,7 +30,7 @@ export const INSIDER_TRANSACTIONS = `${BASE_URL}/api/insider-transactions/`;
 
 //VIDEOS API
 
-export const VIDEOS = `${BASE_URL}/api/videos/`;
+export const VIDEOS = '/api/youtube-videos';
 
 //CALENDAR
 

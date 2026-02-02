@@ -16,14 +16,19 @@ const VideoList = ({ category }) => {
       try {
         setLoading(true);
         const response = await axios.get(VIDEOS);
+        
+        // Handle the new API response format
+        const allVideos = response.data.videos || [];
+        
         const filteredVideos =
           category === "All"
-            ? response.data.data
-            : response.data.data.filter(
-                (video) => video.video_category === category
+            ? allVideos
+            : allVideos.filter(
+                (video) => video.category === category
               );
         setVideos(filteredVideos);
       } catch (err) {
+        console.error('Error fetching videos:', err);
         setError("Failed to fetch videos");
       } finally {
         setLoading(false);
@@ -67,11 +72,36 @@ const VideoList = ({ category }) => {
 
   if (loading)
     return (
-      <div>
+      <div className="flex justify-center items-center py-12">
         <Loader />
       </div>
     );
-  if (error) return <div>{error}</div>;
+    
+  if (error) 
+    return (
+      <div className="flex justify-center items-center py-12">
+        <div className="text-center">
+          <p className="text-red-500 mb-4">{error}</p>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+
+  if (!videos || videos.length === 0) {
+    return (
+      <div className="flex justify-center items-center py-12">
+        <div className="text-center">
+          <p className="text-gray-500 mb-2">No videos found for {category} category</p>
+          <p className="text-sm text-gray-400">Check back later for new content</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gray- rounded-md mb-7">
@@ -84,12 +114,12 @@ const VideoList = ({ category }) => {
           <div
             key={video.id}
             className="w-[250px] cursor-pointer"
-            onClick={() => openModal(video.video_link)}
+            onClick={() => openModal(video.link)}
           >
             <div
               className="w-full h-[133px] mb-3 bg-cover bg-center rounded-lg"
               style={{
-                backgroundImage: `url(${getThumbnailUrl(video.video_link)})`,
+                backgroundImage: `url(${getThumbnailUrl(video.link)})`,
               }}
             >
               <div className="flex items-center justify-center w-full h-full bg-black1 bg-opacity-30 rounded-lg">
@@ -100,7 +130,7 @@ const VideoList = ({ category }) => {
             </div>
             <div className="flex gap-x-2 items-center -mt-1">
               <p className="text-[12px] text-date">
-                {video.channel_name || "Unknown Channel"}
+                {video.channel || "Unknown Channel"}
               </p>
               <span className="mt-[-6px] text-date"> | </span>
               <p className="text-[12px] text-date">
@@ -110,14 +140,14 @@ const VideoList = ({ category }) => {
             <h1 className="mt-[3px] text-[15px] leading-[24px] font-medium text-black1/90">
               {video.title || "No Title Available"}
             </h1>
-            {video.company_name !== "NA" && (
+            {video.company && video.company !== "NA" && (
               <p className="text-[12px] text-date mt-1">
-                Company: {video.company_name}
+                Company: {video.company}
               </p>
             )}
-            {video.stock_ticker !== "NA" && (
+            {video.ticker && video.ticker !== "NA" && (
               <p className="text-[12px] text-date">
-                Stock Ticker: {video.stock_ticker}
+                Stock Ticker: {video.ticker}
               </p>
             )}
           </div>
