@@ -134,7 +134,7 @@ const DirectCopperPrice = () => {
               <p
                 className={`${parseFloat(price_change) >= 0 ? "text-green-600" : "text-red-500"}`}
               >
-                {parseFloat(price_change) >= 0 ? `$+${price_change}` : `$${price_change}`}
+                {parseFloat(price_change) >= 0 ? `$+${price_change}` : `${price_change}`}
               </p>
             </li>
             <li className="w-[33%]">

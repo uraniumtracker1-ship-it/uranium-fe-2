@@ -113,7 +113,7 @@ const DirectHomeCopperPrice = () => {
         {metalData.price_change > 0
           ? `$+${formatValue(metalData.price_change)}`
           : metalData.price_change < 0
-          ? `$${formatValue(metalData.price_change)}`
+          ? `${formatValue(metalData.price_change)}`
           : `$0.0000`}
       </td>
       <td
@@ -174,12 +174,12 @@ const DirectHomeCopperPrice = () => {
       
       {error && (
         <div className="mt-2 text-xs text-orange-600 text-center">
-          Note: Using fallback data - {error}
+          Note: Some data may be simulated due to API restrictions
         </div>
       )}
       
       <div className="mt-2 text-xs text-gray-500 text-center">
-        Last updated: {new Date().toLocaleTimeString()} • Auto-refresh: 2 min • Source: Database API
+        Last updated: {new Date().toLocaleTimeString()} • Auto-refresh: 2 min
       </div>
     </div>
   );

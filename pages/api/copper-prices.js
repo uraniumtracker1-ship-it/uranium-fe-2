@@ -46,7 +46,11 @@ export default async function handler(req, res) {
         }
       ];
       
-      return res.status(200).json(fallbackPrices);
+      return res.status(200).json({
+        success: true,
+        data: fallbackPrices,
+        message: "Using fallback data - no database records found"
+      });
     }
     
     // Format the data for frontend consumption
@@ -66,7 +70,11 @@ export default async function handler(req, res) {
     console.log(`Returning ${metalPrices.length} metal price records from database`);
     console.log(`Copper price: $${metalPrices[0]?.price} (${metalPrices[0]?.price_change_percent}%)`);
     
-    res.status(200).json(metalPrices);
+    res.status(200).json({
+      success: true,
+      data: metalPrices,
+      message: `Retrieved ${metalPrices.length} metal prices from database`
+    });
     
   } catch (error) {
     console.error('Error fetching metal prices from database:', error);
@@ -85,6 +93,11 @@ export default async function handler(req, res) {
       }
     ];
     
-    res.status(200).json(fallbackPrices);
+    res.status(200).json({
+      success: true,
+      data: fallbackPrices,
+      message: "Using fallback data - database error",
+      error: error.message
+    });
   }
 }
