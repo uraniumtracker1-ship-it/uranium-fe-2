@@ -333,15 +333,15 @@ const MostFollowed = () => {
                     <div className="text-gray-500">{stock.name || "N/A"}</div>
                   </td>
                   <td className="py-2 text-right">
-                    <div>${(stock.current_price ?? 0).toFixed(2)}</div>
+                    <div>${parseFloat(stock.current_price || 0).toFixed(2)}</div>
                     <div
                       className={`${
-                        (stock.intraday_percentage ?? 0) < 0
+                        parseFloat(stock.intraday_percentage || 0) < 0
                           ? "text-red-600"
                           : "text-green-500"
                       }`}
                     >
-                      {(stock.intraday_percentage ?? 0).toFixed(2)}%
+                      {parseFloat(stock.intraday_percentage || 0).toFixed(2)}%
                     </div>
                   </td>
                 </tr>

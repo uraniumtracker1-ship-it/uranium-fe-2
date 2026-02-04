@@ -10,8 +10,8 @@ const DirectCopperPrice = () => {
       try {
         setLoading(true);
         
-        // Fetch copper price from our database API
-        const response = await fetch('/api/copper-prices');
+        // Fetch copper price from CME Group API
+        const response = await fetch('/api/cme-copper-spot');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -19,40 +19,28 @@ const DirectCopperPrice = () => {
         
         const data = await response.json();
         
-        if (!data.success || !data.data || data.data.length === 0) {
-          throw new Error('No copper price data available');
+        if (!data.success || !data.data) {
+          throw new Error('No CME copper spot price data available - real data only');
         }
         
-        // Find copper data
-        const copperPrice = data.data.find(item => item.metal_name === 'Copper');
-        
-        if (!copperPrice) {
-          throw new Error('Copper price not found in database');
-        }
+        // Use CME copper data directly
+        const cmeData = data.data;
         
         setCopperData({
-          price: parseFloat(copperPrice.price),
-          price_change: parseFloat(copperPrice.price_change),
-          price_change_percent: parseFloat(copperPrice.price_change_percent),
-          source: "Database API",
-          symbol: copperPrice.symbol,
-          last_updated: copperPrice.last_updated
+          price: parseFloat(cmeData.last_price),
+          price_change: parseFloat(cmeData.price_change),
+          price_change_percent: parseFloat(cmeData.price_change_percent),
+          source: "CME Group",
+          symbol: cmeData.globex_code,
+          last_updated: cmeData.scraped_at
         });
         
       } catch (error) {
-        console.error('Error fetching copper price from database:', error);
+        console.error('Error fetching CME copper spot price:', error);
         setError(error.message);
         
-        // Fallback data
-        setCopperData({
-          price: 4.15,
-          price_change: -0.08,
-          price_change_percent: -1.89,
-          source: "Fallback Data",
-          symbol: "HG=F",
-          last_updated: new Date().toISOString(),
-          note: "Database temporarily unavailable"
-        });
+        // No fallback data - set to null to show error state
+        setCopperData(null);
       } finally {
         setLoading(false);
       }
@@ -86,7 +74,13 @@ const DirectCopperPrice = () => {
           Live Copper Price
         </h2>
         <div className="text-center py-8 text-red-500">
-          Unable to load copper price data
+          <p>CME copper spot price data unavailable</p>
+          <p className="text-sm text-gray-600 mt-2">Real-time data only - no fallback data</p>
+          {error && (
+            <p className="text-xs text-red-400 mt-2">
+              Error: {error}
+            </p>
+          )}
         </div>
       </div>
     );
@@ -170,10 +164,10 @@ const DirectCopperPrice = () => {
           <a
             target="_blank"
             className="text-accent hover:text-accent/60 transition-all duration-200"
-            href="/api/copper-prices"
+            href="/api/cme-copper-spot"
             rel="noopener noreferrer"
           >
-            Database API - Metal Prices
+            CME Group - Copper Futures
           </a>
         </p>
       </div>
