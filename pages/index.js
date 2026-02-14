@@ -13,7 +13,6 @@ import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import Footer from "@/components/Footer";
 import TVCopperCFD from "@/components/Home/TVCopperCFD";
 import TVCopper from "@/components/Home/TVCopper";
-import PlainNews from "@/components/Home/PlainNews";
 import DirectCopperPrice from "@/components/Home/DirectCopperPrice";
 import DirectHomeCopperPrice from "@/components/Home/DirectHomeCopperPrice";
 import SEO from "@/components/SEO";
@@ -50,14 +49,13 @@ const home = () => {
         </div>
 
         {/* 2  */}
-        <div className="w-full lg:w-[40%] flex flex-col space-y-6">
+        <div className="w-full lg:w-[40%] flex flex-col">
           <div>
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1 mt-14 md:mt-0">
+            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Prices
             </h1>
             <DirectHomeCopperPrice />
           </div>
-          {/* <PlainNews /> */}
         </div>
 
         {/* 3  */}

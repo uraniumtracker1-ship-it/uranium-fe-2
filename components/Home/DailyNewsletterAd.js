@@ -9,7 +9,7 @@ const DailyNewsletterAd = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-accent to-accent/50 rounded-lg p-8 mt-4">
+    <div className="bg-gradient-to-b from-accent to-accent/50 rounded-lg p-8">
       {/* Heading Section */}
       <h2 className="text-white text-3xl font-semibold cambay">
         Receive our <span className="text-white">FREE</span>
