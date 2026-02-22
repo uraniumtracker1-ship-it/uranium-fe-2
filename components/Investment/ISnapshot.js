@@ -64,7 +64,23 @@ const ISnapshot = ({ stockData = [] }) => {
         // Try to fetch from external API first
         try {
           const response = await axios.get(MOST_FOLLOWED);
-          setStocksData(response.data);
+          const apiData = response.data;
+          
+          // Check if data is grouped or flat
+          if (apiData.data) {
+            // Grouped data - flatten it
+            const allStocks = [
+              ...(apiData.data.most_watched || []),
+              ...(apiData.data.north_american_leaders || []),
+              ...(apiData.data.global_market_leaders || [])
+            ].slice(0, 12);
+            setStocksData(allStocks);
+          } else if (Array.isArray(apiData)) {
+            // Flat array
+            setStocksData(apiData.slice(0, 12));
+          } else {
+            throw new Error("Unexpected API response format");
+          }
         } catch (apiError) {
           console.log("External API not available, using local stock data");
           
@@ -73,8 +89,8 @@ const ISnapshot = ({ stockData = [] }) => {
             const fallbackData = stockData.slice(0, 12).map(stock => ({
               name: stock.company_name,
               ticker: stock.ticker,
-              current_price: parseFloat(stock.last_price?.replace('$', '') || '0'),
-              intraday_change: 0, // We don't have this data
+              current_price: parseFloat(stock.last_price?.replace('$', '').replace(',', '') || '0'),
+              intraday_change: 0,
               intraday_percentage: parseFloat(stock.intraday_percentage?.replace('%', '') || '0')
             }));
             setStocksData(fallbackData);

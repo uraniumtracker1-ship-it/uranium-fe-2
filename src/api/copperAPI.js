@@ -12,8 +12,8 @@ export const COPPER_PRICES = '/api/copper-prices';
 export const PRESS_RELEASE = '/api/press-releases';
 
 export const STOCK_NEWS = '/api/stock-news';
-export const GENERAL_NEWS = '/api/general-news/';
 
+export const GENERAL_NEWS = '/api/general-news/';
 
 export const SUBSTACKS = '/api/substacks';
 
@@ -28,7 +28,7 @@ export const STOCK_SCREENER = '/api/stock-metrics';
 
 export const FOLLOWED_STOCKS = `${BASE_URL}/api/followed-stocks/`;
 
-export const INSIDER_TRANSACTIONS = `${BASE_URL}/api/insider-transactions/`;
+export const INSIDER_TRANSACTIONS = '/api/insider-transactions';
 
 //VIDEOS API
 

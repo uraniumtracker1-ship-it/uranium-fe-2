@@ -1,5 +1,10 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import InvestmentHero from "@/components/Investment/InvestmentHero";
+import ISnapshot from "@/components/Investment/ISnapshot";
+import IStockScreener from "@/components/Investment/IStockScreener";
+import IInsiderTransactions from "@/components/Investment/IInsiderTransactions";
+import IETF from "@/components/Investment/ETF/IETF";
 import React, { useState, useMemo } from "react";
 import { useRouter } from "next/router";
 import SEO from "@/components/SEO";
@@ -113,46 +118,43 @@ const investments = ({ stockData }) => {
 
       <Navbar />
       
-      {/* Investment Hero Section */}
-      <div className="px-3 md:px-12 py-5 md:py-5">
-        <h1 className="cambay text-[22px] sm:text-3xl font-semibold">
-          Investment Insights
-        </h1>
-        <p className="text-gray-600 mt-2">
-          Explore comprehensive stock analysis and market trends
-        </p>
+      {/* Investment Hero Banner */}
+      <div className="pt-[80px]">
+        <InvestmentHero />
       </div>
 
       {/* Tabs Section */}
-      <div className="px-3 md:px-12">
+      <div className="px-3 md:px-12 mt-6">
         <div className="flex space-x-4 border-b border-gray-200">
-          <button 
-            className={`py-2 px-4 ${currentTab === "snapshot" ? "border-b-2 border-accent text-accent" : "text-gray-600"}`}
+          <a 
+            href="/investments?tab=snapshot"
+            className={`py-2 px-4 ${currentTab === "snapshot" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
             Snapshot
-          </button>
-          <button 
-            className={`py-2 px-4 ${currentTab === "stock-screener" ? "border-b-2 border-accent text-accent" : "text-gray-600"}`}
+          </a>
+          <a 
+            href="/investments?tab=stock-screener"
+            className={`py-2 px-4 ${currentTab === "stock-screener" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
             Stock Screener
-          </button>
-          <button 
-            className={`py-2 px-4 ${currentTab === "insider-transactions" ? "border-b-2 border-accent text-accent" : "text-gray-600"}`}
+          </a>
+          <a 
+            href="/investments?tab=insider-transactions"
+            className={`py-2 px-4 ${currentTab === "insider-transactions" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
             Insider Transactions
-          </button>
-          <button 
-            className={`py-2 px-4 ${currentTab === "etf-trust-holdings" ? "border-b-2 border-accent text-accent" : "text-gray-600"}`}
+          </a>
+          <a 
+            href="/investments?tab=etf-trust-holdings"
+            className={`py-2 px-4 ${currentTab === "etf-trust-holdings" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
             ETF Trust Holdings
-          </button>
+          </a>
         </div>
         
         <div className="mt-6">
           {currentTab === "snapshot" && (
-            <div className="text-center py-8">
-              <p>Snapshot view coming soon...</p>
-            </div>
+            <ISnapshot stockData={stockData} />
           )}
           {currentTab === "stock-screener" && (
             <div className="py-5">
@@ -388,14 +390,10 @@ const investments = ({ stockData }) => {
             </div>
           )}
           {currentTab === "insider-transactions" && (
-            <div className="text-center py-8">
-              <p>Insider Transactions view coming soon...</p>
-            </div>
+            <IInsiderTransactions />
           )}
           {currentTab === "etf-trust-holdings" && (
-            <div className="text-center py-8">
-              <p>ETF Trust Holdings view coming soon...</p>
-            </div>
+            <IETF />
           )}
         </div>
       </div>
