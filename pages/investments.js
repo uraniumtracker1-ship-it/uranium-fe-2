@@ -5,6 +5,7 @@ import ISnapshot from "@/components/Investment/ISnapshot";
 import IStockScreener from "@/components/Investment/IStockScreener";
 import IInsiderTransactions from "@/components/Investment/IInsiderTransactions";
 import IETF from "@/components/Investment/ETF/IETF";
+import ICopperAssets from "@/components/Investment/ICopperAssets";
 import React, { useState, useMemo } from "react";
 import { useRouter } from "next/router";
 import SEO from "@/components/SEO";
@@ -149,6 +150,12 @@ const investments = ({ stockData }) => {
             className={`py-2 px-4 ${currentTab === "etf-trust-holdings" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
             ETF Trust Holdings
+          </a>
+          <a 
+            href="/investments?tab=copper-assets"
+            className={`py-2 px-4 ${currentTab === "copper-assets" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
+          >
+            Copper Assets
           </a>
         </div>
         
@@ -394,6 +401,9 @@ const investments = ({ stockData }) => {
           )}
           {currentTab === "etf-trust-holdings" && (
             <IETF />
+          )}
+          {currentTab === "copper-assets" && (
+            <ICopperAssets />
           )}
         </div>
       </div>
