@@ -15,6 +15,7 @@ import TVCopperCFD from "@/components/Home/TVCopperCFD";
 import TVCopper from "@/components/Home/TVCopper";
 import PlainNews from "@/components/Home/PlainNews";
 import HomeCopperPrice from "@/components/Home/HomeCopperPrice";
+import HomeInsiderTransactions from "@/components/Home/HomeInsiderTransactions";
 
 const home = () => {
   return (
@@ -23,9 +24,9 @@ const home = () => {
       <Hero />
 
       {/* 3 cols  */}
-      <div className=" flex flex-col  justify-between flex-wrap px-3 md:px-10 lg:px-12 py-12 mb-7">
+      <div className="flex flex-col lg:flex-row justify-between gap-6 px-3 md:px-10 lg:px-12 py-8 mb-8">
         {/* 1  */}
-        <div className="w-full md:w-[24%] flex flex-col space-y-14">
+        <div className="w-full lg:w-[24%] flex flex-col space-y-6">
           <div>
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Copper Price Chart
@@ -36,19 +37,32 @@ const home = () => {
         </div>
 
         {/* 2  */}
-
-        <div className="w-full lg:w-[40%] flex flex-col space-y-14">
+        <div className="w-full lg:w-[40%] flex flex-col space-y-6">
           <div>
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Prices
             </h1>
             <HomeCopperPrice />
           </div>
+          <div>
+            <div className="flex justify-between items-center mb-3 border-b border-black/10 pb-1">
+              <h1 className="text-[21px] cambay font-bold">
+                Recent Canadian Company Insider Transactions
+              </h1>
+              <a 
+                href="/investments" 
+                className="text-sm text-accent hover:text-accent/80 transition-colors"
+              >
+                view all
+              </a>
+            </div>
+            <HomeInsiderTransactions />
+          </div>
           <PlainNews />
         </div>
 
         {/* 3  */}
-        <div className="w-full md:w-[24%] flex flex-col space-y-14  ">
+        <div className="w-full lg:w-[24%] flex flex-col space-y-6">
           <div>
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Copper Futures
@@ -60,16 +74,16 @@ const home = () => {
       </div>
 
       {/* 2 cols  */}
-      <div className="flex justify-between flex-wrap px-3 md:px-10 lg:px-12 py-12">
+      <div className="flex flex-col lg:flex-row justify-between gap-6 px-3 md:px-10 lg:px-12 py-8 mb-8">
         {/* left  */}
-        <div className="w-full md:w-[66%] flex flex-col space-y-20">
+        <div className="w-full lg:w-[66%] flex flex-col space-y-12">
           {/* <LatestNews /> */}
           <PressReleaseNews />
           <StockNews />
           <MostPopularNews />
         </div>
         {/* right  */}
-        <div className="w-full md:w-[26%] space-y-20">
+        <div className="w-full lg:w-[26%] space-y-12">
           <CopperLivePrice />
           {/* <CopperTradingviewChart /> */}
           <MostFollowed />
@@ -79,14 +93,12 @@ const home = () => {
         </div>
       </div>
       {/* Stay ahead section */}
-      <div className="my-14">
+      <div className="mb-8">
         <StayAhead />
       </div>
 
       {/* footer -------------------------------------------------------------------------------------------- */}
-      <div className="-mt-14">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };
