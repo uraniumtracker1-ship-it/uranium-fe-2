@@ -15,7 +15,7 @@ const C101Breadcrumb = ({ link, title }) => {
             onClick={handleBack}
             className="hover:text-accent font-medium transition-all duration-200 cursor-pointer"
           >
-            Copper 101
+            Lithium 101
           </button>
           <span> &gt; </span>
           <a

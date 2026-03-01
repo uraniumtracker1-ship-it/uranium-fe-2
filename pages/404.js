@@ -8,9 +8,9 @@ export default function Custom404() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen  text-black">
       <SEO
-        title="Page Not Found - Copper Tracker"
-        description="Oops! The page you're looking for doesn’t exist. Get back on track with the latest Copper and Copper Alloys market updates and insights."
-        keywords="404, page not found, Copper market, Copper prices, Copper tracker"
+        title="Page Not Found - Lithium Tracker"
+        description="Oops! The page you're looking for doesn’t exist. Get back on track with the latest Lithium and Lithium Alloys market updates and insights."
+        keywords="404, page not found, Lithium market, Lithium prices, Lithium tracker"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/404"
       />
       <motion.div

@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/copperAPI";
+// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
 
 // const LatestNews = () => {
 //   const [newsData, setNewsData] = useState([]);
@@ -117,7 +117,7 @@
 
 // import React, { useState, useEffect } from "react";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/copperAPI";
+// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
 
 // const LatestNews = () => {
 //   const [newsData, setNewsData] = useState([]);
@@ -242,7 +242,7 @@
 
 // import React, { useState, useEffect } from "react";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/copperAPI";
+// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
 
 // const LatestNews = () => {
 //   const [newsData, setNewsData] = useState([]);
@@ -383,7 +383,7 @@
 
 import React, { useState, useEffect } from "react";
 import Loader from "../Loader";
-import { GENERAL_NEWS } from "@/src/api/copperAPI";
+import { GENERAL_NEWS } from "@/src/api/lithiumAPI";
 
 // Updated: 2026-02-15 - Using ONLY general news endpoint
 const LatestNews = () => {

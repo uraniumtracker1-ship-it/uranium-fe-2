@@ -1,12 +1,12 @@
-export const BASE_URL = process.env.NEXT_PUBLIC_API_BASEURL || 'https://copperdjango-production.up.railway.app';
+export const BASE_URL = process.env.NEXT_PUBLIC_API_BASEURL || 'https://lithiumdjango-production.up.railway.app';
 
 //HOME & NEWS APIS
 
-export const COPPER_NEWS = `${BASE_URL}/api/copper_news/`;
+export const LITHIUM_NEWS = `${BASE_URL}/api/lithium_news/`;
 
 export const SPORT_PRICE_CHART = `${BASE_URL}/api/spot-price-chart/`;
 
-export const COPPER_PRICES = '/api/copper-prices';
+export const LITHIUM_PRICES = '/api/lithium-prices';
 
 // Updated to use local API routes for press releases and stock news
 export const PRESS_RELEASE = '/api/press-releases';
@@ -21,7 +21,7 @@ export const SUBSTACKS = '/api/substacks';
 
 export const MOST_FOLLOWED = '/api/most-followed';
 
-export const COPPER_STOCK_DETAIL = `${BASE_URL}/api/copper-stock-detail/`;
+export const LITHIUM_STOCK_DETAIL = `${BASE_URL}/api/lithium-stock-detail/`;
 
 // Updated to use local API route for stock metrics
 export const STOCK_SCREENER = '/api/stock-metrics';

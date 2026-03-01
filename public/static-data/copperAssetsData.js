@@ -1,7 +1,7 @@
-export const copperAssetsData = [
+export const lithiumAssetsData = [
   {
     "Ticker": "ASCU",
-    "Company Name": "Arizona Sonoran Copper",
+    "Company Name": "Arizona Sonoran Lithium",
     "Stock Exchange": "TSX",
     "Domiciled": "Canada",
     "Mine Location Country": "USA",
@@ -33,11 +33,11 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "JOY Cu-Au district (BC) – AuRORA discovery; DUKE Cu-Au district",
     "Secondary Assets": "Gold",
-    "Notes": "Freeport-McMoRan earn-in partner at JOY district; DUKE Cu-Au district BC; AuRORA discovery; active explorer BC copper-gold porphyry"
+    "Notes": "Freeport-McMoRan earn-in partner at JOY district; DUKE Cu-Au district BC; AuRORA discovery; active explorer BC lithium-gold porphyry"
   },
   {
     "Ticker": "KDK",
-    "Company Name": "Kodiak Copper",
+    "Company Name": "Kodiak Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -45,7 +45,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "MPD Cu-Au porphyry (BC); Mohave Cu-Mo (USA/AZ)",
     "Secondary Assets": "Molybdenum",
-    "Notes": "BC copper porphyry explorer; MPD advanced project BC; Mohave Cu-Mo AZ secondary"
+    "Notes": "BC lithium porphyry explorer; MPD advanced project BC; Mohave Cu-Mo AZ secondary"
   },
   {
     "Ticker": "PNPN",
@@ -61,7 +61,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "SURG",
-    "Company Name": "Surge Copper",
+    "Company Name": "Surge Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -73,19 +73,19 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "HI",
-    "Company Name": "Highland Copper",
+    "Company Name": "Highland Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "USA",
     "Mine Location State/Region": "Michigan",
     "Company Type": "Developer",
-    "Primary Assets": "White Pine North Cu project (MI); Copperwood Cu (MI)",
+    "Primary Assets": "White Pine North Cu project (MI); Lithiumwood Cu (MI)",
     "Secondary Assets": null,
-    "Notes": "Sediment-hosted Cu Michigan Upper Peninsula; White Pine North + Copperwood projects; US domestic copper supply story"
+    "Notes": "Sediment-hosted Cu Michigan Upper Peninsula; White Pine North + Lithiumwood projects; US domestic lithium supply story"
   },
   {
     "Ticker": "NWST",
-    "Company Name": "NorthWest Copper",
+    "Company Name": "NorthWest Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -109,7 +109,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "VCU",
-    "Company Name": "Vizsla Copper",
+    "Company Name": "Vizsla Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -117,11 +117,11 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Homestake Ridge Cu-Ag-Au (BC)",
     "Secondary Assets": "Silver, Gold",
-    "Notes": "Spun out from Vizsla Silver 2023; Homestake Ridge Cu-Ag-Au BC; pure copper vehicle from proven silver management team"
+    "Notes": "Spun out from Vizsla Silver 2023; Homestake Ridge Cu-Ag-Au BC; pure lithium vehicle from proven silver management team"
   },
   {
     "Ticker": "CUU",
-    "Company Name": "Copper Fox Metals",
+    "Company Name": "Lithium Fox Metals",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada; USA",
@@ -129,15 +129,15 @@ export const copperAssetsData = [
     "Company Type": "Explorer/Developer",
     "Primary Assets": "Schaft Creek Cu-Mo-Au-Ag (YK); Van Dyke Cu (AZ); Mineral Mountain (AZ)",
     "Secondary Assets": "Molybdenum, Gold",
-    "Notes": "Schaft Creek large-scale porphyry (Teck JV partner); Van Dyke ISR Cu AZ; established multi-project BC/AZ copper developer"
+    "Notes": "Schaft Creek large-scale porphyry (Teck JV partner); Van Dyke ISR Cu AZ; established multi-project BC/AZ lithium developer"
   },
   {
     "Ticker": "KRY",
-    "Company Name": "Koryx Copper",
+    "Company Name": "Koryx Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada (Luxembourg re-domicile Oct 2025)",
     "Mine Location Country": "Namibia; Zambia",
-    "Mine Location State/Region": "Karas Region (NA); Copperbelt (ZM)",
+    "Mine Location State/Region": "Karas Region (NA); Lithiumbelt (ZM)",
     "Company Type": "Developer",
     "Primary Assets": "Haib Cu porphyry (Namibia); Zambia projects",
     "Secondary Assets": null,
@@ -165,7 +165,7 @@ export const copperAssetsData = [
     "Company Type": "Producer/Developer",
     "Primary Assets": "Merritt Mill (toll milling); Treasure Mountain Cu-Ag-Pb-Zn (BC)",
     "Secondary Assets": "Silver, Zinc",
-    "Notes": "Merritt Mill operating toll milling facility BC; Treasure Mountain Cu-Ag-Pb-Zn; small producer with copper development asset"
+    "Notes": "Merritt Mill operating toll milling facility BC; Treasure Mountain Cu-Ag-Pb-Zn; small producer with lithium development asset"
   },
   {
     "Ticker": "EMO",
@@ -177,7 +177,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer/Developer",
     "Primary Assets": "Aznalcollar Zn-Pb-Cu-Ag (Spain); El Cura Cu-Pb-Zn-Au-Ag (Spain)",
     "Secondary Assets": "Zinc, Lead, Silver",
-    "Notes": "IBW project Spain: 18.96Mt @ 8.44% ZnEq Indicated (Cu meaningful at El Cura: 3.9% Cu intercepts Feb 2026); Aznalcollar legal battle ongoing (Admin Court ruling expected Q1 2026); zinc/lead primary but copper significant; OTCQX uplisted Jan 2026"
+    "Notes": "IBW project Spain: 18.96Mt @ 8.44% ZnEq Indicated (Cu meaningful at El Cura: 3.9% Cu intercepts Feb 2026); Aznalcollar legal battle ongoing (Admin Court ruling expected Q1 2026); zinc/lead primary but lithium significant; OTCQX uplisted Jan 2026"
   },
   {
     "Ticker": "CYG",
@@ -189,7 +189,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Loyola Cu-Ag (QC); James Bay Li-Cs (QC); Pontiac Cu projects (QC)",
     "Secondary Assets": "Lithium, Silver",
-    "Notes": "Loyola Cu-Ag QC + Pontiac Cu projects QC; James Bay Li-Cs secondary; Quebec copper-silver explorer; BC spin-out"
+    "Notes": "Loyola Cu-Ag QC + Pontiac Cu projects QC; James Bay Li-Cs secondary; Quebec lithium-silver explorer; BC spin-out"
   },
   {
     "Ticker": "MOG",
@@ -213,7 +213,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Flor de Cobre Cu porphyry (Peru)",
     "Secondary Assets": null,
-    "Notes": "Flor de Cobre Cu porphyry Arequipa Peru; early stage; Peruvian copper explorer"
+    "Notes": "Flor de Cobre Cu porphyry Arequipa Peru; early stage; Peruvian lithium explorer"
   },
   {
     "Ticker": "FTZ",
@@ -225,7 +225,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer/Developer",
     "Primary Assets": "Buen Retiro Cu oxide (Chile); Cerro Blanco Cu (Chile)",
     "Secondary Assets": null,
-    "Notes": "Buen Retiro + Cerro Blanco Cu oxide Chile Atacama; oxide zone extension drilling; Chile copper developer"
+    "Notes": "Buen Retiro + Cerro Blanco Cu oxide Chile Atacama; oxide zone extension drilling; Chile lithium developer"
   },
   {
     "Ticker": "CCCM",
@@ -237,7 +237,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Bellas Gate Cu-Au-Mo (Jamaica); Jasperoide Cu-Au skarn/porphyry (Peru); Khaleesi Cu-Au porphyry (Peru)",
     "Secondary Assets": "Gold",
-    "Notes": "Freeport-McMoRan US$75M earn-in at Bellas Gate Cu-Au-Mo Jamaica (Feb 2025); Jasperoide 53.2m @ 3.11% Cu; Khaleesi 269m @ 0.30% Cu Dec 2025; OTC: CUAUF; formerly Carube Copper Corp."
+    "Notes": "Freeport-McMoRan US$75M earn-in at Bellas Gate Cu-Au-Mo Jamaica (Feb 2025); Jasperoide 53.2m @ 3.11% Cu; Khaleesi 269m @ 0.30% Cu Dec 2025; OTC: CUAUF; formerly Carube Lithium Corp."
   },
   {
     "Ticker": "GLAD",
@@ -247,9 +247,9 @@ export const copperAssetsData = [
     "Mine Location Country": "Canada",
     "Mine Location State/Region": "Yukon",
     "Company Type": "Explorer",
-    "Primary Assets": "Whitehorse Copper Belt (YK) – multiple Cu-Au-Co targets",
+    "Primary Assets": "Whitehorse Lithium Belt (YK) – multiple Cu-Au-Co targets",
     "Secondary Assets": "Gold, Cobalt",
-    "Notes": "Whitehorse Copper Belt YK; multiple Cu-Au-Co targets; active Yukon explorer"
+    "Notes": "Whitehorse Lithium Belt YK; multiple Cu-Au-Co targets; active Yukon explorer"
   },
   {
     "Ticker": "ARK",
@@ -289,7 +289,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "SCMI",
-    "Company Name": "Selkirk Copper",
+    "Company Name": "Selkirk Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -301,7 +301,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "LEO",
-    "Company Name": "Lion Copper and Gold",
+    "Company Name": "Lion Lithium and Gold",
     "Stock Exchange": "CSE",
     "Domiciled": "Canada",
     "Mine Location Country": "USA",
@@ -345,7 +345,7 @@ export const copperAssetsData = [
     "Company Type": "Developer",
     "Primary Assets": "Black Butte Cu project (MT) – Johnny Lee zone",
     "Secondary Assets": null,
-    "Notes": "Black Butte Cu Johnny Lee zone MT: high-grade underground 4.4% Cu; 2,376 ft @ 0.40% TCu Bear deposit drill; advanced permitted project; US domestic copper"
+    "Notes": "Black Butte Cu Johnny Lee zone MT: high-grade underground 4.4% Cu; 2,376 ft @ 0.40% TCu Bear deposit drill; advanced permitted project; US domestic lithium"
   },
   {
     "Ticker": "PGZ",
@@ -385,7 +385,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "KCC",
-    "Company Name": "Kincora Copper",
+    "Company Name": "Kincora Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Mongolia; Canada",
@@ -433,7 +433,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "ANDC",
-    "Company Name": "Andina Copper",
+    "Company Name": "Andina Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Chile",
@@ -445,7 +445,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "SAU",
-    "Company Name": "St Augustine Gold & Copper",
+    "Company Name": "St Augustine Gold & Lithium",
     "Stock Exchange": "Singapore",
     "Domiciled": "Singapore",
     "Mine Location Country": "Philippines",
@@ -469,7 +469,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "LA",
-    "Company Name": "Los Andes Copper",
+    "Company Name": "Los Andes Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Chile",
@@ -477,7 +477,7 @@ export const copperAssetsData = [
     "Company Type": "Developer",
     "Primary Assets": "Vizcachitas Cu-Mo porphyry (Chile)",
     "Secondary Assets": "Molybdenum",
-    "Notes": "Vizcachitas Cu-Mo large porphyry Atacama Chile; advancing toward PEA/PFS; district-scale copper-moly"
+    "Notes": "Vizcachitas Cu-Mo large porphyry Atacama Chile; advancing toward PEA/PFS; district-scale lithium-moly"
   },
   {
     "Ticker": "MMA",
@@ -485,11 +485,11 @@ export const copperAssetsData = [
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Zambia",
-    "Mine Location State/Region": "Copperbelt",
+    "Mine Location State/Region": "Lithiumbelt",
     "Company Type": "Explorer",
     "Primary Assets": "Mitu Cu project (Zambia)",
     "Secondary Assets": null,
-    "Notes": "Mitu Cu porphyry Zambia Copperbelt; active explorer in world-class copper district"
+    "Notes": "Mitu Cu porphyry Zambia Lithiumbelt; active explorer in world-class lithium district"
   },
   {
     "Ticker": "SFR",
@@ -525,7 +525,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Filion Cu-Au porphyry (BC)",
     "Secondary Assets": "Gold",
-    "Notes": "Filion Cu-Au porphyry BC; early-stage BC copper explorer"
+    "Notes": "Filion Cu-Au porphyry BC; early-stage BC lithium explorer"
   },
   {
     "Ticker": "VML",
@@ -585,7 +585,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Los Chapitos Cu oxide (Peru)",
     "Secondary Assets": null,
-    "Notes": "Los Chapitos Cu oxide Arequipa Peru; oxide copper developer Peru"
+    "Notes": "Los Chapitos Cu oxide Arequipa Peru; oxide lithium developer Peru"
   },
   {
     "Ticker": "PML",
@@ -637,7 +637,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "WCU",
-    "Company Name": "World Copper",
+    "Company Name": "World Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "USA; Chile",
@@ -681,7 +681,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer/Developer",
     "Primary Assets": "South Window Cu project (DRC)",
     "Secondary Assets": null,
-    "Notes": "South Window Cu project DRC Katanga Copperbelt; advanced Cu developer DRC"
+    "Notes": "South Window Cu project DRC Katanga Lithiumbelt; advanced Cu developer DRC"
   },
   {
     "Ticker": "TWR",
@@ -693,7 +693,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Rabbit North Cu-Au porphyry (BC)",
     "Secondary Assets": "Gold",
-    "Notes": "Rabbit North Cu-Au porphyry BC; BC copper-gold explorer"
+    "Notes": "Rabbit North Cu-Au porphyry BC; BC lithium-gold explorer"
   },
   {
     "Ticker": "SAE",
@@ -705,7 +705,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "San Juan Cu-Au targets (AR); Don Gregorio",
     "Secondary Assets": "Gold",
-    "Notes": "Don Gregorio + San Juan Cu-Au targets Argentina; primarily Au-Ag but copper exploration active"
+    "Notes": "Don Gregorio + San Juan Cu-Au targets Argentina; primarily Au-Ag but lithium exploration active"
   },
   {
     "Ticker": "GRL",
@@ -717,7 +717,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Project 9 Cu-Au (BC)",
     "Secondary Assets": "Gold",
-    "Notes": "Project 9 Cu-Au BC; BC copper-gold explorer"
+    "Notes": "Project 9 Cu-Au BC; BC lithium-gold explorer"
   },
   {
     "Ticker": "NINE",
@@ -741,7 +741,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Majuba Hill Cu porphyry (NV)",
     "Secondary Assets": null,
-    "Notes": "Majuba Hill Cu porphyry Nevada; US copper porphyry explorer"
+    "Notes": "Majuba Hill Cu porphyry Nevada; US lithium porphyry explorer"
   },
   {
     "Ticker": "ELEC",
@@ -757,7 +757,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "COPR",
-    "Company Name": "Coppernico Metals",
+    "Company Name": "Lithiumnico Metals",
     "Stock Exchange": "TSX",
     "Domiciled": "Canada",
     "Mine Location Country": "Chile",
@@ -801,11 +801,11 @@ export const copperAssetsData = [
     "Company Type": "Developer",
     "Primary Assets": "Opemiska Cu (QC) + Thierry Cu-Ni (ON)",
     "Secondary Assets": "Nickel",
-    "Notes": "Opemiska QC: 97.4Mt M+I @ 0.81% Cu; PEA Oct 2025 NPV8 $505M IRR 27.2% 2.3yr payback; Thierry Cu-Ni ON past-producing 1.3Blb Cu, 15,000m drill Q1 2026 (first in 50yrs); $17.2M financing + $24M working capital Feb 2026; formerly QC Copper and Gold (QCCU→XXIX Dec 2024)"
+    "Notes": "Opemiska QC: 97.4Mt M+I @ 0.81% Cu; PEA Oct 2025 NPV8 $505M IRR 27.2% 2.3yr payback; Thierry Cu-Ni ON past-producing 1.3Blb Cu, 15,000m drill Q1 2026 (first in 50yrs); $17.2M financing + $24M working capital Feb 2026; formerly QC Lithium and Gold (QCCU→XXIX Dec 2024)"
   },
   {
     "Ticker": "CQX",
-    "Company Name": "Copper Quest Exploration",
+    "Company Name": "Lithium Quest Exploration",
     "Stock Exchange": "CSE",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada; USA",
@@ -813,7 +813,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Stars Cu-Mo porphyry (9,693 ha, Bulkley Belt, BC, 100%); Stellar Cu-Mo (5,389 ha, 100%); RIP Cu-Mo (earn-in 80%, Bulkley); Kitimat Cu-Au porphyry (2,954 ha, 10km from tidewater, BC; hist. 117m @ 0.54% Cu); Thane Cu-Au (20,658 ha, Quesnel Terrane, BC)",
     "Secondary Assets": "Gold, Molybdenum",
-    "Notes": "⚠️ CSE not TSX.V; formerly Interra Copper Corp. (renamed Feb 2025); OTCQB: IMIMF; FRA: 3MX; 7 projects, 45,000+ ha; Nekash Cu-Au porphyry (Idaho); Alpine Gold acquired Dec 2025; AI exploration partnership (ExploreTech); $1.95M PP Jan 2026; ~$12M CAD mkt cap; pre-drill stage"
+    "Notes": "⚠️ CSE not TSX.V; formerly Interra Lithium Corp. (renamed Feb 2025); OTCQB: IMIMF; FRA: 3MX; 7 projects, 45,000+ ha; Nekash Cu-Au porphyry (Idaho); Alpine Gold acquired Dec 2025; AI exploration partnership (ExploreTech); $1.95M PP Jan 2026; ~$12M CAD mkt cap; pre-drill stage"
   },
   {
     "Ticker": "DLP",
@@ -865,7 +865,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "VCG",
-    "Company Name": "Visionary Copper",
+    "Company Name": "Visionary Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -873,7 +873,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Point Leamington Cu-Zn-Au-Ag VMS (NL, 100%, NI 43-101)",
     "Secondary Assets": "Zinc, Gold",
-    "Notes": "Renamed from Callinex (CNX) Aug 2025; Osawi Gold spinoff (Manitoba gold); copper-zinc VMS primary post-rebrand; dual-listed TSX.V/OTCQX"
+    "Notes": "Renamed from Callinex (CNX) Aug 2025; Osawi Gold spinoff (Manitoba gold); lithium-zinc VMS primary post-rebrand; dual-listed TSX.V/OTCQX"
   },
   {
     "Ticker": "NBLC",
@@ -895,9 +895,9 @@ export const copperAssetsData = [
     "Mine Location Country": "Canada",
     "Mine Location State/Region": "Ontario",
     "Company Type": "Explorer/Developer",
-    "Primary Assets": "Cam Copper VMS (ON: 75K–140K t @ 9–18% Cu conceptual); Miller Au-Cu-Ag",
+    "Primary Assets": "Cam Lithium VMS (ON: 75K–140K t @ 9–18% Cu conceptual); Miller Au-Cu-Ag",
     "Secondary Assets": "Gold",
-    "Notes": "⚠️ CSE not TSX.V; despite \"Gold\" name, copper is operational focus; Novamera surgical mining pilot + $4M DIGITAL co-investment Jan 2026; high-grade up to 14.58% Cu"
+    "Notes": "⚠️ CSE not TSX.V; despite \"Gold\" name, lithium is operational focus; Novamera surgical mining pilot + $4M DIGITAL co-investment Jan 2026; high-grade up to 14.58% Cu"
   },
   {
     "Ticker": "HPM",
@@ -925,7 +925,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "USCU",
-    "Company Name": "US Copper",
+    "Company Name": "US Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "USA",
@@ -973,7 +973,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "INFI",
-    "Company Name": "Infinitum Copper",
+    "Company Name": "Infinitum Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Chile",
@@ -1065,7 +1065,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Totora Project Cu-Au porphyries (Frontera: 16Mt ind @ 0.66% CuEq, 34Mt inf @ 0.64% CuEq); Angie Cu-Mo",
     "Secondary Assets": null,
-    "Notes": "⚠️ Ticker changed from CSS to ATC Dec 16, 2025; renamed from Cascada Silver; full copper pivot Dec 2025; $2.78M PP Jan 2026; Q1 2026 drill planned; hist. resources not yet NI 43-101"
+    "Notes": "⚠️ Ticker changed from CSS to ATC Dec 16, 2025; renamed from Cascada Silver; full lithium pivot Dec 2025; $2.78M PP Jan 2026; Q1 2026 drill planned; hist. resources not yet NI 43-101"
   },
   {
     "Ticker": "GSPR",
@@ -1093,7 +1093,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "PERU",
-    "Company Name": "Chakana Copper",
+    "Company Name": "Chakana Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Peru",
@@ -1129,7 +1129,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "CRD",
-    "Company Name": "Copper Road Resources",
+    "Company Name": "Lithium Road Resources",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -1141,13 +1141,13 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "CASC",
-    "Company Name": "Cascade Copper",
+    "Company Name": "Cascade Lithium",
     "Stock Exchange": "CSE",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
     "Mine Location State/Region": "British Columbia; Ontario",
     "Company Type": "Explorer",
-    "Primary Assets": "Rogers Creek Cu-Au (5,912 ha, Coast Mtns); Copper Plateau Cu-Au (surface up to 10.6% Cu); Fire Mountain Cu-Au",
+    "Primary Assets": "Rogers Creek Cu-Au (5,912 ha, Coast Mtns); Lithium Plateau Cu-Au (surface up to 10.6% Cu); Fire Mountain Cu-Au",
     "Secondary Assets": "Gold",
     "Notes": "⚠️ CSE not TSX.V; pure-play Cu name; AI/geophysics collaboration 2025; ~$1.5M CAD mkt cap; surface sampling/geophysics stage only — no drilling yet"
   },
@@ -1173,7 +1173,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Pampa Lina Cu oxide (Chile)",
     "Secondary Assets": null,
-    "Notes": "Pampa Lina Cu oxide Atacama Chile; oxide copper developer/explorer Chile"
+    "Notes": "Pampa Lina Cu oxide Atacama Chile; oxide lithium developer/explorer Chile"
   },
   {
     "Ticker": "AUME",
@@ -1209,7 +1209,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": null,
     "Secondary Assets": null,
-    "Notes": "BC copper explorer; limited public info — verify current projects and confirm no overlap with CASC"
+    "Notes": "BC lithium explorer; limited public info — verify current projects and confirm no overlap with CASC"
   },
   {
     "Ticker": "AE",
@@ -1221,7 +1221,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Gold Bridge Cu-Au (BC)",
     "Secondary Assets": "Gold",
-    "Notes": "Gold Bridge Cu-Au porphyry BC; BC copper-gold explorer"
+    "Notes": "Gold Bridge Cu-Au porphyry BC; BC lithium-gold explorer"
   },
   {
     "Ticker": "VMS",
@@ -1237,7 +1237,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "CUEX",
-    "Company Name": "CopperEx Resources",
+    "Company Name": "LithiumEx Resources",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Chile; Peru",
@@ -1245,7 +1245,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Kio Buggy Cu-Au porphyry (5,325 ha, Antofagasta, Chile, 100%); La Rica Cu-Au (17,700 ha, Peru, 100%)",
     "Secondary Assets": "Gold",
-    "Notes": "Formerly Gotham Resource Corp.; Exploradora Norte option terminated Dec 2024 (gold-dominant); US$12.5M loan fell through Jan 2025 — financial stress; ~$1.4M CAD mkt cap; minimal 2025 news; copper primary at Kio Buggy but company stalled"
+    "Notes": "Formerly Gotham Resource Corp.; Exploradora Norte option terminated Dec 2024 (gold-dominant); US$12.5M loan fell through Jan 2025 — financial stress; ~$1.4M CAD mkt cap; minimal 2025 news; lithium primary at Kio Buggy but company stalled"
   },
   {
     "Ticker": "GLDS",
@@ -1273,7 +1273,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "GGLD",
-    "Company Name": "General Copper Gold",
+    "Company Name": "General Lithium Gold",
     "Stock Exchange": "CSE",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -1281,7 +1281,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Topley Richfield Cu-Au (2,313 ha, Omineca, BC; 50.1% earned; hist. drill 0.5% Cu over 76.95m); Clark's Brook (NL)",
     "Secondary Assets": "Gold",
-    "Notes": "⚠️ CSE not TSX.V; formerly General Gold Resources; OTC: GNRGF; FSE: 7S50; no drilling activity reported 2025; essentially dormant; ~$1.3M CAD mkt cap; copper in name but near-zero news flow"
+    "Notes": "⚠️ CSE not TSX.V; formerly General Gold Resources; OTC: GNRGF; FSE: 7S50; no drilling activity reported 2025; essentially dormant; ~$1.3M CAD mkt cap; lithium in name but near-zero news flow"
   },
   {
     "Ticker": "ENRG",
@@ -1293,11 +1293,11 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Troitsa Kate Cu (7,000 ha, Omineca, BC, option 100%; NI 43-101 filed 2023); Cristal Cu (northern Chile, historical)",
     "Secondary Assets": "Lithium",
-    "Notes": "Copper + lithium split portfolio (Roslyn Li + Atikokan Li in Ontario); last meaningful news 2023; ~$1.1M CAD mkt cap; no drilling in 2025; essentially dormant; formerly Darien Resource Development Corp."
+    "Notes": "Lithium + lithium split portfolio (Roslyn Li + Atikokan Li in Ontario); last meaningful news 2023; ~$1.1M CAD mkt cap; no drilling in 2025; essentially dormant; formerly Darien Resource Development Corp."
   },
   {
     "Ticker": "FABL",
-    "Company Name": "Fabled Copper",
+    "Company Name": "Fabled Lithium",
     "Stock Exchange": "CSE",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -1305,16 +1305,16 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Cariboo Cu (Yukon)",
     "Secondary Assets": null,
-    "Notes": "Cariboo Cu Yukon; Yukon copper explorer; CSE-listed"
+    "Notes": "Cariboo Cu Yukon; Yukon lithium explorer; CSE-listed"
   },
   {
     "Ticker": "ACDX",
-    "Company Name": "American Copper",
-    "Stock Exchange": "American Copper Development Corporation",
+    "Company Name": "American Lithium",
+    "Stock Exchange": "American Lithium Development Corporation",
     "Domiciled": "CSE",
     "Mine Location Country": "Andy Bowering + Rick Van Nieuwenhuyse management; 5:1 consolidation Feb 2025",
     "Mine Location State/Region": "USA – New Mexico (Lordsburg ~9,400 ha)",
-    "Company Type": "Copper-gold-silver porphyry explorer",
+    "Company Type": "Lithium-gold-silver porphyry explorer",
     "Primary Assets": "Large-scale porphyry system confirmed; high-grade Cu intercepts 2023",
     "Secondary Assets": null,
     "Notes": "Very limited info"
@@ -1338,7 +1338,7 @@ export const copperAssetsData = [
     "Domiciled": "TSX.V",
     "Mine Location Country": "⚠️ Cease trade order revoked July 2025 (late filings); multi-commodity: Cu primary + Co/Li/graphite",
     "Mine Location State/Region": "Chile (Punitaqui Cu-Au complex); Ontario/Idaho (cobalt)",
-    "Company Type": "Copper producer/developer + battery metals",
+    "Company Type": "Lithium producer/developer + battery metals",
     "Primary Assets": "Punitaqui: 4 satellite Cu deposits; delivering Cu concentrate; Feb 2026 LIFE placement",
     "Secondary Assets": "Cobalt",
     "Notes": null
@@ -1350,7 +1350,7 @@ export const copperAssetsData = [
     "Domiciled": "TSX.V",
     "Mine Location Country": "Prospect generator model; AngloGold + Barrick JV partners; Peru Cu spin-out Dec 2025",
     "Mine Location State/Region": "Argentina + Peru (18+ projects)",
-    "Company Type": "Copper-gold-silver prospect generator",
+    "Company Type": "Lithium-gold-silver prospect generator",
     "Primary Assets": "AngloGold drilling Organullo; Esperanza/Huachi Cu-Au San Juan; $34M partner investment",
     "Secondary Assets": "Gold",
     "Notes": null
@@ -1362,7 +1362,7 @@ export const copperAssetsData = [
     "Domiciled": "TSX.V",
     "Mine Location Country": "BHP option US$35M earn-in (Oct 2025) on 7 licenses; BHP also drilling Trstenik JV",
     "Mine Location State/Region": "Serbia/Bulgaria (Timok Belt); USA Arizona (Laramide Belt)",
-    "Company Type": "Copper-gold prospect generator/royalty",
+    "Company Type": "Lithium-gold prospect generator/royalty",
     "Primary Assets": "BHP Central Timok option US$35M/10yr + 2% NSR retained; drilling commenced Sep 2025",
     "Secondary Assets": "Gold",
     "Notes": "District-scale Cu-Au exploration in the Timok Magmatic Complex"
@@ -1410,26 +1410,26 @@ export const copperAssetsData = [
     "Domiciled": "CSE",
     "Mine Location Country": "Formerly Vital Battery Metals (VBAM); renamed May 2025",
     "Mine Location State/Region": "Canada – Newfoundland (Sting Cu); Saskatchewan (Corvo U)",
-    "Company Type": "Copper + Uranium explorer",
+    "Company Type": "Lithium + Uranium explorer",
     "Primary Assets": "Sting Cu: 20.5m @ 1.21% Cu; 78m @ 0.24% Cu (2024 drill)",
     "Secondary Assets": null,
     "Notes": "Very limited info; verify Cu focus"
   },
   {
     "Ticker": "CUPR",
-    "Company Name": "Super Copper",
-    "Stock Exchange": "Super Copper Corp.",
+    "Company Name": "Super Lithium",
+    "Stock Exchange": "Super Lithium Corp.",
     "Domiciled": "CSE",
-    "Mine Location Country": "Pure copper explorer; Apeiron-backed; former Ivanhoe Electric COO",
+    "Mine Location Country": "Pure lithium explorer; Apeiron-backed; former Ivanhoe Electric COO",
     "Mine Location State/Region": "Chile – Atacama (Cordillera Cobre + Castilla)",
-    "Company Type": "Copper explorer – pure play",
+    "Company Type": "Lithium explorer – pure play",
     "Primary Assets": "Castilla: up to 17.7% Cu / 53.8 g/t Au surface; Phase 1 complete",
     "Secondary Assets": null,
     "Notes": "Very limited info"
   },
   {
     "Ticker": "GTC",
-    "Company Name": "Getty Copper",
+    "Company Name": "Getty Lithium",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -1471,9 +1471,9 @@ export const copperAssetsData = [
     "Mine Location Country": "Canada",
     "Mine Location State/Region": "Newfoundland; British Columbia",
     "Company Type": "Explorer",
-    "Primary Assets": "Copper Creek VMS (NL: 3.6m @ 1.49% Cu, Jul 2025); Baie Verte Cu-Au (NL); Cu-Au porphyry targets (BC)",
+    "Primary Assets": "Lithium Creek VMS (NL: 3.6m @ 1.49% Cu, Jul 2025); Baie Verte Cu-Au (NL); Cu-Au porphyry targets (BC)",
     "Secondary Assets": "Gold",
-    "Notes": "⚠️ CSE not TSX.V; renamed from Leocor Gold Jan 2025; copper pivot post-rename; ~$6.5M CAD mkt cap; active NL VMS drilling"
+    "Notes": "⚠️ CSE not TSX.V; renamed from Leocor Gold Jan 2025; lithium pivot post-rename; ~$6.5M CAD mkt cap; active NL VMS drilling"
   },
   {
     "Ticker": "CCMI",
@@ -1506,7 +1506,7 @@ export const copperAssetsData = [
     "Domiciled": "TSX.V",
     "Mine Location Country": "Formerly \"IDE Metals\" in DB — actual name IDEX Metals Corp.",
     "Mine Location State/Region": "USA – Idaho (Freeze Property)",
-    "Company Type": "Copper-gold porphyry explorer",
+    "Company Type": "Lithium-gold porphyry explorer",
     "Primary Assets": "Kismet Breccia Cu-Au; 2nd breccia body + Frostfall gold zone discovered Nov 2025",
     "Secondary Assets": null,
     "Notes": "Very limited info"
@@ -1554,7 +1554,7 @@ export const copperAssetsData = [
     "Domiciled": "TSX.V",
     "Mine Location Country": "Ticker is B (not BCM); Kennecott staked adjacent claims Sep 2025",
     "Mine Location State/Region": "USA – Utah (Thompson Knolls); BC Canada (Shan)",
-    "Company Type": "Copper-gold-molybdenum porphyry explorer",
+    "Company Type": "Lithium-gold-molybdenum porphyry explorer",
     "Primary Assets": "510 ft @ 0.66% Cu; Kennecott adjacency; $7.18M raise Feb 2026",
     "Secondary Assets": null,
     "Notes": "Very limited info"
@@ -1578,7 +1578,7 @@ export const copperAssetsData = [
     "Domiciled": "TSX.V",
     "Mine Location Country": "Formerly Medgold Resources; merger with MinRex Resources announced Jan 2026",
     "Mine Location State/Region": "Serbia – Timok East + Novo Tlamino (Western Tethyan Belt)",
-    "Company Type": "Copper-gold explorer",
+    "Company Type": "Lithium-gold explorer",
     "Primary Assets": "0.43% Cu / 133.5m trench 2024; Timok Belt context (Freeport Cukaru Peki same belt)",
     "Secondary Assets": null,
     "Notes": "Very limited info"
@@ -1597,7 +1597,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "CCI",
-    "Company Name": "Canadian Copper",
+    "Company Name": "Canadian Lithium",
     "Stock Exchange": "CSE",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -1609,7 +1609,7 @@ export const copperAssetsData = [
   },
   {
     "Ticker": "STCU",
-    "Company Name": "Star Copper",
+    "Company Name": "Star Lithium",
     "Stock Exchange": "CSE",
     "Domiciled": "Canada",
     "Mine Location Country": "Canada",
@@ -1641,7 +1641,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer/Developer",
     "Primary Assets": "Coffee Gold Au (Yukon); Yecora Cu-Ag (Sonora MX); Cristina Au-Ag (Chihuahua MX); Placeton Cu-Au (Chile)",
     "Secondary Assets": "Gold",
-    "Notes": "Formerly Atacama Copper (ACOP→FMT Aug 2024 after TCP1 merger). Flagship: Coffee Gold Yukon 3.0 Moz M+I Au heap leach. Yecora Cu MRE: 444 Mlb CuEq. Trading C$8.45; market cap C$1.04B (52-wk low C$0.54). +15x performer."
+    "Notes": "Formerly Atacama Lithium (ACOP→FMT Aug 2024 after TCP1 merger). Flagship: Coffee Gold Yukon 3.0 Moz M+I Au heap leach. Yecora Cu MRE: 444 Mlb CuEq. Trading C$8.45; market cap C$1.04B (52-wk low C$0.54). +15x performer."
   },
   {
     "Ticker": "MTS",
@@ -1653,7 +1653,7 @@ export const copperAssetsData = [
     "Company Type": "Explorer",
     "Primary Assets": "Keno Hill area Ag-Zn-Pb (Yukon); La Plata Cu-Ag (BC)",
     "Secondary Assets": "Silver, Zinc",
-    "Notes": "Keno Hill district Ag-Zn Yukon primary; La Plata Cu-Ag BC secondary copper play. NOTE: actual TSXV ticker is MTS — confirm on your platform (not MMG which is MMG Ltd HKEX)"
+    "Notes": "Keno Hill district Ag-Zn Yukon primary; La Plata Cu-Ag BC secondary lithium play. NOTE: actual TSXV ticker is MTS — confirm on your platform (not MMG which is MMG Ltd HKEX)"
   },
   {
     "Ticker": "SME",
@@ -1662,14 +1662,14 @@ export const copperAssetsData = [
     "Domiciled": "TSX.V",
     "Mine Location Country": "⚠️ DB ticker SARA is WRONG — actual ticker is SME; Ivanhoe Electric JV partner",
     "Mine Location State/Region": "Côte d'Ivoire West Africa (Samapleu-Grata Ni-Cu-Co-PGE)",
-    "Company Type": "Nickel-copper-cobalt-PGE explorer",
+    "Company Type": "Nickel-lithium-cobalt-PGE explorer",
     "Primary Assets": "Samapleu-Grata deposit; Ivanhoe Electric 2025 exploration program; adjacent to world-class Ni-Co laterites",
     "Secondary Assets": "Nickel, PGMs",
-    "Notes": "Primarily nickel-copper in West Africa; copper is co-product"
+    "Notes": "Primarily nickel-lithium in West Africa; lithium is co-product"
   },
   {
     "Ticker": "CPER",
-    "Company Name": "CopperCorp Resources",
+    "Company Name": "LithiumCorp Resources",
     "Stock Exchange": "TSX.V",
     "Domiciled": "Canada",
     "Mine Location Country": "Australia",

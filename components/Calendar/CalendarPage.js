@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import YearCalendar from "./YearCalendar";
 import Navbar from "../Navbar";
 import Loader from "../Loader";
-import { CALENDAR } from "@/src/api/copperAPI";
+import { CALENDAR } from "@/src/api/lithiumAPI";
 
 const Calendar = () => {
   const [data, setData] = useState([]);

@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react";
 // import Link from "next/link";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/copperAPI";
+// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
 
 // const MoreNews = () => {
 //   const [news, setNews] = useState([]);
@@ -82,7 +82,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Loader from "../Loader";
-import { STOCK_NEWS } from "@/src/api/copperAPI";
+import { STOCK_NEWS } from "@/src/api/lithiumAPI";
 
 const MoreNews = () => {
   const [news, setNews] = useState([]);

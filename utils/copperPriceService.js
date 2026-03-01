@@ -1,10 +1,10 @@
-// Copper Price Service - Database Integration
-// This service fetches copper prices from our database instead of Yahoo Finance
+// Lithium Price Service - Database Integration
+// This service fetches lithium prices from our database instead of Yahoo Finance
 
-export const fetchRealCopperPrice = async () => {
+export const fetchRealLithiumPrice = async () => {
   try {
     // Fetch from our database API instead of Yahoo Finance
-    const response = await fetch('/api/copper-prices');
+    const response = await fetch('/api/lithium-prices');
     
     if (!response.ok) {
       throw new Error(`API error! status: ${response.status}`);
@@ -12,26 +12,26 @@ export const fetchRealCopperPrice = async () => {
     
     const data = await response.json();
     
-    // Find copper data from the response
-    const copperData = data.find(item => 
-      item.metal_name === "Copper" || item.pgm_name === "Copper"
+    // Find lithium data from the response
+    const lithiumData = data.find(item => 
+      item.metal_name === "Lithium" || item.pgm_name === "Lithium"
     );
     
-    if (!copperData) {
-      throw new Error('Copper price data not found in response');
+    if (!lithiumData) {
+      throw new Error('Lithium price data not found in response');
     }
     
-    console.log('Database Copper Data:', copperData);
+    console.log('Database Lithium Data:', lithiumData);
     
-    return copperData;
+    return lithiumData;
     
   } catch (error) {
-    console.error('Error fetching copper price from database:', error);
+    console.error('Error fetching lithium price from database:', error);
     
     // Return fallback data with realistic changes
     return {
-      metal_name: "Copper",
-      pgm_name: "Copper", 
+      metal_name: "Lithium",
+      pgm_name: "Lithium", 
       price: 4.12,
       price_change: -0.08,
       price_change_percent: -1.91,
@@ -43,20 +43,20 @@ export const fetchRealCopperPrice = async () => {
 };
 
 // Direct frontend fetch without CORS proxy
-export const fetchCopperPriceDirectly = async () => {
+export const fetchLithiumPriceDirectly = async () => {
   try {
     // This will be called directly from React components
-    const response = await fetch('/api/copper-prices');
+    const response = await fetch('/api/lithium-prices');
     
     if (!response.ok) {
       throw new Error(`API error! status: ${response.status}`);
     }
     
     const data = await response.json();
-    return data[0]; // Return the copper data
+    return data[0]; // Return the lithium data
     
   } catch (error) {
-    console.error('Error fetching copper price from API:', error);
+    console.error('Error fetching lithium price from API:', error);
     return null;
   }
 };
@@ -65,7 +65,7 @@ export const fetchCopperPriceDirectly = async () => {
 export const fetchAllMetalPrices = async () => {
   try {
     // Fetch from our database API
-    const response = await fetch('/api/copper-prices');
+    const response = await fetch('/api/lithium-prices');
     
     if (!response.ok) {
       throw new Error(`API error! status: ${response.status}`);
@@ -87,8 +87,8 @@ export const fetchAllMetalPrices = async () => {
     // Return fallback data with realistic changes
     return [
       {
-        metal_name: "Copper",
-        pgm_name: "Copper",
+        metal_name: "Lithium",
+        pgm_name: "Lithium",
         price: 4.12,
         price_change: -0.08,
         price_change_percent: -1.91,

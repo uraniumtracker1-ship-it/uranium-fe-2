@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { jwtDecode } from "jwt-decode";
 import Router from "next/router"; // To handle redirection
 import { GetUserData } from "../utils/GetUserData";
-import { BASE_URL } from "../api/copperAPI";
+import { BASE_URL } from "../api/lithiumAPI";
 
 
 const useAxios = () => {

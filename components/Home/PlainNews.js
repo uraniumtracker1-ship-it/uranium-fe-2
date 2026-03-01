@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react";
 // import { IoTimerOutline } from "react-icons/io5";
 // import axios from "axios";
-// import { COPPER_NEWS } from "@/src/api/copperAPI";
+// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
 // import Loader from "../Loader";
 
 // const PlainNews = () => {
@@ -100,7 +100,7 @@
 // import React, { useState, useEffect } from "react";
 // import { IoTimerOutline } from "react-icons/io5";
 // import axios from "axios";
-// import { COPPER_NEWS } from "@/src/api/copperAPI";
+// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
 // import Loader from "../Loader";
 
 // const PlainNews = () => {
@@ -214,7 +214,7 @@
 // export default PlainNews;
 
 import React, { useState, useEffect } from "react";
-import { PRESS_RELEASE } from "@/src/api/copperAPI";
+import { PRESS_RELEASE } from "@/src/api/lithiumAPI";
 import Loader from "../Loader";
 
 const PlainNews = () => {

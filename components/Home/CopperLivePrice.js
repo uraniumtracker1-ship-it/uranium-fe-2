@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { COPPER_PRICES } from "@/src/api/copperAPI";
+import { COPPER_PRICES } from "@/src/api/lithiumAPI";
 
 const CopperLivePrice = () => {
   const [copperData, setCopperData] = useState(null);

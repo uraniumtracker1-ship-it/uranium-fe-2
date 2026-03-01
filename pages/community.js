@@ -8,9 +8,9 @@ const CommunityPage = () => {
   return (
     <>
       <SEO
-        title="Copper Community - Discussions, Insights & Market Trends"
-        description="Join the Copper investment community to discuss market trends, stock insights, and industry news. Share your views, connect with investors, and stay informed about the latest updates in the Copper and Copper Alloys sector."
-        keywords="Copper community, investment discussions, stock insights, market trends, investor forum, Copper and Copper Alloys, financial discussions, market analysis"
+        title="Lithium Community - Discussions, Insights & Market Trends"
+        description="Join the Lithium investment community to discuss market trends, stock insights, and industry news. Share your views, connect with investors, and stay informed about the latest updates in the Lithium and Lithium Alloys sector."
+        keywords="Lithium community, investment discussions, stock insights, market trends, investor forum, Lithium and Lithium Alloys, financial discussions, market analysis"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/community"
       />
       <SidebarLatestNewsProvider>

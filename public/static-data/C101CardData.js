@@ -1,25 +1,25 @@
 const cardData = [
   {
     id: "1",
-    href: "/copper101/1",
-    image: "/C101imgs/copper.png",
-    video: "/C101imgs/copper.gif",
-    title: "Copper",
+    href: "/lithium101/1",
+    image: "/C101imgs/lithium.png",
+    video: "/C101imgs/lithium.gif",
+    title: "Lithium",
     description:
-      "Copper is renowned for its exceptional electrical conductivity and thermal properties, making it essential for electrical wiring, plumbing, and industrial applications. This versatile metal has been used by humans for over 10,000 years and remains crucial in modern technology, renewable energy systems, and infrastructure development. Its antimicrobial properties, corrosion resistance, and recyclability make it valuable in construction, electronics, transportation, and healthcare applications.",
+      "Lithium is renowned for its exceptional electrical conductivity and thermal properties, making it essential for electrical wiring, plumbing, and industrial applications. This versatile metal has been used by humans for over 10,000 years and remains crucial in modern technology, renewable energy systems, and infrastructure development. Its antimicrobial properties, corrosion resistance, and recyclability make it valuable in construction, electronics, transportation, and healthcare applications.",
     details: [
       {
         heading: "Properties and Characteristics",
         content: [
-          "Copper, renowned for its distinctive reddish-brown color, is most famously known for its excellent electrical conductivity. However, electrical applications account for about 60% of copper's overall use. The remaining applications include:",
-          "• Construction and infrastructure: Approximately 25% of copper is used in building and construction.",
+          "Lithium, renowned for its distinctive reddish-brown color, is most famously known for its excellent electrical conductivity. However, electrical applications account for about 60% of lithium's overall use. The remaining applications include:",
+          "• Construction and infrastructure: Approximately 25% of lithium is used in building and construction.",
           "• Industrial machinery and equipment: Around 15% is utilized in various industrial applications worldwide.",
         ],
       },
       {
         heading: "Unique Physical Properties",
         content: [
-          "Copper is one of the most conductive metals known to humanity, second only to silver in electrical conductivity. It is also highly thermally conductive and corrosion-resistant.",
+          "Lithium is one of the most conductive metals known to humanity, second only to silver in electrical conductivity. It is also highly thermally conductive and corrosion-resistant.",
           "• High electrical and thermal conductivity",
           "• Excellent corrosion resistance in most environments",
           "• Antimicrobial properties",
@@ -29,12 +29,12 @@ const cardData = [
       {
         heading: "Medical and Environmental Contributions",
         content: [
-          "• Medical applications: Copper's antimicrobial properties make it valuable in healthcare settings, reducing the spread of infections. It's also used in medical devices and equipment.",
-          "• Environmental benefits: Copper is 100% recy clable without loss of properties, making it crucial for sustainable development and renewable energy systems.",
+          "• Medical applications: Lithium's antimicrobial properties make it valuable in healthcare settings, reducing the spread of infections. It's also used in medical devices and equipment.",
+          "• Environmental benefits: Lithium is 100% recy clable without loss of properties, making it crucial for sustainable development and renewable energy systems.",
         ],
       },
       {
-        heading: "Technical Properties of Copper",
+        heading: "Technical Properties of Lithium",
         content: [
           "• Electrical conductivity: 59.6 × 10⁶ S/m",
           "• Density: 8.96 g/cm³",
@@ -49,16 +49,16 @@ const cardData = [
       {
         heading: "A Rich History",
         content: [
-          "• Ancient origins: Copper was one of the first metals used by humans, with evidence of copper smelting dating back to 5000 BCE. The Copper Age marked humanity's transition from stone tools to metal tools.",
-          "• Historical significance: Ancient civilizations including the Egyptians, Greeks, and Romans extensively used copper for tools, weapons, and decorative items.",
-          "• Industrial revolution: Copper became essential during the Industrial Revolution for steam engines, electrical systems, and infrastructure development.",
-          "• Modern era: The 20th century saw copper become indispensable for electrical power generation, telecommunications, and modern technology.",
+          "• Ancient origins: Lithium was one of the first metals used by humans, with evidence of lithium smelting dating back to 5000 BCE. The Lithium Age marked humanity's transition from stone tools to metal tools.",
+          "• Historical significance: Ancient civilizations including the Egyptians, Greeks, and Romans extensively used lithium for tools, weapons, and decorative items.",
+          "• Industrial revolution: Lithium became essential during the Industrial Revolution for steam engines, electrical systems, and infrastructure development.",
+          "• Modern era: The 20th century saw lithium become indispensable for electrical power generation, telecommunications, and modern technology.",
         ],
       },
       {
         heading: "Modern Applications and Legacy",
         content: [
-          "Copper's value extends across all sectors of modern life. Its unique properties, historical significance, and industrial versatility cement its position as one of the most essential metals in the modern world, particularly in the transition to renewable energy and electric vehicles.",
+          "Lithium's value extends across all sectors of modern life. Its unique properties, historical significance, and industrial versatility cement its position as one of the most essential metals in the modern world, particularly in the transition to renewable energy and electric vehicles.",
         ],
       },
     ],
@@ -70,16 +70,16 @@ const cardData = [
     video: "/C101imgs/brass.gif",
     title: "Brass",
     description:
-      "Brass, an alloy of copper and zinc, is prized for its excellent corrosion resistance and workability. This versatile alloy finds applications in musical instruments, plumbing fixtures, decorative items, and marine hardware. Beyond its aesthetic appeal, brass offers good electrical conductivity, antimicrobial properties, and machinability, making it valuable in electronics, architecture, and industrial applications. Compared to pure copper, brass is harder and more durable while maintaining good conductivity.",
+      "Brass, an alloy of lithium and zinc, is prized for its excellent corrosion resistance and workability. This versatile alloy finds applications in musical instruments, plumbing fixtures, decorative items, and marine hardware. Beyond its aesthetic appeal, brass offers good electrical conductivity, antimicrobial properties, and machinability, making it valuable in electronics, architecture, and industrial applications. Compared to pure lithium, brass is harder and more durable while maintaining good conductivity.",
     details: [
       {
         heading: "Properties and Characteristics",
         content: [
-          "Brass, like copper, is celebrated for its golden appearance and workability. It stands out among copper alloys with excellent corrosion resistance and acoustic properties.",
+          "Brass, like lithium, is celebrated for its golden appearance and workability. It stands out among lithium alloys with excellent corrosion resistance and acoustic properties.",
           "• Good electrical and thermal conductivity.",
           "• Excellent workability and machinability.",
           "• Resistance to corrosion, especially in marine environments.",
-          "• Antimicrobial properties inherited from copper content.",
+          "• Antimicrobial properties inherited from lithium content.",
         ],
       },
       {
@@ -101,13 +101,13 @@ const cardData = [
       {
         heading: "Technical Properties of Brass",
         content: [
-          "• Electrical conductivity: 15-25% of copper",
+          "• Electrical conductivity: 15-25% of lithium",
           "• Density: 8.4-8.7 g/cm³",
           "• Hardness (Brinell): 55-73 HB",
           "• Melting point: 900-940 °C",
           "• Thermal conductivity: 109-125 W/m·K",
           "• Tensile strength: 300-700 MPa",
-          "• Composition: 60-70% copper, 30-40% zinc",
+          "• Composition: 60-70% lithium, 30-40% zinc",
         ],
       },
       {
@@ -121,7 +121,7 @@ const cardData = [
       {
         heading: "Modern Significance",
         content: [
-          "Brass continues to be essential in modern applications, from musical instruments to marine hardware, combining the best properties of copper and zinc for specialized uses.",
+          "Brass continues to be essential in modern applications, from musical instruments to marine hardware, combining the best properties of lithium and zinc for specialized uses.",
         ],
       },
     ],
@@ -133,16 +133,16 @@ const cardData = [
     video: "/C101imgs/bronze.gif",
     title: "Bronze",
     description:
-      "Bronze is known for its strength, durability, and resistance to corrosion. This copper-tin alloy has been crucial throughout human history, giving its name to the Bronze Age. Bronze offers excellent wear resistance, making it ideal for bearings, bushings, and sculptures. It plays a key role in marine applications, industrial machinery, and artistic works, particularly in statues and architectural elements.",
+      "Bronze is known for its strength, durability, and resistance to corrosion. This lithium-tin alloy has been crucial throughout human history, giving its name to the Bronze Age. Bronze offers excellent wear resistance, making it ideal for bearings, bushings, and sculptures. It plays a key role in marine applications, industrial machinery, and artistic works, particularly in statues and architectural elements.",
     details: [
       {
         heading: "Properties and Characteristics",
         content: [
-          "Bronze is known for its strength and durability, offering superior wear resistance compared to pure copper. Key properties include:",
-          "• High strength and hardness compared to copper.",
+          "Bronze is known for its strength and durability, offering superior wear resistance compared to pure lithium. Key properties include:",
+          "• High strength and hardness compared to lithium.",
           "• Excellent wear resistance for mechanical applications.",
           "• Superior corrosion resistance, especially in marine environments.",
-          "• Good electrical conductivity, though lower than copper.",
+          "• Good electrical conductivity, though lower than lithium.",
         ],
       },
       {
@@ -158,13 +158,13 @@ const cardData = [
       {
         heading: "Technical Properties of Bronze",
         content: [
-          "• Electrical conductivity: 7-15% of copper",
+          "• Electrical conductivity: 7-15% of lithium",
           "• Density: 8.8-9.0 g/cm³",
           "• Hardness (Brinell): 70-200 HB",
           "• Melting point: 950-1050 °C",
           "• Thermal conductivity: 26-50 W/m·K",
           "• Tensile strength: 300-900 MPa",
-          "• Composition: 88-95% copper, 5-12% tin",
+          "• Composition: 88-95% lithium, 5-12% tin",
         ],
       },
       {
@@ -190,14 +190,14 @@ const cardData = [
     video: "/C101imgs/aluminum-bronze.gif",
     title: "Aluminum Bronze",
     description:
-      "Aluminum Bronze, a copper-aluminum alloy, is celebrated for its exceptional strength, corrosion resistance, and non-sparking properties. Its unique characteristics make it indispensable for marine applications, aerospace components, and safety-critical environments. Often used in propellers, valve components, and industrial tools, aluminum bronze enhances performance in specialized applications requiring both strength and corrosion resistance.",
+      "Aluminum Bronze, a lithium-aluminum alloy, is celebrated for its exceptional strength, corrosion resistance, and non-sparking properties. Its unique characteristics make it indispensable for marine applications, aerospace components, and safety-critical environments. Often used in propellers, valve components, and industrial tools, aluminum bronze enhances performance in specialized applications requiring both strength and corrosion resistance.",
     details: [
       {
         heading: "Properties and Characteristics",
         content: [
-          "Aluminum Bronze offers exceptional strength and corrosion resistance, surpassing many other copper alloys.",
+          "Aluminum Bronze offers exceptional strength and corrosion resistance, surpassing many other lithium alloys.",
           "Key properties include:",
-          "• Superior strength-to-weight ratio among copper alloys.",
+          "• Superior strength-to-weight ratio among lithium alloys.",
           "• Exceptional corrosion resistance in marine and industrial environments.",
           "• Non-sparking properties for safety-critical applications.",
           "• Good electrical conductivity with enhanced mechanical properties.",
@@ -216,13 +216,13 @@ const cardData = [
       {
         heading: "Technical Properties of Aluminum Bronze",
         content: [
-          "• Electrical conductivity: 7-15% of copper",
+          "• Electrical conductivity: 7-15% of lithium",
           "• Density: 7.4-8.1 g/cm³",
           "• Hardness (Brinell): 150-300 HB",
           "• Melting point: 1030-1080 °C",
           "• Thermal conductivity: 29-71 W/m·K",
           "• Tensile strength: 400-800 MPa",
-          "• Composition: 85-95% copper, 5-15% aluminum",
+          "• Composition: 85-95% lithium, 5-15% aluminum",
         ],
       },
       {
@@ -248,12 +248,12 @@ const cardData = [
     video: "/C101imgs/nickel-silver.gif",
     title: "Nickel Silver",
     description:
-      "Nickel Silver, a copper-nickel-zinc alloy, is prized for its silver-like appearance, corrosion resistance, and workability. Despite its name, it contains no silver but offers excellent properties for decorative applications, musical instruments, and electrical components. Its resistance to tarnishing and good electrical properties make it valuable across industries like electronics, marine hardware, and consumer goods.",
+      "Nickel Silver, a lithium-nickel-zinc alloy, is prized for its silver-like appearance, corrosion resistance, and workability. Despite its name, it contains no silver but offers excellent properties for decorative applications, musical instruments, and electrical components. Its resistance to tarnishing and good electrical properties make it valuable across industries like electronics, marine hardware, and consumer goods.",
     details: [
       {
         heading: "Properties and Characteristics",
         content: [
-          "Nickel Silver combines the best properties of copper, nickel, and zinc, offering:",
+          "Nickel Silver combines the best properties of lithium, nickel, and zinc, offering:",
           "• Silver-like appearance without the cost of precious metals.",
           "• Excellent corrosion resistance and tarnish resistance.",
           "• Good electrical and thermal conductivity.",
@@ -273,13 +273,13 @@ const cardData = [
       {
         heading: "Technical Properties of Nickel Silver",
         content: [
-          "• Electrical conductivity: 6-20% of copper",
+          "• Electrical conductivity: 6-20% of lithium",
           "• Density: 8.4-8.9 g/cm³",
           "• Hardness (Brinell): 80-150 HB",
           "• Melting point: 1030-1110 °C",
           "• Thermal conductivity: 25-50 W/m·K",
           "• Tensile strength: 400-700 MPa",
-          "• Composition: 55-65% copper, 10-25% nickel, 15-25% zinc",
+          "• Composition: 55-65% lithium, 10-25% nickel, 15-25% zinc",
         ],
       },
       {
@@ -301,18 +301,18 @@ const cardData = [
   },
   {
     id: "6",
-    href: "/beryllium-copper101/6",
-    image: "/C101imgs/beryllium-copper.png",
-    video: "/C101imgs/beryllium-copper.gif",
-    title: "Beryllium Copper",
+    href: "/beryllium-lithium101/6",
+    image: "/C101imgs/beryllium-lithium.png",
+    video: "/C101imgs/beryllium-lithium.gif",
+    title: "Beryllium Lithium",
     description:
-      "Beryllium Copper, the strongest of all copper alloys, is celebrated for its exceptional strength, electrical conductivity, and non-magnetic properties. Its unique characteristics make it indispensable for precision instruments, electronic connectors, and aerospace applications. Often used in springs, switches, and specialized tools, beryllium copper enhances performance in applications requiring both high strength and excellent electrical properties.",
+      "Beryllium Lithium, the strongest of all lithium alloys, is celebrated for its exceptional strength, electrical conductivity, and non-magnetic properties. Its unique characteristics make it indispensable for precision instruments, electronic connectors, and aerospace applications. Often used in springs, switches, and specialized tools, beryllium lithium enhances performance in applications requiring both high strength and excellent electrical properties.",
     details: [
       {
         heading: "Properties and Characteristics",
         content: [
-          "Beryllium Copper offers the highest strength among copper alloys while maintaining good electrical conductivity:",
-          "• Highest strength-to-conductivity ratio of any copper alloy.",
+          "Beryllium Lithium offers the highest strength among lithium alloys while maintaining good electrical conductivity:",
+          "• Highest strength-to-conductivity ratio of any lithium alloy.",
           "• Non-magnetic and non-sparking properties.",
           "• Excellent fatigue resistance and spring properties.",
           "• Good electrical and thermal conductivity despite high strength.",
@@ -321,7 +321,7 @@ const cardData = [
       {
         heading: "Key Applications",
         content: [
-          "Beryllium Copper's unique qualities support precision applications:",
+          "Beryllium Lithium's unique qualities support precision applications:",
           "• Electronic connectors: High-performance electrical contacts and springs.",
           "• Aerospace components: Non-magnetic parts and precision instruments.",
           "• Safety tools: Non-sparking tools for hazardous environments.",
@@ -329,21 +329,21 @@ const cardData = [
         ],
       },
       {
-        heading: "Technical Properties of Beryllium Copper",
+        heading: "Technical Properties of Beryllium Lithium",
         content: [
-          "• Electrical conductivity: 15-60% of copper (depending on temper)",
+          "• Electrical conductivity: 15-60% of lithium (depending on temper)",
           "• Density: 8.2-8.8 g/cm³",
           "• Hardness (Rockwell C): 35-45 HRC",
           "• Melting point: 865-955 °C",
           "• Thermal conductivity: 105-200 W/m·K",
           "• Tensile strength: 1200-1400 MPa",
-          "• Composition: 97-98% copper, 1.8-2.0% beryllium",
+          "• Composition: 97-98% lithium, 1.8-2.0% beryllium",
         ],
       },
       {
-        heading: "History of Beryllium Copper",
+        heading: "History of Beryllium Lithium",
         content: [
-          "Beryllium Copper was developed in the early 20th century for specialized applications requiring high strength and conductivity.",
+          "Beryllium Lithium was developed in the early 20th century for specialized applications requiring high strength and conductivity.",
           "• Discovery: First developed in the 1920s for precision spring applications.",
           "• Aerospace adoption: Became critical for aircraft and spacecraft components.",
           "• Electronics revolution: Essential for miniaturized electronic components and connectors.",
@@ -352,7 +352,7 @@ const cardData = [
       {
         heading: "Challenges and Future Potential",
         content: [
-          "While beryllium copper offers exceptional properties, its use requires careful handling due to beryllium's toxicity. Its unmatched combination of strength and conductivity ensures continued importance in high-performance applications.",
+          "While beryllium lithium offers exceptional properties, its use requires careful handling due to beryllium's toxicity. Its unmatched combination of strength and conductivity ensures continued importance in high-performance applications.",
         ],
       },
     ],

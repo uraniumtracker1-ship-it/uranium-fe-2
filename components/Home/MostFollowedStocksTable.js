@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { MOST_FOLLOWED, COPPER_STOCK_DETAIL } from "@/src/api/copperAPI";
+import { MOST_FOLLOWED, LITHIUM_STOCK_DETAIL } from "@/src/api/lithiumAPI";
 import axios from "axios";
 
 const MostFollowedStocksTable = () => {
@@ -96,7 +96,7 @@ const MostFollowedStocksTable = () => {
   const checkSubpageExists = async (stockTicker) => {
     try {
       const response = await axios.get(
-        `${COPPER_STOCK_DETAIL}?stock_ticker=${stockTicker}`
+        `${LITHIUM_STOCK_DETAIL}?stock_ticker=${stockTicker}`
       );
       return response.data.exists ?? true;
     } catch (error) {

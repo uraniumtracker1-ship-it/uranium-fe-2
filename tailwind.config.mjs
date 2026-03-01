@@ -10,7 +10,7 @@ export default {
       colors: {
         primary: "#000000",
         secondary: "#B7B7B7",
-        accent: "#B87333", // Copper color
+        accent: "#06B6D4", // Lithium color (vibrant cyan/teal - represents energy, batteries, EV)
       },
     },
   },

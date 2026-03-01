@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { STOCK_NEWS } from "@/src/api/copperAPI";
+import { STOCK_NEWS } from "@/src/api/lithiumAPI";
 
 const MostPopularNews = () => {
   const [news, setNews] = useState([]);

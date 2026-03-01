@@ -2,7 +2,7 @@
 // import axios from "axios";
 // import dynamic from "next/dynamic";
 // import { color } from "framer-motion";
-// import { SPORT_PRICE_CHART } from "@/src/api/copperAPI";
+// import { SPORT_PRICE_CHART } from "@/src/api/lithiumAPI";
 
 // const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
@@ -117,7 +117,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import dynamic from "next/dynamic";
-import { SPORT_PRICE_CHART } from "@/src/api/copperAPI";
+import { SPORT_PRICE_CHART } from "@/src/api/lithiumAPI";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 

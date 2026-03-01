@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router"; // For navigation
-import { PRESS_RELEASE } from "@/src/api/copperAPI";
+import { PRESS_RELEASE } from "@/src/api/lithiumAPI";
 
 const PressRelease = () => {
   const router = useRouter();
@@ -58,7 +58,7 @@ const PressRelease = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Copper Company Press Release
+          Lithium Company Press Release
         </h1>
         <div className="text-center py-8">Loading press releases...</div>
       </div>
@@ -69,7 +69,7 @@ const PressRelease = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Copper Company Press Release
+          Lithium Company Press Release
         </h1>
         <div className="text-center py-8 text-red-500">
           Error loading press releases: {error}
@@ -82,7 +82,7 @@ const PressRelease = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Copper Company Press Release
+          Lithium Company Press Release
         </h1>
         <div className="text-center py-8 text-gray-500">
           No press releases available at this time
@@ -95,7 +95,7 @@ const PressRelease = () => {
     <div>
       {/* Heading */}
       <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-        Copper Company Press Release
+        Lithium Company Press Release
       </h1>
 
       {/* Press Release Layout */}

@@ -62,7 +62,7 @@ const C101Cards = () => {
                   Copper Glossary
                 </h2>
                 <p className="text-[15px] text-left text-lightgray group-hover:text-lightgray transition-colors duration-500">
-                  Glossary of Terms for Copper and Copper Alloys...
+                  Glossary of Terms for Copper and Lithium Alloys...
                 </p>
               </div>
             </div>

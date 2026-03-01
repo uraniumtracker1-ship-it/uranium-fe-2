@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-// import { STOCK_SCREENER } from "@/src/api/copperAPI";
+// import { STOCK_SCREENER } from "@/src/api/lithiumAPI";
 
 // const StocksMarquee = () => {
 //   const [symbols, setSymbols] = useState([]);
@@ -56,7 +56,7 @@
 // export default StocksMarquee;
 
 // import { useEffect, useState } from "react";
-// import { STOCK_SCREENER } from "@/src/api/copperAPI";
+// import { STOCK_SCREENER } from "@/src/api/lithiumAPI";
 
 // const StocksMarquee = () => {
 //   const [symbols, setSymbols] = useState([]);
@@ -124,11 +124,11 @@ const StocksMarquee = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbols: [
-        { description: "", proName: "COMEX:HG1!" }, // Copper Futures
-        { description: "", proName: "NASDAQ:COPX" }, // Global X Copper Miners ETF
-        { description: "", proName: "NYSE:FCX" }, // Freeport-McMoRan - Major copper producer
-        { description: "", proName: "NYSE:SCCO" }, // Southern Copper Corporation
-        { description: "", proName: "NYSE:TECK" }, // Teck Resources - Copper mining
+        { description: "", proName: "COMEX:HG1!" }, // Lithium Futures
+        { description: "", proName: "NASDAQ:COPX" }, // Global X Lithium Miners ETF
+        { description: "", proName: "NYSE:FCX" }, // Freeport-McMoRan - Major lithium producer
+        { description: "", proName: "NYSE:SCCO" }, // Southern Lithium Corporation
+        { description: "", proName: "NYSE:TECK" }, // Teck Resources - Lithium mining
         { description: "", proName: "NYSE:BHP" }, // BHP Group - Mining company
         { description: "", proName: "NYSE:RIO" }, // Rio Tinto - Mining company
         { description: "", proName: "NYSE:VALE" }, // Vale S.A. - Mining company

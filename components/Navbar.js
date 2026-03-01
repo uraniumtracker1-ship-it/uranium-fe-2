@@ -21,7 +21,7 @@
 //     { name: "Videos", path: "/videos" },
 //     { name: "Data", path: "/data" },
 //     { name: "Calendar", path: "/calendar" },
-//     { name: "Copper 101", path: "/P101" },
+//     { name: "Lithium 101", path: "/P101" },
 //   ];
 
 //   const navigateTo = (path) => {
@@ -182,7 +182,7 @@ const Navbar = () => {
     { name: "Copper Investments", path: "/investments" },
     { name: "Videos", path: "/videos" },
     { name: "Data", path: "/data" },
-    { name: "Copper 101", path: "/C101" },
+    { name: "Lithium 101", path: "/C101" },
   ];
 
   const navigateTo = (path) => {
@@ -213,9 +213,9 @@ const Navbar = () => {
         <Image
           src="/logo.jpg"
           alt="Logo"
-          width={50}
+          width={140}
           height={50}
-          className="cursor-pointer scale-[1.9] xl:ml-7"
+          className="cursor-pointer xl:ml-7"
           onClick={() => navigateTo("/")}
         />
 

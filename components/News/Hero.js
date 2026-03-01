@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { formatDistanceToNow } from "date-fns"; // Importing date-fns function for relative time
 import { IoIosTimer } from "react-icons/io";
-import { STOCK_NEWS } from "@/src/api/copperAPI";
+import { STOCK_NEWS } from "@/src/api/lithiumAPI";
 
 const Hero = () => {
   const [news, setNews] = useState([]);

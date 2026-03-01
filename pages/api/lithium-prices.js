@@ -34,8 +34,8 @@ export default async function handler(req, res) {
       // Return fallback data if no database records
       const fallbackPrices = [
         {
-          metal_name: "Copper",
-          pgm_name: "Copper",
+          metal_name: "Lithium",
+          pgm_name: "Lithium",
           price: 4.12,
           price_change: 0.05,
           price_change_percent: 1.23,
@@ -68,7 +68,7 @@ export default async function handler(req, res) {
     }));
     
     console.log(`Returning ${metalPrices.length} metal price records from database`);
-    console.log(`Copper price: $${metalPrices[0]?.price} (${metalPrices[0]?.price_change_percent}%)`);
+    console.log(`Lithium price: $${metalPrices[0]?.price} (${metalPrices[0]?.price_change_percent}%)`);
     
     res.status(200).json({
       success: true,
@@ -82,8 +82,8 @@ export default async function handler(req, res) {
     // Fallback to basic mock data
     const fallbackPrices = [
       {
-        metal_name: "Copper",
-        pgm_name: "Copper",
+        metal_name: "Lithium",
+        pgm_name: "Lithium",
         price: 4.12,
         price_change: 0.05,
         price_change_percent: 1.23,

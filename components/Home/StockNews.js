@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 // import { useRouter } from "next/router";
-// import { STOCK_NEWS } from "@/src/api/copperAPI";
+// import { STOCK_NEWS } from "@/src/api/lithiumAPI";
 // const StockNews = () => {
 //   const [newsData, setNewsData] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -134,7 +134,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { STOCK_NEWS } from "@/src/api/copperAPI";
+import { STOCK_NEWS } from "@/src/api/lithiumAPI";
 
 const StockNews = () => {
   const [newsData, setNewsData] = useState([]);

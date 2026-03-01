@@ -20,7 +20,7 @@ const C101Hero = () => {
           {/* Text Content */}
           <div className="relative z-10 p-6 text-white max-w-2xl">
             <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent">
-              Copper 101
+              Lithium 101
             </p>
 
             <h1 className="text-2xl lg:text-4xl font-bold my-4  cambay">

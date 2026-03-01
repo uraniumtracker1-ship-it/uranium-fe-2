@@ -11,10 +11,10 @@ import MostPopularNews from "@/components/Home/MostPopularNews";
 import Substacks from "@/components/Home/Substacks";
 import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import Footer from "@/components/Footer";
-import TVCopperCFD from "@/components/Home/TVCopperCFD";
-import TVCopper from "@/components/Home/TVCopper";
-import DirectCopperPrice from "@/components/Home/DirectCopperPrice";
-import DirectHomeCopperPrice from "@/components/Home/DirectHomeCopperPrice";
+import TVLithiumCFD from "@/components/Home/TVLithiumCFD";
+import TVLithium from "@/components/Home/TVLithium";
+import DirectLithiumPrice from "@/components/Home/DirectLithiumPrice";
+import DirectHomeLithiumPrice from "@/components/Home/DirectHomeLithiumPrice";
 import HomeInsiderTransactions from "@/components/Home/HomeInsiderTransactions";
 import SEO from "@/components/SEO";
 import StocksMarquee from "@/components/Home/StocksMarquee";
@@ -24,9 +24,9 @@ const home = () => {
   return (
     <div>
       <SEO
-        title="Copper Tracker - Real-time News, Prices & Analysis"
-        description="Stay ahead with real-time Copper market news, price updates, and in-depth analysis. Get accurate insights into the copper market trends."
-        keywords="Copper prices, Copper news, Copper market analysis, Industrial metals, Copper trading, Copper updates, Copper investment, Real-time Copper updates,investment"
+        title="Lithium Tracker - Real-time News, Prices & Analysis"
+        description="Stay ahead with real-time Lithium market news, price updates, and in-depth analysis. Get accurate insights into the lithium market trends."
+        keywords="Lithium prices, Lithium news, Lithium market analysis, Industrial metals, Lithium trading, Lithium updates, Lithium investment, Real-time Lithium updates,investment"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/"
       />
 
@@ -43,9 +43,9 @@ const home = () => {
         <div className="w-full lg:w-[24%] flex flex-col space-y-6">
           <div>
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Copper Price Chart
+              Lithium Price Chart
             </h1>
-            <TVCopperCFD />
+            <TVLithiumCFD />
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const home = () => {
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Prices
             </h1>
-            <DirectHomeCopperPrice />
+            <DirectHomeLithiumPrice />
           </div>
           <div>
             <div className="flex justify-between items-center mb-3 border-b border-black/10 pb-1">
@@ -77,9 +77,9 @@ const home = () => {
         <div className="w-full lg:w-[24%] flex flex-col space-y-6">
           <div>
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Copper Futures
+              Lithium Futures
             </h1>
-            <TVCopper />
+            <TVLithium />
           </div>
 
           <Substacks />
@@ -99,8 +99,8 @@ const home = () => {
         </div>
         {/* right  */}
         <div className="w-full lg:w-[26%] space-y-12">
-          <DirectCopperPrice />
-          {/* <CopperTradingviewChart /> */}
+          <DirectLithiumPrice />
+          {/* <LithiumTradingviewChart /> */}
           <PopularIntradayReturn />
           <PopularTools />
           {/* <DailyNewsletterAd /> */}

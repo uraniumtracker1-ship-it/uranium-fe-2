@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { FaPlay } from "react-icons/fa";
 import Loader from "../Loader";
-import { VIDEOS } from "@/src/api/copperAPI";
+import { VIDEOS } from "@/src/api/lithiumAPI";
 const VideoList = ({ category }) => {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaLink } from "react-icons/fa6";
-import { COPPER_PRICES } from "@/src/api/copperAPI";
+import { COPPER_PRICES } from "@/src/api/lithiumAPI";
 
 const HomeCopperPrice = () => {
   const [copperPrices, setCopperPrices] = useState([]);

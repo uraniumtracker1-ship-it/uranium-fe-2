@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { SUBSTACKS } from "@/src/api/copperAPI";
+import { SUBSTACKS } from "@/src/api/lithiumAPI";
 
 const Substacks = () => {
   const [substackPosts, setSubstackPosts] = useState([]);
@@ -79,7 +79,7 @@ const Substacks = () => {
     return (
       <div>
         <h2 className="flex items-center text-[19px] md:text-[21px] font-bold cambay border-b border-gray-300 pb-1 mb-3">
-          Copper Substacks
+          Lithium Substacks
         </h2>
         <div className="flex justify-center items-center h-32">
           <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gray-800"></div>
@@ -93,7 +93,7 @@ const Substacks = () => {
     return (
       <div>
         <h2 className="flex items-center text-[19px] md:text-[21px] font-bold cambay border-b border-gray-300 pb-1 mb-3">
-          Copper Substacks
+          Lithium Substacks
         </h2>
         <div className="text-center py-8 text-red-500">
           Error loading substacks: {error}
@@ -106,7 +106,7 @@ const Substacks = () => {
     return (
       <div>
         <h2 className="flex items-center text-[19px] md:text-[21px] font-bold cambay border-b border-gray-300 pb-1 mb-3">
-          Copper Substacks
+          Lithium Substacks
         </h2>
         <div className="text-center py-8 text-gray-500">
           No Substack posts available at this time
@@ -118,7 +118,7 @@ const Substacks = () => {
   return (
     <div>
       <h2 className="flex items-center text-[19px] md:text-[21px] font-bold cambay border-b border-gray-300 pb-1 mb-3">
-        Copper Substacks
+        Lithium Substacks
       </h2>
       <div className="space-y-6">
         {substackPosts.slice(0, 4).map((post) => (

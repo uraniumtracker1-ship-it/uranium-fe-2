@@ -8,9 +8,9 @@ const calendar = () => {
   return (
     <div>
       <SEO
-        title="Copper Market Calendar  - Key Events & Industry Updates"
-        description="Stay informed with the latest Copper market events in 2025. Track key industry conferences, financial updates, and supply-demand shifts with our comprehensive market calendar."
-        keywords="Copper market calendar 2025, Copper and Copper Alloys events, Copper industry conferences, market updates, financial events, supply and demand trends"
+        title="Lithium Market Calendar  - Key Events & Industry Updates"
+        description="Stay informed with the latest Lithium market events in 2025. Track key industry conferences, financial updates, and supply-demand shifts with our comprehensive market calendar."
+        keywords="Lithium market calendar 2025, Lithium and Lithium Alloys events, Lithium industry conferences, market updates, financial events, supply and demand trends"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/calendar"
       />
       <Navbar />

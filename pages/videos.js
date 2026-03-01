@@ -72,9 +72,9 @@ const Videos = () => {
   return (
     <div>
       <SEO
-        title="Copper Video Hub - Market Updates, Education & Insights"
-        description="Enhance your Copper market knowledge through our educational video content. From market fundamentals to advanced trading strategies, explore our comprehensive library of featured videos, company insights, podcasts, and educational resources."
-        keywords="Copper videos, market updates, Copper education, trading strategies, company insights, Copper podcasts, investment knowledge, Copper and Copper Alloys"
+        title="Lithium Video Hub - Market Updates, Education & Insights"
+        description="Enhance your Lithium market knowledge through our educational video content. From market fundamentals to advanced trading strategies, explore our comprehensive library of featured videos, company insights, podcasts, and educational resources."
+        keywords="Lithium videos, market updates, Lithium education, trading strategies, company insights, Lithium podcasts, investment knowledge, Lithium and Lithium Alloys"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/videos"
       />
       <Navbar />

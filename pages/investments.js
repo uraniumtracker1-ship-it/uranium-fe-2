@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import InvestmentHero from "@/components/Investment/InvestmentHero";
 import ISnapshot from "@/components/Investment/ISnapshot";
@@ -113,7 +113,7 @@ const investments = ({ stockData }) => {
       <SEO
         title="Copper Investment Insights - Market Trends & Stock Analysis"
         description="Explore in-depth Copper investment insights, stock analysis, and the latest market trends. Stay informed about financial updates, ETF holdings, insider transactions, and stock screening tools to make better investment decisions."
-        keywords="Copper investment insights, stock market trends, ETF holdings, stock analysis, insider transactions, stock screener, market updates, investment strategies, Copper and Copper Alloys investments"
+        keywords="Copper investment insights, stock market trends, ETF holdings, stock analysis, insider transactions, stock screener, market updates, investment strategies, Copper and Lithium Alloys investments"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/investments"
       />
 

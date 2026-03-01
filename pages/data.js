@@ -17,9 +17,9 @@ const Data = () => {
   return (
     <div>
       <SEO
-        title="Copper Market Data - Price Trends, Supply & Demand Insights"
-        description="Access comprehensive Copper market data, including price trends, supply and demand metrics, and industry analysis. Our detailed datasets provide the insights you need for informed decision-making in the Copper market."
-        keywords="Copper market data, price trends, Copper supply and demand, industry analysis, Copper research, market insights, Copper and Copper Alloys, data analytics"
+        title="Lithium Market Data - Price Trends, Supply & Demand Insights"
+        description="Access comprehensive Lithium market data, including price trends, supply and demand metrics, and industry analysis. Our detailed datasets provide the insights you need for informed decision-making in the Lithium market."
+        keywords="Lithium market data, price trends, Lithium supply and demand, industry analysis, Lithium research, market insights, Lithium and Lithium Alloys, data analytics"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/data"
       />
       <Navbar />

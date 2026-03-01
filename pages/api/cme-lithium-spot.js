@@ -16,9 +16,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    console.log('Fetching CME copper spot price from database...');
+    console.log('Fetching CME lithium spot price from database...');
     
-    // Query the database for the latest CME copper spot price
+    // Query the database for the latest CME lithium spot price
     const query = `
       SELECT globex_code, last_price, price_change, price_change_percent, 
              volume, is_decrease, source, scraped_at
@@ -30,12 +30,12 @@ export default async function handler(req, res) {
     const result = await pool.query(query);
     
     if (result.rows.length === 0) {
-      console.log('No CME copper spot price found in database');
+      console.log('No CME lithium spot price found in database');
       
       return res.status(404).json({
         success: false,
         data: null,
-        message: "No CME copper spot price data available in database"
+        message: "No CME lithium spot price data available in database"
       });
     }
     
@@ -52,21 +52,21 @@ export default async function handler(req, res) {
       scraped_at: cmeData.scraped_at
     };
     
-    console.log(`Returning CME copper spot price: ${formattedData.last_price} (${formattedData.price_change_percent >= 0 ? '+' : ''}${formattedData.price_change_percent.toFixed(2)}%)`);
+    console.log(`Returning CME lithium spot price: ${formattedData.last_price} (${formattedData.price_change_percent >= 0 ? '+' : ''}${formattedData.price_change_percent.toFixed(2)}%)`);
     
     res.status(200).json({
       success: true,
       data: formattedData,
-      message: "Retrieved CME copper spot price from database"
+      message: "Retrieved CME lithium spot price from database"
     });
     
   } catch (error) {
-    console.error('Error fetching CME copper spot price from database:', error);
+    console.error('Error fetching CME lithium spot price from database:', error);
     
     res.status(500).json({
       success: false,
       data: null,
-      message: "Database error - unable to fetch CME copper spot price",
+      message: "Database error - unable to fetch CME lithium spot price",
       error: error.message
     });
   }

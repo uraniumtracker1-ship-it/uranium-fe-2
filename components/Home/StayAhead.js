@@ -9,20 +9,20 @@ import { useRef } from "react";
 const StayAhead = () => {
   const features = [
     {
-      title: "Copper Stock Screener",
+      title: "Lithium Stock Screener",
       icon: <LuCrown className="w-6 h-6 text-accent" />,
       description: [
-        "Use our Copper Stock screener to find suitable Copper stocks",
+        "Use our Lithium Stock screener to find suitable Lithium stocks",
         "Search by Jurisdiction, stock exchange, marketcap",
       ],
       link: "/investments?tab=stock-screener",
     },
     {
-      title: "Copper News",
+      title: "Lithium News",
       icon: <IoNewspaperOutline className="w-6 h-6 text-accent" />,
       description: [
-        "Stay ahead with up to date Copper News",
-        "Track most recent press releases on all Copper stocks",
+        "Stay ahead with up to date Lithium News",
+        "Track most recent press releases on all Lithium stocks",
       ],
       link: "/news",
     },
@@ -30,7 +30,7 @@ const StayAhead = () => {
       title: "Track Insider Transactions",
       icon: <AiOutlineSetting className="w-6 h-6 text-accent" />,
       description: [
-        "See if insiders are buying or selling your Copper stocks",
+        "See if insiders are buying or selling your Lithium stocks",
         "See recent insider trades so you can stay ahead of the game",
       ],
       link: "/investments?tab=insider-transactions",
@@ -70,10 +70,10 @@ const StayAhead = () => {
         <div className="md:w-2/6 sm:p-8 rounded-lg flex flex-col justify-between">
           <div>
             <h1 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-6 cambay text-white">
-              Stay ahead with real-time Copper news, price and analysis
+              Stay ahead with real-time Lithium news, price and analysis
             </h1>
             <p className="text-sm text-white/80 font-medium mb-4 sm:mb-8">
-              Sign up for Copper Tracker's to gain access to Copper Tracker's full
+              Sign up for Lithium Tracker's to gain access to Lithium Tracker's full
               suite of research tools
             </p>
           </div>
