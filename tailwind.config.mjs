@@ -10,7 +10,9 @@ export default {
       colors: {
         primary: "#000000",
         secondary: "#B7B7B7",
-        accent: "#06B6D4", // Lithium color (vibrant cyan/teal - represents energy, batteries, EV)
+        accent: "#2962FF", // Electric blue - energetic, technological, associated with electricity and clean energy
+        "accent-light": "#1E90FF", // Clean electric blue variant
+        "accent-bright": "#00BFFF", // Brighter, more energetic variant
       },
     },
   },
