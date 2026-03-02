@@ -4,20 +4,20 @@ const PlatinumPrice = () => {
   const [copperData, setCopperData] = useState(null);
 
   useEffect(() => {
-    // Fetch CME copper spot price data from the API
-    fetch('/api/cme-copper-spot')
+    // Fetch CME lithium spot price data from the API
+    fetch('/api/cme-lithium-spot')
       .then((response) => response.json())
       .then((response) => {
         if (response.success && response.data) {
           setCopperData(response.data);
         } else {
-          console.error("Failed to fetch CME copper data:", response.message);
+          console.error("Failed to fetch CME lithium data:", response.message);
           // No fallback data - show error state
           setCopperData(null);
         }
       })
       .catch((error) => {
-        console.error("Error fetching CME copper data:", error);
+        console.error("Error fetching CME lithium data:", error);
         // No fallback data - show error state
         setCopperData(null);
       });
@@ -28,7 +28,7 @@ const PlatinumPrice = () => {
     return (
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 mt-4 rounded-lg max-w-3xl">
         <div className="text-center text-red-400">
-          <p>CME copper spot price data unavailable</p>
+          <p>CME lithium spot price data unavailable</p>
           <p className="text-sm text-gray-400">Real-time data only - no fallback data</p>
         </div>
       </div>

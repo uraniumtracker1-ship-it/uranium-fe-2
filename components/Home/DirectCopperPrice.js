@@ -10,8 +10,8 @@ const DirectCopperPrice = () => {
       try {
         setLoading(true);
         
-        // Fetch copper price from CME Group API
-        const response = await fetch('/api/cme-copper-spot');
+        // Fetch lithium price from CME Group API
+        const response = await fetch('/api/cme-lithium-spot');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -164,7 +164,7 @@ const DirectCopperPrice = () => {
           <a
             target="_blank"
             className="text-accent hover:text-accent/60 transition-all duration-200"
-            href="/api/cme-copper-spot"
+            href="/api/cme-lithium-spot"
             rel="noopener noreferrer"
           >
             CME Group - Copper Futures

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { copperAssetsData } from "@/public/static-data/copperAssetsData";
+import { lithiumAssetsData } from "@/public/static-data/copperAssetsData";
 
 const PAGE_SIZE = 15;
 
@@ -21,17 +21,17 @@ const ICopperAssets = () => {
   // Get unique values for filters
   const uniqueOptions = useMemo(() => {
     return {
-      companyType: ["All", ...new Set(copperAssetsData.map(item => item["Company Type"]).filter(Boolean))],
-      country: ["All", ...new Set(copperAssetsData.map(item => item["Domiciled"]).filter(Boolean))],
-      stage: ["All", ...new Set(copperAssetsData.map(item => item["Company Type"]).filter(Boolean))],
-      mineLocation: ["All", ...new Set(copperAssetsData.map(item => item["Mine Location Country"]).filter(Boolean))],
-      primaryResource: ["All", ...new Set(copperAssetsData.map(item => item["Primary Assets"]).filter(Boolean))],
+      companyType: ["All", ...new Set(lithiumAssetsData.map(item => item["Company Type"]).filter(Boolean))],
+      country: ["All", ...new Set(lithiumAssetsData.map(item => item["Domiciled"]).filter(Boolean))],
+      stage: ["All", ...new Set(lithiumAssetsData.map(item => item["Company Type"]).filter(Boolean))],
+      mineLocation: ["All", ...new Set(lithiumAssetsData.map(item => item["Mine Location Country"]).filter(Boolean))],
+      primaryResource: ["All", ...new Set(lithiumAssetsData.map(item => item["Primary Assets"]).filter(Boolean))],
     };
   }, []);
 
   // Filter and sort data
   const filteredAndSortedData = useMemo(() => {
-    let filtered = copperAssetsData.filter((asset) => {
+    let filtered = lithiumAssetsData.filter((asset) => {
       const matchesSearch = 
         asset["Company Name"]?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         asset["Ticker"]?.toLowerCase().includes(searchTerm.toLowerCase()) ||
