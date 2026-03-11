@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Navbar from "@/components/Navbar";
 import { IoTimerOutline } from "react-icons/io5";
-import PlatinumLivePrice from "@/components/Home/PlatinumLivePrice";
+import LithiumLivePrice from "@/components/Home/LithiumLivePrice";
 import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import PopularIntradayReturn from "@/components/Home/MostFollowed";
 import MoreNews from "@/components/News/MoreNews";
@@ -209,7 +209,7 @@ const PressReleasePage = () => {
 
         {/* Sidebar */}
         <div className="w-full lg:w-[35%] flex flex-col space-y-8 mt-10 lg:mt-0">
-          <PlatinumLivePrice />
+          <LithiumLivePrice />
           <DailyNewsletterAd />
           <PopularIntradayReturn />
         </div>
