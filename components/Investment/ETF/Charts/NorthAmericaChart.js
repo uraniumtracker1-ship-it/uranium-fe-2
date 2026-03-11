@@ -11,7 +11,7 @@ function TradingViewWidget() {
     script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "COMEX:HG1!",
+          "symbol": "AMEX:LIT",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
@@ -22,15 +22,15 @@ function TradingViewWidget() {
           "save_image": false,
           "compareSymbols": [
             {
-              "symbol": "NASDAQ:COPX",
+              "symbol": "NYSE:ALB",
               "position": "SameScale"
             },
             {
-              "symbol": "NYSE:FCX",
+              "symbol": "NYSE:SQM",
               "position": "SameScale"
             },
             {
-              "symbol": "NYSE:SCCO",
+              "symbol": "NYSE:LAC",
               "position": "SameScale"
             }
           ],

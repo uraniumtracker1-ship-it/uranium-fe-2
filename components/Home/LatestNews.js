@@ -450,7 +450,7 @@ const LatestNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Latest Copper News
+          Latest Lithium News
         </h1>
         <div className="flex justify-center items-center h-32">
           <Loader />
@@ -463,7 +463,7 @@ const LatestNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Latest Copper News
+          Latest Lithium News
         </h1>
         <div className="flex justify-center items-center h-32 text-red-500">
           <span>Error: {error}</span>
@@ -476,7 +476,7 @@ const LatestNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Latest Copper News
+          Latest Lithium News
         </h1>
         <div className="text-center py-8 text-gray-500">
           No news available at this time
@@ -488,7 +488,7 @@ const LatestNews = () => {
   return (
     <div>
       <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-        Latest Copper News
+        Latest Lithium News
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -235,9 +235,12 @@ const MostFollowed = () => {
           throw new Error("Failed to fetch data");
         }
         const data = await response.json();
-        setStockData(data.slice(0, 10)); // Limit to 10-12 stocks
+        // Ensure data is an array before calling slice
+        const dataArray = Array.isArray(data) ? data : [];
+        setStockData(dataArray.slice(0, 10)); // Limit to 10 stocks
       } catch (err) {
         setError(err.message);
+        setStockData([]); // Set empty array on error
       } finally {
         setLoading(false);
       }
@@ -302,16 +305,6 @@ const MostFollowed = () => {
       {error && <p className="text-center text-red-500">{error}</p>}
       {!loading && !error && (
         <table className="w-full text-left text-sm font-sans">
-          <thead>
-            <tr>
-              <th className="pb-2 text-xs font-medium text-black1/60">
-                COMPANY
-              </th>
-              <th className="pb-2 text-xs font-medium text-black1/60 text-right">
-                PRICE
-              </th>
-            </tr>
-          </thead>
           <tbody>
             {stockData
               .sort(

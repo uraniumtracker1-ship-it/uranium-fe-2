@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import PlatinumPrice from "./PlatinumPrice";
+import LithiumPrice from "./LithiumPrice";
 import { useRouter } from "next/router";
 
 const Hero = () => {
@@ -65,7 +65,7 @@ const Hero = () => {
           </span>
         </motion.h1>
 
-        {/* PlatinumPrice component */}
+        {/* LithiumPrice component */}
         <motion.div
           className="mt-8"
           variants={textVariants}
@@ -73,7 +73,7 @@ const Hero = () => {
           animate="visible"
           transition={{ delay: 0.2, duration: 1 }}
         >
-          <PlatinumPrice />
+          <LithiumPrice />
         </motion.div>
 
         {/* Button */}

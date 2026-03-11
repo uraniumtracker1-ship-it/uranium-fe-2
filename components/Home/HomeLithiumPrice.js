@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaLink } from "react-icons/fa6";
 import { COPPER_PRICES } from "@/src/api/lithiumAPI";
 
-const HomeCopperPrice = () => {
-  const [copperPrices, setCopperPrices] = useState([]);
+const HomeLithiumPrice = () => {
+  const [metalPrices, setMetalPrices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -16,13 +16,13 @@ const HomeCopperPrice = () => {
         }
         const data = await response.json();
 
-        // Sort data to ensure Copper comes first
+        // Sort data to ensure Lithium comes first
         const sortedData = data.sort((a, b) => {
-          if (a.metal_name === "Copper") return -1;
-          if (b.metal_name === "Copper") return 1;
+          if (a.metal_name === "Lithium") return -1;
+          if (b.metal_name === "Lithium") return 1;
           return 0;
         });
-        setCopperPrices(sortedData);
+        setMetalPrices(sortedData);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -80,7 +80,7 @@ const HomeCopperPrice = () => {
       </td>
       <td className="border-t px-4 py-3 text-center">
         <a
-          href="https://www.lme.com/en/metals/non-ferrous/copper"
+          href="https://tradingeconomics.com/commodity/lithium"
           target="_blank"
           rel="noopener noreferrer"
           className="text-black/70 hover:text-black/60"
@@ -103,10 +103,10 @@ const HomeCopperPrice = () => {
             <th className="border-t px-4 py-2">Source</th>
           </tr>
         </thead>
-        <tbody>{copperPrices.map((metalData) => renderRow(metalData))}</tbody>
+        <tbody>{metalPrices.map((metalData) => renderRow(metalData))}</tbody>
       </table>
     </div>
   );
 };
 
-export default HomeCopperPrice;
+export default HomeLithiumPrice;

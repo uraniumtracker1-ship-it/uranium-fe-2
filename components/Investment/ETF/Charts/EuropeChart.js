@@ -12,7 +12,7 @@ function TradingViewWidget() {
     script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "NYSE:BHP",
+          "symbol": "NASDAQ:TSLA",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
@@ -23,15 +23,15 @@ function TradingViewWidget() {
           "save_image": false,
           "compareSymbols": [
             {
-              "symbol": "NYSE:RIO",
+              "symbol": "NYSE:GM",
               "position": "SameScale"
             },
             {
-              "symbol": "NYSE:VALE",
+              "symbol": "NASDAQ:RIVN",
               "position": "SameScale"
             },
             {
-              "symbol": "NYSE:AA",
+              "symbol": "NYSE:F",
               "position": "SameScale"
             }
           ],

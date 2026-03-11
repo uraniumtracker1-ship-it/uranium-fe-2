@@ -15,9 +15,9 @@ const AsiaETFIntradayReturnTickers = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbols: [
-        { description: "", proName: "NYSE:TECK" },
-        { description: "", proName: "OTC:GLCNF" },
-        { description: "", proName: "LSE:ANTO" },
+        { description: "", proName: "TSX:LAC" },
+        { description: "", proName: "ASX:PLS" },
+        { description: "", proName: "NASDAQ:BYDDY" },
       ],
       isTransparent: false,
       showSymbolLogo: true,

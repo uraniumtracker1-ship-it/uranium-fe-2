@@ -63,7 +63,7 @@ const Hero = () => {
           <div className="relative flex items-center justify-center overflow-hidden rounded-lg" style={{ height: "350px" }}>
             <div className="text-white text-center">
               <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent mb-4">
-                Copper News
+                Lithium News
               </p>
               <h1 className="text-2xl lg:text-4xl font-bold cambay">Loading latest news...</h1>
             </div>
@@ -98,7 +98,7 @@ const Hero = () => {
           <div className="relative flex items-center justify-center overflow-hidden rounded-lg" style={{ height: "350px" }}>
             <div className="text-white text-center">
               <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent mb-4">
-                Copper News
+                Lithium News
               </p>
               <h1 className="text-2xl lg:text-4xl font-bold cambay">No news available</h1>
             </div>
@@ -132,7 +132,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="relative z-10 p-6 text-white max-w-2xl">
             <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent">
-              Copper News
+              Lithium News
             </p>
 
             {/* Ticker Badge */}
@@ -160,7 +160,7 @@ const Hero = () => {
                 ? `${news[currentIndex]?.summary.substring(0, 200)}...`
                 : news[currentIndex]?.title
                 ? `${news[currentIndex]?.title.substring(0, 200)}...`
-                : "Catch up on our latest Copper news and updates."}
+                : "Catch up on our latest Lithium news and updates."}
             </p>
             <div className="text-xs text-gray-300 flex items-center space-x-1">
               {/* Time Icon */}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const PlatinumPrice = () => {
-  const [copperData, setCopperData] = useState(null);
+const LithiumPrice = () => {
+  const [lithiumData, setLithiumData] = useState(null);
 
   useEffect(() => {
     // Fetch CME lithium spot price data from the API
@@ -9,22 +9,22 @@ const PlatinumPrice = () => {
       .then((response) => response.json())
       .then((response) => {
         if (response.success && response.data) {
-          setCopperData(response.data);
+          setLithiumData(response.data);
         } else {
           console.error("Failed to fetch CME lithium data:", response.message);
           // No fallback data - show error state
-          setCopperData(null);
+          setLithiumData(null);
         }
       })
       .catch((error) => {
         console.error("Error fetching CME lithium data:", error);
         // No fallback data - show error state
-        setCopperData(null);
+        setLithiumData(null);
       });
   }, []);
 
-  // If copperData is not yet available, render a loading state
-  if (!copperData) {
+  // If lithiumData is not yet available, render a loading state
+  if (!lithiumData) {
     return (
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 mt-4 rounded-lg max-w-3xl">
         <div className="text-center text-red-400">
@@ -36,31 +36,35 @@ const PlatinumPrice = () => {
   }
 
   // Extract and format the required values, with fallback to 0.00 if data is invalid
-  const copperSpotPrice = copperData.last_price
-    ? parseFloat(copperData.last_price).toFixed(4)
-    : "0.0000";
-  const changePercentage = copperData.price_change_percent
-    ? parseFloat(copperData.price_change_percent).toFixed(2)
+  const price = lithiumData.last_price ? parseFloat(lithiumData.last_price) : 0;
+  const lithiumSpotPrice = price > 1000
+    ? price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+    : price.toFixed(4);
+  
+  const changeValue = lithiumData.price_change ? parseFloat(lithiumData.price_change) : 0;
+  const change = changeValue > 1000
+    ? changeValue.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+    : changeValue.toFixed(4);
+  
+  const changePercentage = lithiumData.price_change_percent
+    ? parseFloat(lithiumData.price_change_percent).toFixed(2)
     : "0.00";
-  const change = copperData.price_change
-    ? parseFloat(copperData.price_change).toFixed(4)
-    : "0.0000";
 
   // Format the change to display the dollar sign before the negative sign if necessary
-  const formattedChange = `${parseFloat(change) > 0 ? "+" + change : change}`;
+  const formattedChange = `${changeValue > 0 ? "+" + change : change}`;
 
   return (
     <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 mt-4 rounded-lg max-w-3xl">
       {/* Large Screen Layout */}
       <div className="hidden lg:flex flex-row gap-10">
-        {/* Copper Spot Price */}
+        {/* Lithium Spot Price */}
         <div className="text-center lg:text-left">
           <h2 className="text-base font-bold text-white">
-            Copper Spot Price
+            Lithium Spot Price
           </h2>
-          <p className="text-base mt-1">${copperSpotPrice}</p>
+          <p className="text-base mt-1">¥{lithiumSpotPrice}</p>
         </div>
-        {/* Change in Dollars */}
+        {/* Change in Yuan */}
         <div className="text-center lg:text-left">
           <h2 className="text-base font-bold text-white">Change</h2>
           <p
@@ -68,7 +72,7 @@ const PlatinumPrice = () => {
               parseFloat(change) > 0 ? "text-green-400" : "text-red-400"
             }`}
           >
-            {formattedChange}
+            ¥{formattedChange}
           </p>
         </div>
         {/* Change Percentage */}
@@ -91,8 +95,8 @@ const PlatinumPrice = () => {
       {/* Small Screen Layout */}
       <div className="lg:hidden space-y-2">
         <p className="text-base font-bold text-white">
-          Copper Spot Price:{" "}
-          <span className="font-normal">${copperSpotPrice}</span>
+          Lithium Spot Price:{" "}
+          <span className="font-normal">¥{lithiumSpotPrice}</span>
         </p>
 
         <p className="text-base font-bold text-white">
@@ -102,7 +106,7 @@ const PlatinumPrice = () => {
               parseFloat(change) > 0 ? "text-green-400" : "text-red-400"
             } font-normal`}
           >
-            {formattedChange}
+            ¥{formattedChange}
           </span>
         </p>
         <p className="text-base font-bold text-white">
@@ -124,4 +128,4 @@ const PlatinumPrice = () => {
   );
 };
 
-export default PlatinumPrice;
+export default LithiumPrice;

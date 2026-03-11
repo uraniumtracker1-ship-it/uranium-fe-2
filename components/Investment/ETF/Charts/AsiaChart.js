@@ -12,7 +12,7 @@ function TradingViewWidget() {
     script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "NYSE:TECK",
+          "symbol": "TSX:LAC",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
@@ -23,11 +23,11 @@ function TradingViewWidget() {
           "save_image": false,
           "compareSymbols": [
             {
-              "symbol": "OTC:GLCNF",
+              "symbol": "ASX:PLS",
               "position": "SameScale"
             },
             {
-              "symbol": "LSE:ANTO",
+              "symbol": "NASDAQ:BYDDY",
               "position": "SameScale"
             }
           ],

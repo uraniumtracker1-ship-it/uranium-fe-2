@@ -8,6 +8,8 @@ export const SPORT_PRICE_CHART = `${BASE_URL}/api/spot-price-chart/`;
 
 export const LITHIUM_PRICES = '/api/lithium-prices';
 
+export const COPPER_PRICES = '/api/copper-prices';
+
 // Updated to use local API routes for press releases and stock news
 export const PRESS_RELEASE = '/api/press-releases';
 

@@ -12,28 +12,37 @@ function LithiumCFDTradingViewWidget() {
     script.async = true;
     script.innerHTML = `
         {
-          "width": "100%",
-          "height": "250",
-          "symbol": "CAPITALCOM:LITHIUM",
+          "autosize": true,
+          "symbol": "AMEX:LIT",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
-          "style": "2",
+          "style": "1",
           "locale": "en",
-          "hide_top_toolbar": true,
-          "hide_legend": true,
-          "allow_symbol_change": false,
+          "enable_publishing": false,
+          "hide_top_toolbar": false,
+          "hide_legend": false,
+          "allow_symbol_change": true,
           "save_image": false,
           "calendar": false,
-          "hide_volume": true,
+          "hide_volume": false,
           "support_host": "https://www.tradingview.com"
         }`;
-    container.current.appendChild(script);
+    
+    if (container.current) {
+      container.current.innerHTML = '';
+      container.current.appendChild(script);
+    }
   }, []);
 
   return (
-    <div className="tradingview-widget-container" ref={container}>
-      <div className="tradingview-widget-container__widget"></div>
+    <div className="tradingview-widget-container" style={{ height: "400px", width: "100%" }}>
+      <div className="tradingview-widget-container__widget" ref={container} style={{ height: "calc(100% - 32px)", width: "100%" }}></div>
+      <div className="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+          <span className="blue-text">Track all markets on TradingView</span>
+        </a>
+      </div>
     </div>
   );
 }

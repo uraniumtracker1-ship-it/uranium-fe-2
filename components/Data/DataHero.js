@@ -27,19 +27,19 @@ const DataHero = () => {
           {/* Text Content */}
           <div className="relative z-10 p-6 text-white max-w-2xl">
             <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent">
-              Copper Data
+              Lithium Data
             </p>
 
             <h1 className="text-2xl lg:text-4xl font-bold my-4 cambay">
               Discover the data you need to analyze and{" "}
-              <span className="text-white">Research Copper</span>
+              <span className="text-white">Research Lithium</span>
             </h1>
 
             <p className="text-sm md:text-base mb-10">
-              Access comprehensive Copper market data, including price trends,
+              Access comprehensive Lithium market data, including price trends,
               supply and demand metrics, and industry analysis. Our detailed
               datasets provide the insights you need for informed
-              decision-making in the Copper market.
+              decision-making in the Lithium market.
             </p>
 
             <div className="text-xs text-gray-300">

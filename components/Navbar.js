@@ -179,7 +179,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "News", path: "/news" },
-    { name: "Copper Investments", path: "/investments" },
+    { name: "Lithium Investments", path: "/investments" },
     { name: "Videos", path: "/videos" },
     { name: "Data", path: "/data" },
     { name: "Lithium 101", path: "/C101" },

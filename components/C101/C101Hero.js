@@ -25,11 +25,11 @@ const C101Hero = () => {
 
             <h1 className="text-2xl lg:text-4xl font-bold my-4  cambay">
               Explore the Latest Insights, Market Data, and{" "}
-              <span className="text-white">Key Information on Copper</span>
+              <span className="text-white">Key Information on Lithium</span>
             </h1>
 
             <p className="text-sm md:text-base mb-6">
-              Get started with our comprehensive guide to copper markets. From
+              Get started with our comprehensive guide to lithium markets. From
               fundamental concepts to advanced market analysis, discover
               everything you need to know about this essential metal's role in
               the global economy and renewable energy transition.
@@ -37,7 +37,7 @@ const C101Hero = () => {
 
             <div className="text-xs text-gray-300">
               <p className="text-gray-300">
-                Your complete guide to understanding copper markets
+                Your complete guide to understanding lithium markets
               </p>
             </div>
           </div>
