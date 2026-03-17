@@ -56,40 +56,40 @@ const MostFollowedStocksTable = () => {
 
   const getFallbackData = () => ({
     most_watched: [
-      { id: '1', ticker: 'FCX', name: 'Freeport-McMoRan', current_price: 45.67, intraday_percentage: 2.34 },
-      { id: '2', ticker: 'SCCO', name: 'Southern Copper Corporation', current_price: 89.12, intraday_percentage: -1.23 },
-      { id: '3', ticker: 'BHP', name: 'BHP Group', current_price: 67.89, intraday_percentage: 0.87 },
-      { id: '4', ticker: 'RIO', name: 'Rio Tinto', current_price: 78.45, intraday_percentage: 1.56 },
-      { id: '5', ticker: 'ANTO', name: 'Antofagasta', current_price: 23.67, intraday_percentage: -0.45 },
-      { id: '6', ticker: 'TECK', name: 'Teck Resources', current_price: 56.78, intraday_percentage: 3.21 },
-      { id: '7', ticker: 'IVN', name: 'Ivanhoe Mines', current_price: 12.34, intraday_percentage: 4.56 },
-      { id: '8', ticker: 'LUN', name: 'Lundin Mining', current_price: 8.90, intraday_percentage: -2.10 },
-      { id: '9', ticker: 'FM', name: 'First Quantum Minerals', current_price: 34.56, intraday_percentage: 1.78 },
-      { id: '10', ticker: 'COPX', name: 'Global X Copper Miners ETF', current_price: 45.23, intraday_percentage: 0.98 }
+      { id: '1', ticker: 'ALB', name: 'Albemarle Corporation', current_price: 0, intraday_percentage: 0 },
+      { id: '2', ticker: 'SQM', name: 'Sociedad Quimica y Minera', current_price: 0, intraday_percentage: 0 },
+      { id: '3', ticker: 'LTHM', name: 'Livent Corporation', current_price: 0, intraday_percentage: 0 },
+      { id: '4', ticker: 'LAC', name: 'Lithium Americas', current_price: 0, intraday_percentage: 0 },
+      { id: '5', ticker: 'GNENF', name: 'Ganfeng Lithium (ADR)', current_price: 0, intraday_percentage: 0 },
+      { id: '6', ticker: 'RIO', name: 'Rio Tinto (Arcadium)', current_price: 0, intraday_percentage: 0 },
+      { id: '7', ticker: 'LITM', name: 'Standard Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '8', ticker: 'SGML', name: 'Sigma Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '9', ticker: 'LIT', name: 'Global X Lithium ETF', current_price: 0, intraday_percentage: 0 },
+      { id: '10', ticker: 'LIXT', name: 'LITT Lithium Balance ETF', current_price: 0, intraday_percentage: 0 },
     ],
     north_american_leaders: [
-      { id: '11', ticker: 'CS', name: 'Capstone Copper', current_price: 7.89, intraday_percentage: 2.45 },
-      { id: '12', ticker: 'ERO', name: 'Ero Copper', current_price: 23.45, intraday_percentage: -1.67 },
-      { id: '13', ticker: 'HBM', name: 'Hudbay Minerals', current_price: 9.87, intraday_percentage: 3.21 },
-      { id: '14', ticker: 'TKO', name: 'Taseko Mines', current_price: 2.34, intraday_percentage: -0.89 },
-      { id: '15', ticker: 'ASCU', name: 'Arizona Sonoran Copper', current_price: 1.56, intraday_percentage: 5.67 },
-      { id: '16', ticker: 'WRN', name: 'Western Copper and Gold', current_price: 3.45, intraday_percentage: 1.23 },
-      { id: '17', ticker: 'IE', name: 'Ivanhoe Electric', current_price: 8.76, intraday_percentage: -2.34 },
-      { id: '18', ticker: 'SLS', name: 'Solaris Resources', current_price: 4.32, intraday_percentage: 2.78 },
-      { id: '19', ticker: 'NGEX', name: 'NGEx Minerals', current_price: 6.54, intraday_percentage: 0.45 },
-      { id: '20', ticker: 'FOM', name: 'Foran Mining', current_price: 2.87, intraday_percentage: 1.89 }
+      { id: '11', ticker: 'LIILIF', name: 'Lithium Ionic', current_price: 0, intraday_percentage: 0 },
+      { id: '12', ticker: 'LIACF', name: 'Lithium Americas Corp', current_price: 0, intraday_percentage: 0 },
+      { id: '13', ticker: 'E3M', name: 'E3 Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '14', ticker: 'PMET', name: 'Patriot Battery Metals', current_price: 0, intraday_percentage: 0 },
+      { id: '15', ticker: 'FL', name: 'Frontier Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '16', ticker: 'LITM', name: 'Standard Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '17', ticker: 'QDST', name: 'QuantumScape (batteries)', current_price: 0, intraday_percentage: 0 },
+      { id: '18', ticker: 'EEMMF', name: 'Euro Manganese', current_price: 0, intraday_percentage: 0 },
+      { id: '19', ticker: 'LI', name: 'Li Auto (EV)', current_price: 0, intraday_percentage: 0 },
+      { id: '20', ticker: 'LIACF', name: 'Lithium Americas', current_price: 0, intraday_percentage: 0 },
     ],
     global_market_leaders: [
-      { id: '21', ticker: 'ZIJMF', name: 'Zijin Mining Group', current_price: 12.45, intraday_percentage: 1.67 },
-      { id: '22', ticker: 'JIXAY', name: 'Jiangxi Copper', current_price: 34.56, intraday_percentage: -0.78 },
-      { id: '23', ticker: 'MMG', name: 'MMG Limited', current_price: 5.67, intraday_percentage: 2.34 },
-      { id: '24', ticker: 'CMCL', name: 'CMOC Group', current_price: 8.90, intraday_percentage: -1.45 },
-      { id: '25', ticker: 'MARI', name: 'Marimaca Copper', current_price: 3.21, intraday_percentage: 3.67 },
-      { id: '26', ticker: 'NCX', name: 'NorthIsle Copper and Gold', current_price: 1.23, intraday_percentage: 0.89 },
-      { id: '27', ticker: 'PERU', name: 'Chakana Copper', current_price: 0.87, intraday_percentage: -2.10 },
-      { id: '28', ticker: 'WCU', name: 'World Copper', current_price: 0.45, intraday_percentage: 4.56 },
-      { id: '29', ticker: 'INFI', name: 'Infinitum Copper', current_price: 0.23, intraday_percentage: 1.78 },
-      { id: '30', ticker: 'COPP', name: 'Horizons Copper Producers Index ETF', current_price: 23.45, intraday_percentage: 0.67 }
+      { id: '21', ticker: 'PLS.AX', name: 'Pilbara Minerals', current_price: 0, intraday_percentage: 0 },
+      { id: '22', ticker: 'LTR.AX', name: 'Liontown Resources', current_price: 0, intraday_percentage: 0 },
+      { id: '23', ticker: 'MIN.AX', name: 'Mineral Resources', current_price: 0, intraday_percentage: 0 },
+      { id: '24', ticker: 'IGO.AX', name: 'IGO Limited', current_price: 0, intraday_percentage: 0 },
+      { id: '25', ticker: 'CXO.AX', name: 'Core Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '26', ticker: 'GL1.AX', name: 'Global Lithium Resources', current_price: 0, intraday_percentage: 0 },
+      { id: '27', ticker: 'VUL.AX', name: 'Vulcan Energy Resources', current_price: 0, intraday_percentage: 0 },
+      { id: '28', ticker: 'LKE.AX', name: 'Lake Resources', current_price: 0, intraday_percentage: 0 },
+      { id: '29', ticker: 'AGY.AX', name: 'Argosy Minerals', current_price: 0, intraday_percentage: 0 },
+      { id: '30', ticker: 'AKE.AX', name: 'Allkem Limited', current_price: 0, intraday_percentage: 0 },
     ]
   });
 
@@ -250,17 +250,17 @@ const MostFollowedStocksTable = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {renderColumn(
             stocksData.most_watched, 
-            "Most Watched Copper Stocks - Live Performance",
+            "Most Watched Lithium",
             "Live Performance"
           )}
           {renderColumn(
             stocksData.north_american_leaders, 
-            "North American Copper Leaders - Market Performance",
+            "North American Leaders",
             "Market Performance"
           )}
           {renderColumn(
             stocksData.global_market_leaders, 
-            "Global Copper Market Leaders - Live Tracking",
+            "Australian Lithium Leaders",
             "Live Tracking"
           )}
         </div>
