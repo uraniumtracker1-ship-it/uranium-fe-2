@@ -14,13 +14,13 @@ const TableCanadaInsiderTransactions = ({
   const totalPages = Math.ceil(homeData.length / rowsPerPage);
 
   const getColorClass = (value) => {
-    const num = parseFloat((value || "").replace(/[^\d.-]/g, ""));
+    const num = parseFloat((String(value || "")).replace(/[^\d.-]/g, ""));
     if (isNaN(num)) return "";
     return num < 0 ? "text-red-500" : "text-green-500";
   };
 
   const formatLargeNumber = (value) => {
-    const valueStr = value || "";
+    const valueStr = String(value || "");
     const hasDollarSign = valueStr.includes("$");
     const num = parseFloat(valueStr.replace(/[^\d.-]/g, ""));
     if (isNaN(num)) return value;
