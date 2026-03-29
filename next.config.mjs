@@ -22,7 +22,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Handle potential build issues
+  // Handle potential build issues 
   typescript: {
     ignoreBuildErrors: false,
   },

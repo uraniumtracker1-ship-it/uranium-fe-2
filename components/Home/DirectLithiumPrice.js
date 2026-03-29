@@ -86,7 +86,19 @@ const DirectLithiumPrice = () => {
     );
   }
 
-  const { price, price_change, price_change_percent, source, note } = lithiumData;
+  const { price, price_change, price_change_percent, source } = lithiumData;
+
+  // Format large numbers (CNY) with commas
+  const formattedPrice = price > 1000 
+    ? price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+    : price.toFixed(2);
+  
+  const changeValue = parseFloat(price_change || 0);
+  const formattedChange = Math.abs(changeValue) > 1000
+    ? Math.abs(changeValue).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+    : Math.abs(changeValue).toFixed(2);
+  
+  const formattedPercent = parseFloat(price_change_percent || 0).toFixed(2);
 
   return (
     <div className="text-center">
@@ -94,55 +106,54 @@ const DirectLithiumPrice = () => {
         Live Lithium Price
       </h2>
 
-      <div className="bg-accent/30 p-3 md:p-2 lg:p-3 py-4 w-full border border-accent/30 rounded-md flex justify-between items-center">
-        <div className="h-8 md:h-6 lg:h-8">
-          <img
-            className="w-16 md:w-12 lg:w-28 h-16 md:h-6 lg:h-10 sm:h-10 sm:w-28"
-            src="/logotransparent.jpg"
-            alt="Lithium Tracker Logo"
-          />
-        </div>
+      {/* Single row with all data */}
+      <div className="bg-accent/30 p-4 md:p-3 lg:p-4 w-full border border-accent/30 rounded-md">
+        <div className="flex items-center justify-between gap-2">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <img
+              className="w-20 h-10 md:w-16 md:h-8 lg:w-20 lg:h-10 object-contain"
+              src="/logo.jpg"
+              alt="Lithium Tracker Logo"
+            />
+          </div>
 
-        <div className="w-[60%] md:w-[70%] pr-1">
-          <ul className="flex items-center gap-x-5 md:gap-x-3 lg:gap-x-5 text-xs md:text-[10px] lg:text-sm">
-            <li className="w-[33%] text-black1/80 font-medium">Price</li>
-            <li className="w-[33%] text-black1/80 font-medium">Change</li>
-            <li className="w-[33%] text-black1/80 font-medium">% Change</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="mt-1 bg-accent/30 p-3 md:p-2 lg:p-3 py-4 w-full border border-accent/30 rounded-md flex justify-between items-center">
-        <div>
-          <h3 className="text-xs md:text-[9px] lg:text-sm font-bold text-green">
-            Lithium Spot Price
-          </h3>
-        </div>
-
-        <div className="w-[60%] md:w-[70%]">
-          <ul className="flex items-center gap-x-5 md:gap-x-3 lg:gap-x-5 text-xs md:text-[9px] lg:text-sm font-semibold text-green">
-            <li className="w-[33%]">
-              <p>${price}</p>
-            </li>
-            <li className="w-[33%]">
-              <p
-                className={`${parseFloat(price_change) >= 0 ? "text-green-600" : "text-red-500"}`}
-              >
-                {parseFloat(price_change) >= 0 ? `$+${price_change}` : `${price_change}`}
+          {/* Price Data */}
+          <div className="flex-1 grid grid-cols-3 gap-2 text-center">
+            {/* Price */}
+            <div>
+              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">Price</p>
+              <p className="text-sm md:text-xs lg:text-sm font-bold text-green">
+                ¥{formattedPrice}
               </p>
-            </li>
-            <li className="w-[33%]">
+            </div>
+
+            {/* Change */}
+            <div>
+              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">Change</p>
               <p
-                className={`${
-                  parseFloat(price_change_percent) >= 0 ? "text-green-600" : "text-red-500"
+                className={`text-sm md:text-xs lg:text-sm font-bold ${
+                  changeValue >= 0 ? "text-green-600" : "text-red-500"
                 }`}
               >
-                {parseFloat(price_change_percent) >= 0
-                  ? `+${price_change_percent}%`
-                  : `${price_change_percent}%`}
+                {changeValue >= 0 ? `¥+${formattedChange}` : `¥-${formattedChange}`}
               </p>
-            </li>
-          </ul>
+            </div>
+
+            {/* % Change */}
+            <div>
+              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">% Change</p>
+              <p
+                className={`text-sm md:text-xs lg:text-sm font-bold ${
+                  parseFloat(formattedPercent) >= 0 ? "text-green-600" : "text-red-500"
+                }`}
+              >
+                {parseFloat(formattedPercent) >= 0
+                  ? `+${formattedPercent}%`
+                  : `${formattedPercent}%`}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -150,21 +161,11 @@ const DirectLithiumPrice = () => {
         <p className="text-xs text-gray-600">
           Source: {source}
         </p>
-        {note && (
-          <p className="text-xs text-orange-600 mt-1">
-            {note}
-          </p>
-        )}
-        {error && (
-          <p className="text-xs text-red-500 mt-1">
-            Note: Using fallback data - {error}
-          </p>
-        )}
         <p className="font-medium text-date text-sm md:text-xs lg:text-sm">
           <a
             target="_blank"
             className="text-accent hover:text-accent/60 transition-all duration-200"
-            href="/api/cme-lithium-spot"
+            href="https://tradingeconomics.com/commodity/lithium"
             rel="noopener noreferrer"
           >
             CME Group - Lithium Futures
