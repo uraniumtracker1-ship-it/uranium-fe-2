@@ -3,8 +3,8 @@ import { useRouter } from "next/navigation";
 import { ArrowUp, ArrowDown } from "lucide-react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { FOLLOWED_STOCKS } from "@/src/api/lithiumAPI";
-import { LITHIUM_STOCK_DETAIL } from "@/src/api/lithiumAPI";
+import { FOLLOWED_STOCKS } from "@/src/api/uraniumAPI";
+import { URANIUM_STOCK_DETAIL } from "@/src/api/uraniumAPI";
 
 const StockScreenerTable = ({
   displayedData,
@@ -72,7 +72,7 @@ const StockScreenerTable = ({
   const checkSubpageExists = async (stockTicker) => {
     try {
       const response = await axios.get(
-        `${LITHIUM_STOCK_DETAIL}?stock_ticker=${stockTicker}`
+        `${URANIUM_STOCK_DETAIL}?stock_ticker=${stockTicker}`
       );
       return response.data && Object.keys(response.data).length > 0;
     } catch (error) {

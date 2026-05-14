@@ -1,6 +1,6 @@
 {
-    "ruthenium_demand": {
-      "title": "Global industrial demand for ruthenium",
+    "uranium_demand": {
+      "title": "Global industrial demand for uranium",
       "units": "thousand ounces",
       "categories": {
         "chemical": {
@@ -30,8 +30,8 @@
         "2024": 1105
       }
     },
-    "iridium_demand": {
-      "title": "Global industrial demand for iridium",
+    "uranium_demand": {
+      "title": "Global industrial demand for uranium",
       "units": "thousand ounces",
       "categories": {
         "chemical": {

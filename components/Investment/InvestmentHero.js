@@ -54,17 +54,17 @@ const InvestmentHero = () => {
           {/* Text Content */}
           <div className="relative z-10 p-6 text-white max-w-2xl">
             <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent">
-              Lithium Investments
+              Uranium Investments
             </p>
 
             <h1 className="text-2xl lg:text-4xl font-bold my-4  cambay">
               Elevate Your Portfolio with{" "}
-              <span className="text-white">Lithium Investment Strategies</span>
+              <span className="text-white">Uranium Investment Strategies</span>
             </h1>
 
             <p className="text-sm md:text-base mb-10">
-              Discover the potential of Lithium investments through our
-              comprehensive range of investment options. From physical Lithium to
+              Discover the potential of Uranium investments through our
+              comprehensive range of investment options. From physical Uranium to
               ETFs and mining stocks, we offer diverse ways to incorporate this
               precious metal into your portfolio.
             </p>

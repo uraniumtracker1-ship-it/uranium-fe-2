@@ -7,7 +7,7 @@ const C101Cards = () => {
   const router = useRouter();
 
   const handleNavigation = (id) => {
-    router.push(`/copper101/${id}`);
+    router.push(`/uranium101/${id}`);
   };
 
   return (
@@ -44,7 +44,7 @@ const C101Cards = () => {
 
           {/* glossary card  */}
           <div
-            onClick={() => router.push("/copper101/glossary")}
+            onClick={() => router.push("/uranium101/glossary")}
             className="card relative group w-full h-[360px] overflow-hidden rounded-t-[1.7rem] flex flex-col border border-date/20 cursor-pointer"
           >
             <div className="w-full h-full bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-[1.03] overflow-hidden -mb-3">

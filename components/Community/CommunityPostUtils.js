@@ -8,7 +8,7 @@ import GeneralHelpers from "../../src/utils/general-helpers";
 import { GetUserData } from "../../src/utils/GetUserData";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { BASE_URL } from "@/src/api/lithiumAPI";
+import { BASE_URL } from "@/src/api/uraniumAPI";
 
 const PostUtils = ({
   auth,

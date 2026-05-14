@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { SUBSTACKS } from "@/src/api/lithiumAPI";
+import { SUBSTACKS } from "@/src/api/uraniumAPI";
 
 const Substacks = () => {
   const [substackPosts, setSubstackPosts] = useState([]);
@@ -44,7 +44,10 @@ const Substacks = () => {
         const response = await fetch(SUBSTACKS);
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Substacks API returned ${response.status} — showing empty state`);
+          setSubstackPosts([]);
+          setLoading(false);
+          return;
         }
         
         const data = await response.json();

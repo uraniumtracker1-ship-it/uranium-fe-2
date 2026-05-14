@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { MOST_FOLLOWED, LITHIUM_STOCK_DETAIL } from "@/src/api/lithiumAPI";
+import { MOST_FOLLOWED, URANIUM_STOCK_DETAIL } from "@/src/api/uraniumAPI";
 import axios from "axios";
 
 const MostFollowedStocksTable = () => {
@@ -24,7 +24,10 @@ const MostFollowedStocksTable = () => {
         const response = await fetch(MOST_FOLLOWED);
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Most followed stocks API returned ${response.status} — using fallback`);
+          setStocksData(getFallbackData());
+          setLoading(false);
+          return;
         }
         
         const result = await response.json();
@@ -59,33 +62,33 @@ const MostFollowedStocksTable = () => {
       { id: '1', ticker: 'ALB', name: 'Albemarle Corporation', current_price: 0, intraday_percentage: 0 },
       { id: '2', ticker: 'SQM', name: 'Sociedad Quimica y Minera', current_price: 0, intraday_percentage: 0 },
       { id: '3', ticker: 'LTHM', name: 'Livent Corporation', current_price: 0, intraday_percentage: 0 },
-      { id: '4', ticker: 'LAC', name: 'Lithium Americas', current_price: 0, intraday_percentage: 0 },
-      { id: '5', ticker: 'GNENF', name: 'Ganfeng Lithium (ADR)', current_price: 0, intraday_percentage: 0 },
+      { id: '4', ticker: 'LAC', name: 'Uranium Americas', current_price: 0, intraday_percentage: 0 },
+      { id: '5', ticker: 'GNENF', name: 'Ganfeng Uranium (ADR)', current_price: 0, intraday_percentage: 0 },
       { id: '6', ticker: 'RIO', name: 'Rio Tinto (Arcadium)', current_price: 0, intraday_percentage: 0 },
-      { id: '7', ticker: 'LITM', name: 'Standard Lithium', current_price: 0, intraday_percentage: 0 },
-      { id: '8', ticker: 'SGML', name: 'Sigma Lithium', current_price: 0, intraday_percentage: 0 },
-      { id: '9', ticker: 'LIT', name: 'Global X Lithium ETF', current_price: 0, intraday_percentage: 0 },
-      { id: '10', ticker: 'LIXT', name: 'LITT Lithium Balance ETF', current_price: 0, intraday_percentage: 0 },
+      { id: '7', ticker: 'LITM', name: 'Standard Uranium', current_price: 0, intraday_percentage: 0 },
+      { id: '8', ticker: 'SGML', name: 'Sigma Uranium', current_price: 0, intraday_percentage: 0 },
+      { id: '9', ticker: 'LIT', name: 'Global X Uranium ETF', current_price: 0, intraday_percentage: 0 },
+      { id: '10', ticker: 'LIXT', name: 'LITT Uranium Balance ETF', current_price: 0, intraday_percentage: 0 },
     ],
     north_american_leaders: [
-      { id: '11', ticker: 'LIILIF', name: 'Lithium Ionic', current_price: 0, intraday_percentage: 0 },
-      { id: '12', ticker: 'LIACF', name: 'Lithium Americas Corp', current_price: 0, intraday_percentage: 0 },
-      { id: '13', ticker: 'E3M', name: 'E3 Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '11', ticker: 'LIILIF', name: 'Uranium Ionic', current_price: 0, intraday_percentage: 0 },
+      { id: '12', ticker: 'LIACF', name: 'Uranium Americas Corp', current_price: 0, intraday_percentage: 0 },
+      { id: '13', ticker: 'E3M', name: 'E3 Uranium', current_price: 0, intraday_percentage: 0 },
       { id: '14', ticker: 'PMET', name: 'Patriot Battery Metals', current_price: 0, intraday_percentage: 0 },
-      { id: '15', ticker: 'FL', name: 'Frontier Lithium', current_price: 0, intraday_percentage: 0 },
-      { id: '16', ticker: 'LITM', name: 'Standard Lithium', current_price: 0, intraday_percentage: 0 },
+      { id: '15', ticker: 'FL', name: 'Frontier Uranium', current_price: 0, intraday_percentage: 0 },
+      { id: '16', ticker: 'LITM', name: 'Standard Uranium', current_price: 0, intraday_percentage: 0 },
       { id: '17', ticker: 'QDST', name: 'QuantumScape (batteries)', current_price: 0, intraday_percentage: 0 },
       { id: '18', ticker: 'EEMMF', name: 'Euro Manganese', current_price: 0, intraday_percentage: 0 },
       { id: '19', ticker: 'LI', name: 'Li Auto (EV)', current_price: 0, intraday_percentage: 0 },
-      { id: '20', ticker: 'LIACF', name: 'Lithium Americas', current_price: 0, intraday_percentage: 0 },
+      { id: '20', ticker: 'LIACF', name: 'Uranium Americas', current_price: 0, intraday_percentage: 0 },
     ],
     global_market_leaders: [
       { id: '21', ticker: 'PLS.AX', name: 'Pilbara Minerals', current_price: 0, intraday_percentage: 0 },
       { id: '22', ticker: 'LTR.AX', name: 'Liontown Resources', current_price: 0, intraday_percentage: 0 },
       { id: '23', ticker: 'MIN.AX', name: 'Mineral Resources', current_price: 0, intraday_percentage: 0 },
       { id: '24', ticker: 'IGO.AX', name: 'IGO Limited', current_price: 0, intraday_percentage: 0 },
-      { id: '25', ticker: 'CXO.AX', name: 'Core Lithium', current_price: 0, intraday_percentage: 0 },
-      { id: '26', ticker: 'GL1.AX', name: 'Global Lithium Resources', current_price: 0, intraday_percentage: 0 },
+      { id: '25', ticker: 'CXO.AX', name: 'Core Uranium', current_price: 0, intraday_percentage: 0 },
+      { id: '26', ticker: 'GL1.AX', name: 'Global Uranium Resources', current_price: 0, intraday_percentage: 0 },
       { id: '27', ticker: 'VUL.AX', name: 'Vulcan Energy Resources', current_price: 0, intraday_percentage: 0 },
       { id: '28', ticker: 'LKE.AX', name: 'Lake Resources', current_price: 0, intraday_percentage: 0 },
       { id: '29', ticker: 'AGY.AX', name: 'Argosy Minerals', current_price: 0, intraday_percentage: 0 },
@@ -96,7 +99,7 @@ const MostFollowedStocksTable = () => {
   const checkSubpageExists = async (stockTicker) => {
     try {
       const response = await axios.get(
-        `${LITHIUM_STOCK_DETAIL}?stock_ticker=${stockTicker}`
+        `${URANIUM_STOCK_DETAIL}?stock_ticker=${stockTicker}`
       );
       return response.data.exists ?? true;
     } catch (error) {

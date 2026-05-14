@@ -5,7 +5,7 @@ import ISnapshot from "@/components/Investment/ISnapshot";
 import IStockScreener from "@/components/Investment/IStockScreener";
 import IInsiderTransactions from "@/components/Investment/IInsiderTransactions";
 import IETF from "@/components/Investment/ETF/IETF";
-import ICopperAssets from "@/components/Investment/ICopperAssets";
+import IUraniumAssets from "@/components/Investment/IUraniumAssets";
 import React, { useState, useMemo } from "react";
 import { useRouter } from "next/router";
 import SEO from "@/components/SEO";
@@ -397,7 +397,7 @@ const investments = ({ stockData }) => {
             <IETF />
           )}
           {currentTab === "lithium-assets" && (
-            <ICopperAssets />
+            <IUraniumAssets />
           )}
         </div>
       </div>

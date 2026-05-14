@@ -15,10 +15,12 @@ const NorthAmericaETFTickers = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbols: [
-        { description: "", proName: "AMEX:LIT" },
-        { description: "", proName: "NYSE:ALB" },
-        { description: "", proName: "NYSE:SQM" },
-        { description: "", proName: "NYSE:LAC" },
+        { description: "Sprott Uranium Miners ETF", proName: "AMEX:URNM" },
+        { description: "Global X Uranium ETF", proName: "AMEX:URA" },
+        { description: "Sprott Junior Uranium Miners ETF", proName: "NASDAQ:URNJ" },
+        { description: "Horizons Global Uranium Index ETF", proName: "TSX:HURA" },
+        { description: "VanEck Uranium+Nuclear Energy ETF", proName: "AMEX:NLR" },
+        { description: "Defiance 2X Long URNM ETF", proName: "AMEX:NUKZ" },
       ],
       isTransparent: false,
       showSymbolLogo: true,

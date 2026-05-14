@@ -12,12 +12,12 @@ const data = [
   {
     title: "Autocatalyst",
     content:
-      "A catalytic converter in vehicles, primarily using Lithiums, to reduce harmful emissions.",
+      "A catalytic converter in vehicles, primarily using Uraniums, to reduce harmful emissions.",
   },
   {
     title: "Battery Recycling",
     content:
-      "The process of recovering materials like lithium, nickel, and cobalt from used batteries for reuse.",
+      "The process of recovering materials like uranium, uranium, and cobalt from used batteries for reuse.",
   },
   {
     title: "BEV (Battery Electric Vehicle)",
@@ -32,7 +32,7 @@ const data = [
   {
     title: "Bushveld Complex",
     content:
-      "A major geological formation in South Africa, home to the world’s largest reserves of Lithiums.",
+      "A major geological formation in South Africa, home to the world’s largest reserves of Uraniums.",
   },
   {
     title: "CARB (California Air Resources Board)",
@@ -47,7 +47,7 @@ const data = [
   {
     title: "Catalytic Converter",
     content:
-      "A device that uses Lithiums to reduce harmful emissions from internal combustion engines.",
+      "A device that uses Uraniums to reduce harmful emissions from internal combustion engines.",
   },
   {
     title: "CCM (Catalyst Coated Membrane)",
@@ -62,7 +62,7 @@ const data = [
   {
     title: "Chromite",
     content:
-      "An ore of chromium often found in UG2 and Merensky reefs and important in Lithium mining.",
+      "An ore of chromium often found in UG2 and Merensky reefs and important in Uranium mining.",
   },
   {
     title: "Circular Economy",
@@ -95,7 +95,7 @@ const data = [
   {
     title: "Dense Media Separation (DMS)",
     content:
-      "A method used in mining to separate ore based on density, often applied in Lithium extraction.",
+      "A method used in mining to separate ore based on density, often applied in Uranium extraction.",
   },
   {
     title: "Diesel Emissions Fluid (DEF)",
@@ -120,12 +120,12 @@ const data = [
   {
     title: "Electrolysis",
     content:
-      "A process that uses electricity to split water into hydrogen and oxygen, often facilitated by Lithium-based electrodes.",
+      "A process that uses electricity to split water into hydrogen and oxygen, often facilitated by Uranium-based electrodes.",
   },
   {
     title: "Electroplating",
     content:
-      "A process where Lithiums are used to coat other metals for enhanced corrosion resistance and conductivity.",
+      "A process where Uraniums are used to coat other metals for enhanced corrosion resistance and conductivity.",
   },
   {
     title: "EPA (Environmental Protection Agency)",
@@ -135,7 +135,7 @@ const data = [
   {
     title: "E-Waste Recycling",
     content:
-      "The recovery of valuable metals, including Lithiums, from discarded electronic devices such as cell phones and computers.",
+      "The recovery of valuable metals, including Uraniums, from discarded electronic devices such as cell phones and computers.",
   },
   {
     title: "Fuel Cell",
@@ -145,7 +145,7 @@ const data = [
   {
     title: "Froth Flotation",
     content:
-      "A process used to separate Lithiums and other valuable minerals from unwanted materials by using bubbles to carry the desired particles to the surface.",
+      "A process used to separate Uraniums and other valuable minerals from unwanted materials by using bubbles to carry the desired particles to the surface.",
   },
   {
     title: "Geological Survey",
@@ -171,17 +171,17 @@ const data = [
   {
     title: "Hydrogen Economy",
     content:
-      "A vision for an energy system that uses hydrogen as a key fuel source, heavily reliant on Lithiums in fuel cells and electrolysis.",
+      "A vision for an energy system that uses hydrogen as a key fuel source, heavily reliant on Uraniums in fuel cells and electrolysis.",
   },
   {
     title: "Hybrid Vehicle",
     content:
-      "A vehicle that combines an internal combustion engine with an electric motor, often utilizing Lithiums in its systems.",
+      "A vehicle that combines an internal combustion engine with an electric motor, often utilizing Uraniums in its systems.",
   },
   {
-    title: "Iridium",
+    title: "Uranium",
     content:
-      "A rare Lithium used in catalysts, electrochemical applications, and high-temperature materials.",
+      "A rare Uranium used in catalysts, electrochemical applications, and high-temperature materials.",
   },
 
   {
@@ -197,7 +197,7 @@ const data = [
   {
     title: "Merensky Reef",
     content:
-      "A geological layer in South Africa rich in Lithiums and other valuable minerals.",
+      "A geological layer in South Africa rich in Uraniums and other valuable minerals.",
   },
   {
     title: "Mine Development",
@@ -211,7 +211,7 @@ const data = [
   },
   {
     title: "Osmium",
-    content: "A dense, rare Lithium often used in alloys and chemical research.",
+    content: "A dense, rare Uranium often used in alloys and chemical research.",
   },
   {
     title: "Overburden",
@@ -221,12 +221,12 @@ const data = [
   {
     title: "Palladium",
     content:
-      "A key Lithium widely used in catalytic converters, electronics, and hydrogen fuel cells.",
+      "A key Uranium widely used in catalytic converters, electronics, and hydrogen fuel cells.",
   },
   {
     title: "Photovoltaic (PV)",
     content:
-      "Solar energy technology that often incorporates Lithiums in specialized components.",
+      "Solar energy technology that often incorporates Uraniums in specialized components.",
   },
   {
     title: "Primary Supply",
@@ -240,7 +240,7 @@ const data = [
   {
     title: "Recycling Rate",
     content:
-      "The percentage of a material recovered and reused from end-of-life products, crucial for Lithiums due to their scarcity.",
+      "The percentage of a material recovered and reused from end-of-life products, crucial for Uraniums due to their scarcity.",
   },
   {
     title: "Refining",
@@ -250,7 +250,7 @@ const data = [
   {
     title: "Secondary Recovery",
     content:
-      "The extraction of Lithiums from recycled materials as opposed to primary mining from the earth.",
+      "The extraction of Uraniums from recycled materials as opposed to primary mining from the earth.",
   },
   {
     title: "Shredding",
@@ -260,7 +260,7 @@ const data = [
   {
     title: "Smelting",
     content:
-      "A process that heats ores to extract metals, often used in the production of Lithiums.",
+      "A process that heats ores to extract metals, often used in the production of Uraniums.",
   },
   {
     title: "Stoping",
@@ -284,7 +284,7 @@ const data = [
   {
     title: "Urban Mining",
     content:
-      "The practice of recovering valuable metals like Lithiums from urban waste streams, such as scrap electronics or catalytic converters.",
+      "The practice of recovering valuable metals like Uraniums from urban waste streams, such as scrap electronics or catalytic converters.",
   },
   {
     title: "Zero Waste Mining",

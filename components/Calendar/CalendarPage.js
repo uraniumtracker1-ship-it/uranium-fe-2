@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import YearCalendar from "./YearCalendar";
 import Navbar from "../Navbar";
 import Loader from "../Loader";
-import { CALENDAR } from "@/src/api/lithiumAPI";
+import { CALENDAR } from "@/src/api/uraniumAPI";
 
 const Calendar = () => {
   const [data, setData] = useState([]);
@@ -15,7 +15,10 @@ const Calendar = () => {
       try {
         const response = await fetch(CALENDAR); // Replace with your API URL
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Calendar API returned ${response.status} — showing empty state`);
+          setData([]);
+          setLoading(false);
+          return;
         }
         const events = await response.json();
         setData(events);

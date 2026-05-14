@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { formatDistanceToNow } from "date-fns"; // Importing date-fns function for relative time
 import { IoIosTimer } from "react-icons/io";
-import { STOCK_NEWS } from "@/src/api/lithiumAPI";
+import { STOCK_NEWS } from "@/src/api/uraniumAPI";
 
 const Hero = () => {
   const [news, setNews] = useState([]);
@@ -16,7 +16,10 @@ const Hero = () => {
         const response = await fetch(STOCK_NEWS);
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Stock news API returned ${response.status} — showing empty state`);
+          setNews([]);
+          setLoading(false);
+          return;
         }
         
         const data = await response.json();
@@ -63,7 +66,7 @@ const Hero = () => {
           <div className="relative flex items-center justify-center overflow-hidden rounded-lg" style={{ height: "350px" }}>
             <div className="text-white text-center">
               <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent mb-4">
-                Lithium News
+                Uranium News
               </p>
               <h1 className="text-2xl lg:text-4xl font-bold cambay">Loading latest news...</h1>
             </div>
@@ -98,7 +101,7 @@ const Hero = () => {
           <div className="relative flex items-center justify-center overflow-hidden rounded-lg" style={{ height: "350px" }}>
             <div className="text-white text-center">
               <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent mb-4">
-                Lithium News
+                Uranium News
               </p>
               <h1 className="text-2xl lg:text-4xl font-bold cambay">No news available</h1>
             </div>
@@ -116,7 +119,7 @@ const Hero = () => {
         style={{
           backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(${
             news[currentIndex]?.image_url ||
-            "https://www.aupreciousmetals.com/wp-content/uploads/2022/07/platinum-bars-or-ingots.png"
+            "https://www.aupreciousmetals.com/wp-content/uploads/2022/07/uranium-bars-or-ingots.png"
           })`,
         }}
       ></div>
@@ -132,7 +135,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="relative z-10 p-6 text-white max-w-2xl">
             <p className="inline-block px-2 py-1 rounded-full text-xs font-semibold bg-accent">
-              Lithium News
+              Uranium News
             </p>
 
             {/* Ticker Badge */}
@@ -160,7 +163,7 @@ const Hero = () => {
                 ? `${news[currentIndex]?.summary.substring(0, 200)}...`
                 : news[currentIndex]?.title
                 ? `${news[currentIndex]?.title.substring(0, 200)}...`
-                : "Catch up on our latest Lithium news and updates."}
+                : "Catch up on our latest Uranium news and updates."}
             </p>
             <div className="text-xs text-gray-300 flex items-center space-x-1">
               {/* Time Icon */}

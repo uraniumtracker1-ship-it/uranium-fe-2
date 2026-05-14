@@ -3,7 +3,7 @@ import Hero from "@/components/Home/Hero";
 import StockNews from "@/components/Home/StockNews";
 import Navbar from "@/components/Navbar";
 import MostFollowed from "@/components/Home/MostFollowed";
-import LithiumLivePrice from "@/components/Home/LithiumLivePrice";
+import UraniumLivePrice from "@/components/Home/UraniumLivePrice";
 import StayAhead from "@/components/Home/StayAhead";
 import PressReleaseNews from "@/components/Home/PressReleaseNews";
 import PopularTools from "@/components/Home/PopularTools";
@@ -11,10 +11,10 @@ import MostPopularNews from "@/components/Home/MostPopularNews";
 import Substacks from "@/components/Home/Substacks";
 import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import Footer from "@/components/Footer";
-import TVLithiumCFD from "@/components/Home/TVLithiumCFD";
-import TVLithium from "@/components/Home/TVLithium";
+import TVUraniumCFD from "@/components/Home/TVUraniumCFD";
+import TVUranium from "@/components/Home/TVUranium";
 import PlainNews from "@/components/Home/PlainNews";
-import HomeLithiumPrice from "@/components/Home/HomeLithiumPrice";
+import HomeUraniumPrice from "@/components/Home/HomeUraniumPrice";
 import HomeInsiderTransactions from "@/components/Home/HomeInsiderTransactions";
 
 const home = () => {
@@ -31,7 +31,7 @@ const home = () => {
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Lithium Price Chart
             </h1>
-            <TVLithiumCFD />
+            <TVUraniumCFD />
           </div>
           <DailyNewsletterAd />
         </div>
@@ -42,7 +42,7 @@ const home = () => {
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Metal Prices
             </h1>
-            <HomeLithiumPrice />
+            <HomeUraniumPrice />
           </div>
           <div>
             <div className="flex justify-between items-center mb-3 border-b border-black/10 pb-1">
@@ -67,7 +67,7 @@ const home = () => {
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Lithium Market Data
             </h1>
-            <TVLithium />
+            <TVUranium />
           </div>
           <Substacks />
         </div>
@@ -84,7 +84,7 @@ const home = () => {
         </div>
         {/* right  */}
         <div className="w-full lg:w-[26%] space-y-12">
-          <LithiumLivePrice />
+          <UraniumLivePrice />
           {/* <CopperTradingviewChart /> */}
           <MostFollowed />
           <PopularTools />
@@ -126,9 +126,9 @@ export default home;
 // import TVPalladium from "@/components/Home/TVPalladium ";
 // import PlainNews from "@/components/Home/PlainNews";
 // import HomeInsiderTransactionTable from "@/components/Home/HomeInsiderTransactionTable";
-// import ChartIridium from "@/components/Home/ChartIridium";
-// import ChartRhodium from "@/components/Home/ChartRhodium";
-// import ChartRuthenium from "@/components/Home/ChartRuthenium";
+// import ChartUranium from "@/components/Home/ChartUranium";
+// import ChartUranium2 from "@/components/Home/ChartUranium2";
+// import ChartUranium3 from "@/components/Home/ChartUranium3";
 // import HomeCopperPrice from "@/components/Home/HomeCopperPrice";
 
 // const home = () => {
@@ -152,14 +152,14 @@ export default home;
 //             <h1 className="text-[18px] sm:text-[20px] md:text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
 //               Iridium Price Chart
 //             </h1>
-//             <ChartIridium />
+//             <ChartUranium />
 //           </div>
 
 //           <div>
 //             <h1 className="text-[18px] sm:text-[20px] md:text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
 //               Rhodium Price Chart
 //             </h1>
-//             <ChartRhodium />
+//             <ChartUranium2 />
 //           </div>
 //           <div className="hidden lg:block">
 //             <DailyNewsletterAd />
@@ -192,7 +192,7 @@ export default home;
 //             <h1 className="text-[18px] sm:text-[20px] md:text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
 //               Ruthenium Price Chart
 //             </h1>
-//             <ChartRuthenium />
+//             <ChartUranium3 />
 //           </div>
 //           <Substacks />
 //         </div>

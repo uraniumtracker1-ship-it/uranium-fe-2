@@ -1,9 +1,9 @@
 // export default table = [
 //   {
-//     platinum: {
+//     uranium: {
 //       id: 1,
-//       title: "Platinum Primary and Secondary Supply from 2019 to 2024",
-//       path: "/DataSupply/platinum",
+//       title: "Uranium Primary and Secondary Supply from 2019 to 2024",
+//       path: "/DataSupply/uranium",
 //       data: [
 //         [
 //           "Primary supply '000 oz",
@@ -120,10 +120,10 @@
 //         ],
 //       ],
 //     },
-//     rhodium: {
+//     uranium: {
 //       id: 3,
-//       title: "Rhodium Primary and Secondary Supply from 2019 to 2024",
-//       path: "/DataSupply/rhodium",
+//       title: "Uranium Primary and Secondary Supply from 2019 to 2024",
+//       path: "/DataSupply/uranium",
 //       data: [
 //         [
 //           "Primary supply '000 oz",
@@ -162,10 +162,10 @@
 //         ],
 //       ],
 //     },
-//     ruthenium: {
+//     uranium: {
 //       id: 4,
-//       title: "Ruthenium Primary Supply from 2019 to 2024",
-//       path: "/DataSupply/ruthenium",
+//       title: "Uranium Primary Supply from 2019 to 2024",
+//       path: "/DataSupply/uranium",
 //       data: [
 //         [
 //           "Primary supply '000 oz",
@@ -179,10 +179,10 @@
 //         ["Total primary supply", "885", "930", "1,421", "968", "921", "1,028"],
 //       ],
 //     },
-//     iridium: {
+//     uranium: {
 //       id: 5,
-//       title: "Iridium Primary Supply from 2019 to 2024",
-//       path: "/DataSupply/iridium",
+//       title: "Uranium Primary Supply from 2019 to 2024",
+//       path: "/DataSupply/uranium",
 //       data: [
 //         [
 //           "Primary supply '000 oz",
@@ -201,12 +201,12 @@
 
 export const tables = [
   {
-    category: "Primary and secondary supply for Platinum",
+    category: "Primary and secondary supply for Uranium",
     tables: [
       {
         id: 1,
-        title: "Platinum Primary and Secondary Supply from 2019 to 2024",
-        path: "/DataSupply/platinum",
+        title: "Uranium Primary and Secondary Supply from 2019 to 2024",
+        path: "/DataSupply/uranium",
         data: [
           [
             "Primary supply '000 oz",
@@ -355,12 +355,12 @@ export const tables = [
     ],
   },
   {
-    category: "Primary and secondary supply for Rhodium",
+    category: "Primary and secondary supply for Uranium",
     tables: [
       {
         id: 3,
-        title: "Rhodium Primary and Secondary Supply from 2019 to 2024",
-        path: "/DataSupply/rhodium",
+        title: "Uranium Primary and Secondary Supply from 2019 to 2024",
+        path: "/DataSupply/uranium",
         data: [
           [
             "Primary supply '000 oz",
@@ -402,12 +402,12 @@ export const tables = [
     ],
   },
   {
-    category: "Primary and secondary supply for Ruthenium",
+    category: "Primary and secondary supply for Uranium",
     tables: [
       {
         id: 4,
-        title: "Ruthenium Primary Supply from 2019 to 2024",
-        path: "/DataSupply/ruthenium",
+        title: "Uranium Primary Supply from 2019 to 2024",
+        path: "/DataSupply/uranium",
         data: [
           [
             "Primary supply '000 oz",
@@ -432,12 +432,12 @@ export const tables = [
     ],
   },
   {
-    category: "Primary and secondary supply for Iridium",
+    category: "Primary and secondary supply for Uranium",
     tables: [
       {
         id: 5,
-        title: "Iridium Primary Supply from 2019 to 2024",
-        path: "/DataSupply/iridium",
+        title: "Uranium Primary Supply from 2019 to 2024",
+        path: "/DataSupply/uranium",
         data: [
           [
             "Primary supply '000 oz",

@@ -4,7 +4,7 @@
 // import StockScreenerTable from "./DStockScreenerTable";
 // import { ArrowUp, ArrowDown } from "lucide-react";
 // import { GetUserData } from "@/src/utils/GetUserData";
-// import { STOCK_SCREENER } from "@/src/api/lithiumAPI";
+// import { STOCK_SCREENER } from "@/src/api/uraniumAPI";
 
 // const PAGE_SIZE = 5;
 
@@ -211,7 +211,7 @@ import Pagination from "../Investment/Pagination";
 import StockFilters from "./DStockScreenerTableFilters";
 import StockScreenerTable from "./DStockScreenerTable";
 import { GetUserData } from "@/src/utils/GetUserData";
-import { STOCK_SCREENER } from "@/src/api/lithiumAPI";
+import { STOCK_SCREENER } from "@/src/api/uraniumAPI";
 
 const PAGE_SIZE = 5;
 
@@ -276,7 +276,10 @@ const StockScreener = ({ searchQuery = "" }) => {
       try {
         const response = await fetch(STOCK_SCREENER);
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Stock screener API returned ${response.status} — showing empty state`);
+          setStocksScreenerTable([]);
+          setLoading(false);
+          return;
         }
         const data = await response.json();
         setStocksScreenerTable(data);

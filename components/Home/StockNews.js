@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 // import { useRouter } from "next/router";
-// import { STOCK_NEWS } from "@/src/api/lithiumAPI";
+// import { STOCK_NEWS } from "@/src/api/uraniumAPI";
 // const StockNews = () => {
 //   const [newsData, setNewsData] = useState([]);
 //   const [loading, setLoading] = useState(true);
@@ -134,7 +134,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { STOCK_NEWS } from "@/src/api/lithiumAPI";
+import { STOCK_NEWS } from "@/src/api/uraniumAPI";
 
 const StockNews = () => {
   const [newsData, setNewsData] = useState([]);
@@ -148,7 +148,10 @@ const StockNews = () => {
         const response = await fetch(STOCK_NEWS);
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Stock news API returned ${response.status} — showing empty state`);
+          setNewsData([]);
+          setLoading(false);
+          return;
         }
         
         const data = await response.json();

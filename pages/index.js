@@ -11,10 +11,10 @@ import MostPopularNews from "@/components/Home/MostPopularNews";
 import Substacks from "@/components/Home/Substacks";
 import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import Footer from "@/components/Footer";
-import TVLithiumCFD from "@/components/Home/TVLithiumCFD";
-import TVLithium from "@/components/Home/TVLithium";
-import DirectLithiumPrice from "@/components/Home/DirectLithiumPrice";
-import DirectHomeLithiumPrice from "@/components/Home/DirectHomeLithiumPrice";
+import TVUraniumCFD from "@/components/Home/TVUraniumCFD";
+import TVUranium from "@/components/Home/TVUranium";
+import DirectUraniumPrice from "@/components/Home/DirectUraniumPrice";
+import DirectHomeUraniumPrice from "@/components/Home/DirectHomeUraniumPrice";
 import HomeInsiderTransactions from "@/components/Home/HomeInsiderTransactions";
 import SEO from "@/components/SEO";
 import StocksMarquee from "@/components/Home/StocksMarquee";
@@ -45,7 +45,7 @@ const home = () => {
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Lithium Price Chart
             </h1>
-            <TVLithiumCFD />
+            <TVUraniumCFD />
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const home = () => {
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Prices
             </h1>
-            <DirectHomeLithiumPrice />
+            <DirectHomeUraniumPrice />
           </div>
           <div>
             <div className="flex justify-between items-center mb-3 border-b border-black/10 pb-1">
@@ -79,7 +79,7 @@ const home = () => {
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Lithium Futures
             </h1>
-            <TVLithium />
+            <TVUranium />
           </div>
 
           <Substacks />
@@ -99,7 +99,7 @@ const home = () => {
         </div>
         {/* right  */}
         <div className="w-full lg:w-[26%] space-y-12">
-          <DirectLithiumPrice />
+          <DirectUraniumPrice />
           {/* <LithiumTradingviewChart /> */}
           <PopularIntradayReturn />
           <PopularTools />

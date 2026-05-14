@@ -179,10 +179,10 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "News", path: "/news" },
-    { name: "Lithium Investments", path: "/investments" },
+    { name: "Uranium Investments", path: "/investments" },
     { name: "Videos", path: "/videos" },
     { name: "Data", path: "/data" },
-    { name: "Lithium 101", path: "/C101" },
+    { name: "Uranium 101", path: "/C101" },
   ];
 
   const navigateTo = (path) => {
@@ -213,8 +213,8 @@ const Navbar = () => {
         <Image
           src="/logo.jpg"
           alt="Logo"
-          width={140}
-          height={50}
+          width={220}
+          height={80}
           className="cursor-pointer xl:ml-7"
           onClick={() => navigateTo("/")}
         />
@@ -245,19 +245,12 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Buttons (Visible after xl) */}
-        {isLoggedIn ? (
+        {isLoggedIn && (
           <button
             className="text-2xl hidden xl:block text-primary py-3 hover:text-accent/90"
             onClick={() => navigateTo("/dashboard")}
           >
             <FaUserCircle />
-          </button>
-        ) : (
-          <button
-            className="bg-accent hidden xl:block text-white px-5 py-2 rounded-sm hover:bg-accent/90"
-            onClick={() => navigateTo("/auth/login")}
-          >
-            Login
           </button>
         )}
 
@@ -297,19 +290,12 @@ const Navbar = () => {
                 {name}
               </button>
             ))}
-            {isLoggedIn ? (
+            {isLoggedIn && (
               <button
                 className="bg-accent text-white px-5 py-2 rounded-sm hover:bg-accent/90"
                 onClick={() => navigateTo("/dashboard")}
               >
                 Profile
-              </button>
-            ) : (
-              <button
-                className="bg-accent text-white px-5 py-2 rounded-sm hover:bg-accent/90"
-                onClick={() => navigateTo("/auth/login")}
-              >
-                Login
               </button>
             )}
           </motion.div>

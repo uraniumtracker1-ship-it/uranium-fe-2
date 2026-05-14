@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
+// import { COPPER_NEWS } from "@/src/api/uraniumAPI";
 
 // const LatestNews = () => {
 //   const [newsData, setNewsData] = useState([]);
@@ -117,7 +117,7 @@
 
 // import React, { useState, useEffect } from "react";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
+// import { COPPER_NEWS } from "@/src/api/uraniumAPI";
 
 // const LatestNews = () => {
 //   const [newsData, setNewsData] = useState([]);
@@ -242,7 +242,7 @@
 
 // import React, { useState, useEffect } from "react";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
+// import { COPPER_NEWS } from "@/src/api/uraniumAPI";
 
 // const LatestNews = () => {
 //   const [newsData, setNewsData] = useState([]);
@@ -383,13 +383,12 @@
 
 import React, { useState, useEffect } from "react";
 import Loader from "../Loader";
-import { GENERAL_NEWS } from "@/src/api/lithiumAPI";
+import { GENERAL_NEWS } from "@/src/api/uraniumAPI";
 
 // Updated: 2026-02-15 - Using ONLY general news endpoint
 const LatestNews = () => {
   const [newsData, setNewsData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -397,21 +396,22 @@ const LatestNews = () => {
         console.log('Fetching latest news from:', GENERAL_NEWS);
         const response = await fetch(GENERAL_NEWS);
         
+        // Gracefully handle non-200 responses — show empty state, don't crash
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`News API returned ${response.status} — showing empty state`);
+          setNewsData([]);
+          setLoading(false);
+          return;
         }
         
         const data = await response.json();
-        console.log('Latest news data:', data);
         
         if (!data || data.length === 0) {
-          console.log("No news available");
           setNewsData([]);
           setLoading(false);
           return;
         }
 
-        // Process the data to add today's date for missing dates
         const processedData = Array.isArray(data)
           ? data.map((news) => ({
               ...news,
@@ -423,7 +423,7 @@ const LatestNews = () => {
         setLoading(false);
       } catch (err) {
         console.error('Error fetching latest news:', err);
-        setError(err.message);
+        // Don't surface the error to the UI — just show empty state
         setNewsData([]);
         setLoading(false);
       }
@@ -450,23 +450,10 @@ const LatestNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Latest Lithium News
+          Latest Uranium News
         </h1>
         <div className="flex justify-center items-center h-32">
           <Loader />
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div>
-        <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Latest Lithium News
-        </h1>
-        <div className="flex justify-center items-center h-32 text-red-500">
-          <span>Error: {error}</span>
         </div>
       </div>
     );
@@ -476,7 +463,7 @@ const LatestNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Latest Lithium News
+          Latest Uranium News
         </h1>
         <div className="text-center py-8 text-gray-500">
           No news available at this time
@@ -488,7 +475,7 @@ const LatestNews = () => {
   return (
     <div>
       <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-        Latest Lithium News
+        Latest Uranium News
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -1,8 +1,8 @@
 // export const tables = [
 //   {
 //     id: 14,
-//     title: "Global Industrial Demand for Platinum",
-//     path: "/DataDemandDatabase/platinum",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "695", "647", "643"],
@@ -17,8 +17,8 @@
 //   },
 //   {
 //     id: 15,
-//     title: "Global Industrial Demand for Rhodium",
-//     path: "/DataDemandDatabase/rhodium",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "67", "81", "92"],
@@ -30,8 +30,8 @@
 //   },
 //   {
 //     id: 16,
-//     title: "Global Industrial Demand for Ruthenium",
-//     path: "/DataDemandDatabase/ruthenium",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "393", "427", "508"],
@@ -43,8 +43,8 @@
 //   },
 //   {
 //     id: 17,
-//     title: "Global Industrial Demand for Iridium",
-//     path: "/DataDemandDatabase/iridium",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "25", "27", "32"],
@@ -75,8 +75,8 @@
 // export const tables = [
 //   {
 //     id: 14,
-//     title: "Global Industrial Demand for Platinum",
-//     path: "/DataDemandDatabase/platinum",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "695", "647", "643"],
@@ -91,8 +91,8 @@
 //   },
 //   {
 //     id: 15,
-//     title: "Global Industrial Demand for Rhodium",
-//     path: "/DataDemandDatabase/rhodium",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "67", "81", "92"],
@@ -104,8 +104,8 @@
 //   },
 //   {
 //     id: 16,
-//     title: "Global Industrial Demand for Ruthenium",
-//     path: "/DataDemandDatabase/ruthenium",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "393", "427", "508"],
@@ -117,8 +117,8 @@
 //   },
 //   {
 //     id: 17,
-//     title: "Global Industrial Demand for Iridium",
-//     path: "/DataDemandDatabase/iridium",
+//     title: "Global Industrial Demand for Uranium",
+//     path: "/DataDemandDatabase/uranium",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Chemical", "25", "27", "32"],
@@ -144,8 +144,8 @@
 //   },
 //   {
 //     id: 19,
-//     title: "European Platinum Demand",
-//     path: "/DataDemandDatabase/platinum/europe",
+//     title: "European Uranium Demand",
+//     path: "/DataDemandDatabase/uranium/europe",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Automotive", "794", "1,007", "910"],
@@ -163,8 +163,8 @@
 //   },
 //   {
 //     id: 20,
-//     title: "Japanese Platinum Demand",
-//     path: "/DataDemandDatabase/platinum/japan",
+//     title: "Japanese Uranium Demand",
+//     path: "/DataDemandDatabase/uranium/japan",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Automotive", "237", "245", "240"],
@@ -182,8 +182,8 @@
 //   },
 //   {
 //     id: 21,
-//     title: "North American Platinum Demand",
-//     path: "/DataDemandDatabase/platinum/north-america",
+//     title: "North American Uranium Demand",
+//     path: "/DataDemandDatabase/uranium/north-america",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Automotive", "438", "516", "537"],
@@ -201,8 +201,8 @@
 //   },
 //   {
 //     id: 22,
-//     title: "Chinese Platinum Demand",
-//     path: "/DataDemandDatabase/platinum/china",
+//     title: "Chinese Uranium Demand",
+//     path: "/DataDemandDatabase/uranium/china",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Automotive", "396", "568", "591"],
@@ -220,8 +220,8 @@
 //   },
 //   {
 //     id: 23,
-//     title: "Rest of World Platinum Demand",
-//     path: "/DataDemandDatabase/platinum/rest-of-world",
+//     title: "Rest of World Uranium Demand",
+//     path: "/DataDemandDatabase/uranium/rest-of-world",
 //     data: [
 //       ["Demand '000 oz", "2022", "2023", "2024"],
 //       ["Automotive", "882", "1,006", "1,021"],
@@ -247,8 +247,8 @@ export const tables = [
     tables: [
       {
         id: 14,
-        title: "Global Industrial Demand for Platinum",
-        path: "/DataDemandDatabase/platinum",  
+        title: "Global Industrial Demand for Uranium",
+        path: "/DataDemandDatabase/uranium",  
         data: [ 
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Chemical", "695", "647", "643"],
@@ -263,8 +263,8 @@ export const tables = [
       },
       {
         id: 15,
-        title: "Global Industrial Demand for Rhodium",
-        path: "/DataDemandDatabase/rhodium",
+        title: "Global Industrial Demand for Uranium",
+        path: "/DataDemandDatabase/uranium",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Chemical", "67", "81", "92"],
@@ -276,8 +276,8 @@ export const tables = [
       },
       {
         id: 16,
-        title: "Global Industrial Demand for Ruthenium",
-        path: "/DataDemandDatabase/ruthenium",
+        title: "Global Industrial Demand for Uranium",
+        path: "/DataDemandDatabase/uranium",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Chemical", "393", "427", "508"],
@@ -289,8 +289,8 @@ export const tables = [
       },
       {
         id: 17,
-        title: "Global Industrial Demand for Iridium",
-        path: "/DataDemandDatabase/iridium",
+        title: "Global Industrial Demand for Uranium",
+        path: "/DataDemandDatabase/uranium",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Chemical", "25", "27", "32"],
@@ -317,12 +317,12 @@ export const tables = [
     ],
   },
   {
-    category: "Total Platinum Demand by Region",
+    category: "Total Uranium Demand by Region",
     tables: [
       {
         id: 19,
-        title: "European Platinum Demand",
-        path: "/DataDemandDatabase/platinum_europe",
+        title: "European Uranium Demand",
+        path: "/DataDemandDatabase/uranium_europe",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Automotive", "794", "1,007", "910"],
@@ -340,8 +340,8 @@ export const tables = [
       },
       {
         id: 20,
-        title: "Japanese Platinum Demand",
-        path: "/DataDemandDatabase/platinum_japan",
+        title: "Japanese Uranium Demand",
+        path: "/DataDemandDatabase/uranium_japan",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Automotive", "237", "245", "240"],
@@ -359,8 +359,8 @@ export const tables = [
       },
       {
         id: 21,
-        title: "North American Platinum Demand",
-        path: "/DataDemandDatabase/platinum_north-america",
+        title: "North American Uranium Demand",
+        path: "/DataDemandDatabase/uranium_north-america",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Automotive", "438", "516", "537"],
@@ -378,8 +378,8 @@ export const tables = [
       },
       {
         id: 22,
-        title: "Chinese Platinum Demand",
-        path: "/DataDemandDatabase/platinum_china",
+        title: "Chinese Uranium Demand",
+        path: "/DataDemandDatabase/uranium_china",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Automotive", "396", "568", "591"],
@@ -397,8 +397,8 @@ export const tables = [
       },
       {
         id: 23,
-        title: "Rest of World Platinum Demand",
-        path: "/DataDemandDatabase/platinum_rest-of-world",
+        title: "Rest of World Uranium Demand",
+        path: "/DataDemandDatabase/uranium_rest-of-world",
         data: [
           ["Demand '000 oz", "2022", "2023", "2024"],
           ["Automotive", "882", "1,006", "1,021"],
@@ -421,8 +421,8 @@ export const tables = [
     tables: [
       {
         id: 24,
-        title: "Platinum Historical Demand",
-        path: "/DataDemandDatabase/platinum_historical",
+        title: "Uranium Historical Demand",
+        path: "/DataDemandDatabase/uranium_historical",
         data: [
           ["Demand '000 oz", "2019", "2020", "2021", "2022", "2023", "2024"],
           ["Automotive", "2,589", "2,024", "2,410", "2,747", "3,342", "3,299"],
@@ -507,8 +507,8 @@ export const tables = [
       },
       {
         id: 26,
-        title: "Rhodium Historical Demand",
-        path: "/DataDemandDatabase/rhodium_historical",
+        title: "Uranium Historical Demand",
+        path: "/DataDemandDatabase/uranium_historical",
         data: [
           ["Demand '000 oz", "2019", "2020", "2021", "2022", "2023", "2024"],
           ["Automotive", "1,031", "961", "956", "946", "989", "931"],
@@ -530,8 +530,8 @@ export const tables = [
       },
       {
         id: 27,
-        title: "Ruthenium Historical Demand",
-        path: "/DataDemandDatabase/ruthenium_historical",
+        title: "Uranium Historical Demand",
+        path: "/DataDemandDatabase/uranium_historical",
         data: [
           ["Demand '000 oz", "2019", "2020", "2021", "2022", "2023", "2024"],
           ["Chemical", "409", "395", "343", "393", "427", "508"],
@@ -560,8 +560,8 @@ export const tables = [
       },
       {
         id: 28,
-        title: "Iridium Historical Demand",
-        path: "/DataDemandDatabase/iridium_historical",
+        title: "Uranium Historical Demand",
+        path: "/DataDemandDatabase/uranium_historical",
         data: [
           ["Demand '000 oz", "2019", "2020", "2021", "2022", "2023", "2024"],
           ["Chemical", "18", "24", "30", "25", "27", "32"],

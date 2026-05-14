@@ -11,7 +11,7 @@ function TradingViewWidget() {
     script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "AMEX:LIT",
+          "symbol": "AMEX:URNM",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
@@ -22,15 +22,23 @@ function TradingViewWidget() {
           "save_image": false,
           "compareSymbols": [
             {
-              "symbol": "NYSE:ALB",
+              "symbol": "AMEX:URA",
               "position": "SameScale"
             },
             {
-              "symbol": "NYSE:SQM",
+              "symbol": "NASDAQ:URNJ",
               "position": "SameScale"
             },
             {
-              "symbol": "NYSE:LAC",
+              "symbol": "TSX:HURA",
+              "position": "SameScale"
+            },
+            {
+              "symbol": "AMEX:NLR",
+              "position": "SameScale"
+            },
+            {
+              "symbol": "AMEX:NUKZ",
               "position": "SameScale"
             }
           ],

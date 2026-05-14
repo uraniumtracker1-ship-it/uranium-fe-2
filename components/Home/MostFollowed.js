@@ -120,7 +120,7 @@
 // export default MostFollowed;
 
 // import { useEffect, useState } from "react";
-// import { MOST_FOLLOWED } from "@/src/api/lithiumAPI";
+// import { MOST_FOLLOWED } from "@/src/api/uraniumAPI";
 
 // const MostFollowed = () => {
 //   const [stockData, setStockData] = useState([]);
@@ -215,7 +215,7 @@
 // export default MostFollowed;
 
 import { useEffect, useState } from "react";
-import { MOST_FOLLOWED, LITHIUM_STOCK_DETAIL } from "@/src/api/lithiumAPI";
+import { MOST_FOLLOWED, URANIUM_STOCK_DETAIL } from "@/src/api/uraniumAPI";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
@@ -232,7 +232,10 @@ const MostFollowed = () => {
       try {
         const response = await fetch(MOST_FOLLOWED);
         if (!response.ok) {
-          throw new Error("Failed to fetch data");
+          console.warn(`Most followed API returned ${response.status} — showing empty state`);
+          setStockData([]);
+          setLoading(false);
+          return;
         }
         const data = await response.json();
         // Ensure data is an array before calling slice
@@ -252,7 +255,7 @@ const MostFollowed = () => {
   const checkSubpageExists = async (stockTicker) => {
     try {
       const response = await axios.get(
-        `${LITHIUM_STOCK_DETAIL}?stock_ticker=${stockTicker}`
+        `${URANIUM_STOCK_DETAIL}?stock_ticker=${stockTicker}`
       );
       return response.data.exists ?? true;
     } catch (error) {

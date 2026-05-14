@@ -3,26 +3,29 @@ import React, { useState, useEffect } from "react";
 const HomeInsiderTransactions = () => {
   const [transactions, setTransactions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
         const response = await fetch("/api/insider-transactions/");
+        // Gracefully handle non-200 — show empty state, don't crash
         if (!response.ok) {
-          throw new Error("Failed to fetch insider transactions");
+          console.warn(`Insider transactions API returned ${response.status} — showing empty state`);
+          setTransactions([]);
+          setLoading(false);
+          return;
         }
         const data = await response.json();
         
         // Filter for Canadian transactions and limit to 10 most recent
-        const canadianTransactions = data
+        const canadianTransactions = (Array.isArray(data) ? data : [])
           .filter(t => t.country === "Canada")
           .slice(0, 10);
         
         setTransactions(canadianTransactions);
       } catch (err) {
-        setError(err.message);
         console.error("Error fetching insider transactions:", err);
+        setTransactions([]);
       } finally {
         setLoading(false);
       }
@@ -45,14 +48,6 @@ const HomeInsiderTransactions = () => {
     return (
       <div className="text-center py-4">
         <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-accent mx-auto"></div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="text-center py-4 text-red-500 text-sm">
-        Error loading transactions: {error}
       </div>
     );
   }

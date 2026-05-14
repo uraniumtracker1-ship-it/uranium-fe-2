@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react";
 // import Link from "next/link";
 // import Loader from "../Loader";
-// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
+// import { URANIUM_NEWS } from "@/src/api/uraniumAPI";
 
 // const MoreNews = () => {
 //   const [news, setNews] = useState([]);
@@ -11,7 +11,7 @@
 //   useEffect(() => {
 //     const fetchNews = async () => {
 //       try {
-//         const response = await fetch(COPPER_NEWS);
+//         const response = await fetch(URANIUM_NEWS);
 //         if (!response.ok) {
 //           throw new Error("Failed to fetch news");
 //         }
@@ -82,7 +82,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Loader from "../Loader";
-import { STOCK_NEWS } from "@/src/api/lithiumAPI";
+import { STOCK_NEWS } from "@/src/api/uraniumAPI";
 
 const MoreNews = () => {
   const [news, setNews] = useState([]);
@@ -96,7 +96,10 @@ const MoreNews = () => {
         const response = await fetch(STOCK_NEWS);
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Stock news API returned ${response.status} — showing empty state`);
+          setNewsData([]);
+          setLoading(false);
+          return;
         }
         
         const data = await response.json();

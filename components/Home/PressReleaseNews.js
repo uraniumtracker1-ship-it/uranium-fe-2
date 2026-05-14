@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router"; // For navigation
-import { PRESS_RELEASE } from "@/src/api/lithiumAPI";
+import { PRESS_RELEASE } from "@/src/api/uraniumAPI";
 
 const PressRelease = () => {
   const router = useRouter();
@@ -16,7 +16,10 @@ const PressRelease = () => {
         const res = await fetch(PRESS_RELEASE);
         
         if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
+          console.warn(`Press releases API returned ${res.status} — showing empty state`);
+          setPressReleases([]);
+          setLoading(false);
+          return;
         }
         
         const data = await res.json();

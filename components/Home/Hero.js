@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import LithiumPrice from "./LithiumPrice";
+import UraniumPrice from "./UraniumPrice";
 import { useRouter } from "next/router";
 
 const Hero = () => {
@@ -61,11 +61,11 @@ const Hero = () => {
             className="text-accent"
             // style={{ textShadow: "1px 1px 2px rgba(255, 255, 255, 0.8)" }}
           >
-            Lithium market news, price and analysis
+            Uranium market news, price and analysis
           </span>
         </motion.h1>
 
-        {/* LithiumPrice component */}
+        {/* UraniumPrice component */}
         <motion.div
           className="mt-8"
           variants={textVariants}
@@ -73,7 +73,7 @@ const Hero = () => {
           animate="visible"
           transition={{ delay: 0.2, duration: 1 }}
         >
-          <LithiumPrice />
+          <UraniumPrice />
         </motion.div>
 
         {/* Button */}

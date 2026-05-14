@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { MOST_FOLLOWED } from "@/src/api/lithiumAPI";
+import { MOST_FOLLOWED } from "@/src/api/uraniumAPI";
 import { useForumPosts } from "../../context/ForumPostsContext";
 
 // Shimmer Stock Card Component

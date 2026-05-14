@@ -1,5 +1,5 @@
 export const data = {
-  published_lithium: {
+  published_uranium: {
     2021: {
       supply: {
         refined_mine_production: {

@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react";
 // import { IoTimerOutline } from "react-icons/io5";
 // import axios from "axios";
-// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
+// import { COPPER_NEWS } from "@/src/api/uraniumAPI";
 // import Loader from "../Loader";
 
 // const PlainNews = () => {
@@ -100,7 +100,7 @@
 // import React, { useState, useEffect } from "react";
 // import { IoTimerOutline } from "react-icons/io5";
 // import axios from "axios";
-// import { COPPER_NEWS } from "@/src/api/lithiumAPI";
+// import { COPPER_NEWS } from "@/src/api/uraniumAPI";
 // import Loader from "../Loader";
 
 // const PlainNews = () => {
@@ -214,7 +214,7 @@
 // export default PlainNews;
 
 import React, { useState, useEffect } from "react";
-import { PRESS_RELEASE } from "@/src/api/lithiumAPI";
+import { PRESS_RELEASE } from "@/src/api/uraniumAPI";
 import Loader from "../Loader";
 
 const PlainNews = () => {
@@ -230,7 +230,10 @@ const PlainNews = () => {
         const response = await fetch(PRESS_RELEASE);
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.warn(`Press releases API returned ${response.status} — showing empty state`);
+          setNewsData([]);
+          setLoading(false);
+          return;
         }
         
         const data = await response.json();
