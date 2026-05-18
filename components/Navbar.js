@@ -160,7 +160,6 @@
 // };
 
 // export default Navbar;
-
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -179,10 +178,10 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "News", path: "/news" },
-    { name: "Uranium Investments", path: "/investments" },
+    { name: "Platinum Investments", path: "/investments" },
     { name: "Videos", path: "/videos" },
     { name: "Data", path: "/data" },
-    { name: "Uranium 101", path: "/C101" },
+    { name: "Platinum 101", path: "/C101" },
   ];
 
   const navigateTo = (path) => {
@@ -207,19 +206,20 @@ const Navbar = () => {
   }
 
   return (
-    <div className="bg-white border-b fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto px-4 xl:px-10 py-5 flex justify-between items-center">
-        {/* Logo */}
-        <Image
-          src="/logo.jpg"
-          alt="Logo"
-          width={220}
-          height={80}
-          className="cursor-pointer xl:ml-7"
+    <div className="bg-white border-b fixed top-0 left-0 w-full z-50  ">
+      <div className="container w-full xl:mx-auto px-4 xl:px-10 py-4 flex justify-between items-center">
+        <div className="relative w-[300px] h-[50px] xl:w-[220px] xl:h-[80px] xl:ml-7 cursor-pointer flex-shrink-0"
           onClick={() => navigateTo("/")}
-        />
+        >
+          <Image
+            src="/logo.jpg"
+            alt="Platinum Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
 
-        {/* Desktop Navigation (Visible after xl) */}
         <div className="hidden xl:flex xl:space-x-8 font-medium">
           {navLinks.map(({ name, path }, index) => (
             <div key={index} className="relative group">
@@ -244,7 +244,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Desktop Buttons (Visible after xl) */}
         {isLoggedIn && (
           <button
             className="text-2xl hidden xl:block text-primary py-3 hover:text-accent/90"
@@ -254,7 +253,6 @@ const Navbar = () => {
           </button>
         )}
 
-        {/* Mobile Menu Toggle (Hidden after xl) */}
         <div className="xl:hidden">
           <FaBars
             className={`text-2xl text-accent cursor-pointer ${
@@ -265,11 +263,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu (Visible below xl) */}
       {menuOpen && (
         <>
           <FaTimes
-            className="text-2xl text-accent cursor-pointer fixed top-5 right-2 z-[100]"
+            className="text-2xl text-accent cursor-pointer fixed top-5 right-4 z-[100]"
             onClick={() => setMenuOpen(false)}
           />
           <motion.div
