@@ -178,10 +178,10 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "News", path: "/news" },
-    { name: "Platinum Investments", path: "/investments" },
+    { name: "Uranium Investments", path: "/investments" },
     { name: "Videos", path: "/videos" },
     { name: "Data", path: "/data" },
-    { name: "Platinum 101", path: "/C101" },
+    { name: "Uranium 101", path: "/C101" },
   ];
 
   const navigateTo = (path) => {

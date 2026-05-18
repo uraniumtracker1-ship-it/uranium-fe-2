@@ -111,9 +111,9 @@ const investments = ({ stockData }) => {
   return (
     <div>
       <SEO
-        title="Lithium Investment Insights - Market Trends & Stock Analysis"
-        description="Explore in-depth Lithium investment insights, stock analysis, and the latest market trends. Stay informed about financial updates, ETF holdings, insider transactions, and stock screening tools to make better investment decisions."
-        keywords="Lithium investment insights, stock market trends, ETF holdings, stock analysis, insider transactions, stock screener, market updates, investment strategies, Lithium investments"
+        title="Uranium Investment Insights - Market Trends & Stock Analysis"
+        description="Explore in-depth Uranium investment insights, stock analysis, and the latest market trends. Stay informed about financial updates, ETF holdings, insider transactions, and stock screening tools to make better investment decisions."
+        keywords="uranium investment insights, stock market trends, ETF holdings, stock analysis, insider transactions, stock screener, market updates, investment strategies, uranium investments"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/investments"
       />
 
@@ -152,10 +152,10 @@ const investments = ({ stockData }) => {
             ETF Trust Holdings
           </a>
           <a 
-            href="/investments?tab=lithium-assets"
-            className={`py-2 px-4 ${currentTab === "lithium-assets" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
+            href="/investments?tab=uranium-assets"
+            className={`py-2 px-4 ${currentTab === "uranium-assets" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
-            Lithium Assets
+            Uranium Assets
           </a>
         </div>
         
@@ -396,7 +396,7 @@ const investments = ({ stockData }) => {
           {currentTab === "etf-trust-holdings" && (
             <IETF />
           )}
-          {currentTab === "lithium-assets" && (
+          {currentTab === "uranium-assets" && (
             <IUraniumAssets />
           )}
         </div>
