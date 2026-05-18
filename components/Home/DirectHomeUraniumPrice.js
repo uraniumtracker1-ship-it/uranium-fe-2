@@ -10,47 +10,48 @@ const DirectHomeUraniumPrice = () => {
     const fetchPricesFromDatabase = async () => {
       try {
         setLoading(true);
-        
+
         // Fetch metal prices from our database API
-        const response = await fetch('/api/uranium-prices');
-        
+        const response = await fetch("/api/uranium-prices");
+
         if (!response.ok) {
-          console.warn(`Uranium prices API returned ${response.status} — showing empty state`);
+          console.warn(
+            `Uranium prices API returned ${response.status} — showing empty state`,
+          );
           setUraniumPrices([]);
           setLoading(false);
           return;
         }
-        
+
         const data = await response.json();
-        
+
         if (!data.success || !data.data) {
           setUraniumPrices([]);
           setLoading(false);
           return;
         }
-        
+
         // Ensure data.data is an array
         const dataArray = Array.isArray(data.data) ? data.data : [data.data];
-        
+
         if (dataArray.length === 0) {
-          throw new Error('No metal price data available from database');
+          throw new Error("No metal price data available from database");
         }
-        
+
         // Transform database data to component format
-        const metalPrices = dataArray.map(item => ({
+        const metalPrices = dataArray.map((item) => ({
           metal_name: item.metal_name,
           price: parseFloat(item.price),
           price_change: parseFloat(item.price_change),
           price_change_percent: parseFloat(item.price_change_percent),
-          source: "Database API"
+          source: "Database API",
         }));
-        
+
         setUraniumPrices(metalPrices);
-        
       } catch (err) {
-        console.error('Error fetching prices from database:', err);
+        console.error("Error fetching prices from database:", err);
         setError(err.message);
-        
+
         // Fallback to mock data
         const fallbackData = [
           {
@@ -58,29 +59,29 @@ const DirectHomeUraniumPrice = () => {
             price: 4.15,
             price_change: -0.08,
             price_change_percent: -1.89,
-            source: "Fallback"
+            source: "Fallback",
           },
           {
-            metal_name: "Aluminum", 
+            metal_name: "Aluminum",
             price: 0.91,
             price_change: -0.02,
             price_change_percent: -1.51,
-            source: "Fallback"
+            source: "Fallback",
           },
           {
             metal_name: "Nickel",
             price: 8.51,
             price_change: -0.16,
             price_change_percent: -2.27,
-            source: "Fallback"
+            source: "Fallback",
           },
           {
             metal_name: "Zinc",
             price: 1.25,
             price_change: -0.02,
-            price_change_percent: -1.70,
-            source: "Fallback"
-          }
+            price_change_percent: -1.7,
+            source: "Fallback",
+          },
         ];
         setUraniumPrices(fallbackData);
       } finally {
@@ -89,7 +90,7 @@ const DirectHomeUraniumPrice = () => {
     };
 
     fetchPricesFromDatabase();
-    
+
     // Refresh every 2 minutes
     const interval = setInterval(fetchPricesFromDatabase, 2 * 60 * 1000);
     return () => clearInterval(interval);
@@ -109,41 +110,33 @@ const DirectHomeUraniumPrice = () => {
   };
 
   const renderRow = (metalData) => (
-    <tr className="text-sm hover:bg-accent/10" key={metalData.metal_name}>
-      <td className="border-t px-4 py-2 font-sm">
+    <tr className="text-md hover:bg-accent/10" key={metalData.metal_name}>
+      <td className="border-t px-4 py-5 font-sm">
         {metalData.metal_name}
         {metalData.source && (
-          <span className="text-xs text-gray-500 ml-2">({metalData.source})</span>
+          <span className="text-sm text-gray-500 ml-2">
+            ({metalData.source})
+          </span>
         )}
       </td>
-      <td className="border-t px-4 py-3">${formatValue(metalData.price)}</td>
+      <td className="border-t px-4 py-5">${formatValue(metalData.price)}</td>
       <td
-        className={`border-t px-4 py-3 ${getChangeClass(
-          parseFloat(metalData.price_change)
+        className={`border-t px-4 py-5 ${getChangeClass(
+          parseFloat(metalData.price_change),
         )}`}
       >
         {metalData.price_change > 0
           ? `$+${formatValue(metalData.price_change)}`
           : metalData.price_change < 0
-          ? `${formatValue(metalData.price_change)}`
-          : `$0.0000`}
+            ? `${formatValue(metalData.price_change)}`
+            : `$0.0000`}
       </td>
       <td
-        className={`border-t px-4 py-3 ${getChangeClass(
-          parseFloat(metalData.price_change_percent)
+        className={`border-t px-4 py-5 ${getChangeClass(
+          parseFloat(metalData.price_change_percent),
         )}`}
       >
         {formatValue(metalData.price_change_percent)}%
-      </td>
-      <td className="border-t px-4 py-3 text-center">
-        <a
-          href="/api/uranium-prices"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-black/70 hover:text-black/60"
-        >
-          <FaLink size={18} />
-        </a>
       </td>
     </tr>
   );
@@ -175,7 +168,6 @@ const DirectHomeUraniumPrice = () => {
             <th className="border-t px-4 py-2">Price (USD/lb)</th>
             <th className="border-t px-4 py-2">Change</th>
             <th className="border-t px-4 py-2">% Change</th>
-            <th className="border-t px-4 py-2">Source</th>
           </tr>
         </thead>
         <tbody>
@@ -190,14 +182,14 @@ const DirectHomeUraniumPrice = () => {
           )}
         </tbody>
       </table>
-      
+
       {error && (
         <div className="mt-2 text-xs text-orange-600 text-center">
           Note: Some data may be simulated due to API restrictions
         </div>
       )}
-      
-      <div className="mt-2 text-xs text-gray-500 text-center">
+
+      <div className="mt-2 mb-3  text-xs text-gray-500 text-center">
         Last updated: {new Date().toLocaleTimeString()} • Auto-refresh: 2 min
       </div>
     </div>

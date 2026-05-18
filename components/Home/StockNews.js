@@ -144,19 +144,21 @@ const StockNews = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        console.log('Fetching stock news from:', STOCK_NEWS);
+        console.log("Fetching stock news from:", STOCK_NEWS);
         const response = await fetch(STOCK_NEWS);
-        
+
         if (!response.ok) {
-          console.warn(`Stock news API returned ${response.status} — showing empty state`);
+          console.warn(
+            `Stock news API returned ${response.status} — showing empty state`,
+          );
           setNewsData([]);
           setLoading(false);
           return;
         }
-        
+
         const data = await response.json();
-        console.log('Stock news data:', data);
-        
+        console.log("Stock news data:", data);
+
         // Process the data to add today's date for missing dates
         const processedData = Array.isArray(data)
           ? data.map((news) => ({
@@ -242,7 +244,7 @@ const StockNews = () => {
   }
 
   const featuredNews = validNewsData[0];
-  const remainingNews = validNewsData.slice(1, 5);
+  const remainingNews = validNewsData.slice(1, 4);
 
   return (
     <div>
@@ -278,20 +280,20 @@ const StockNews = () => {
                   <h3 className="text-[18px] font-medium leading-6 mb-2 group-hover:underline">
                     {featuredNews.title}
                   </h3>
-                  
+
                   {/* Summary */}
                   {featuredNews.summary && (
                     <p className="text-[14px] text-gray-600 mb-2 line-clamp-2">
-                      {featuredNews.summary.length > 150 
+                      {featuredNews.summary.length > 150
                         ? `${featuredNews.summary.substring(0, 150)}...`
                         : featuredNews.summary}
                     </p>
                   )}
-                  
+
                   <div className="text-[14px] text-gray-500 space-x-2">
                     <span>{formatDate(featuredNews.date)}</span>
                     <span>|</span>
-                    <span>{featuredNews.provider || 'Unknown'}</span>
+                    <span>{featuredNews.provider || "Unknown"}</span>
                   </div>
                 </div>
               </div>
@@ -323,14 +325,14 @@ const StockNews = () => {
                       ? `${news.title.slice(0, 90)}...`
                       : news.title}
                   </h3>
-                  
+
                   {/* Company name for smaller news */}
                   {news.company_name && (
                     <p className="text-[12px] text-gray-600 mb-1">
                       {news.company_name}
                     </p>
                   )}
-                  
+
                   <div className="text-[12px] text-gray-500">
                     {formatDate(news.date)}
                   </div>

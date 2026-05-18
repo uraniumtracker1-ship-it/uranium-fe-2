@@ -1,10 +1,50 @@
+// // /** @type {import('next').NextConfig} */
+// // const nextConfig = {
+// //   reactStrictMode: true,
+// // };
+
+// // export default nextConfig;
+
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
 //   reactStrictMode: true,
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: 'https',
+//         hostname: 'copperdjango-production.up.railway.app',
+//         port: '',
+//         pathname: '/**',
+//       },
+//     ],
+//   },
+//   // Optimize for Vercel deployment
+//   compiler: {
+//     removeConsole: process.env.NODE_ENV === 'production',
+//   },
+//   // Handle potential build issues 
+//   typescript: {
+//     ignoreBuildErrors: false,
+//   },
+//   eslint: {
+//     ignoreDuringBuilds: false,
+//   },
+//   // Disable static optimization for dynamic pages
+//   output: 'standalone',
+//   // Add output for static export if needed
+//   trailingSlash: true,
+//   // Ensure proper handling of API routes
+//   async rewrites() {
+//     return [
+//       {
+//         source: '/api/:path*',
+//         destination: '/api/:path*',
+//       },
+//     ];
+//   },
 // };
 
 // export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -18,22 +58,17 @@ const nextConfig = {
       },
     ],
   },
-  // Optimize for Vercel deployment
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Handle potential build issues 
   typescript: {
     ignoreBuildErrors: false,
   },
   eslint: {
     ignoreDuringBuilds: false,
   },
-  // Disable static optimization for dynamic pages
   output: 'standalone',
-  // Add output for static export if needed
   trailingSlash: true,
-  // Ensure proper handling of API routes
   async rewrites() {
     return [
       {
@@ -41,6 +76,14 @@ const nextConfig = {
         destination: '/api/:path*',
       },
     ];
+  },
+  // fix hot reload
+  webpack: (config) => {
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300,
+    };
+    return config;
   },
 };
 

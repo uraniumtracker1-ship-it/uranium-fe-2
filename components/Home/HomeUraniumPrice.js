@@ -61,32 +61,22 @@ const HomeUraniumPrice = () => {
       <td className="border-t px-4 py-3">${formatValue(metalData.price)}</td>
       <td
         className={`border-t px-4 py-3 ${getChangeClass(
-          parseFloat(metalData.price_change)
+          parseFloat(metalData.price_change),
         )}`}
       >
         {/* Display Change with proper sign */}
         {metalData.price_change > 0
           ? `$+${formatValue(metalData.price_change)}`
           : metalData.price_change < 0
-          ? `$-${formatValue(Math.abs(metalData.price_change))}`
-          : `$0.00`}
+            ? `$-${formatValue(Math.abs(metalData.price_change))}`
+            : `$0.00`}
       </td>
       <td
         className={`border-t px-4 py-3 ${getChangeClass(
-          parseFloat(metalData.price_change_percent)
+          parseFloat(metalData.price_change_percent),
         )}`}
       >
         {formatValue(metalData.price_change_percent)}%
-      </td>
-      <td className="border-t px-4 py-3 text-center">
-        <a
-          href="https://tradingeconomics.com/commodity/uranium"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-black/70 hover:text-black/60"
-        >
-          <FaLink size={18} />
-        </a>
       </td>
     </tr>
   );
@@ -100,7 +90,6 @@ const HomeUraniumPrice = () => {
             <th className="border-t px-4 py-2">Price (USD)</th>
             <th className="border-t px-4 py-2">Change</th>
             <th className="border-t px-4 py-2">% Change</th>
-            <th className="border-t px-4 py-2">Source</th>
           </tr>
         </thead>
         <tbody>{metalPrices.map((metalData) => renderRow(metalData))}</tbody>

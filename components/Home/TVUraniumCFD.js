@@ -28,18 +28,29 @@ function UraniumCFDTradingViewWidget() {
           "hide_volume": false,
           "support_host": "https://www.tradingview.com"
         }`;
-    
+
     if (container.current) {
-      container.current.innerHTML = '';
+      container.current.innerHTML = "";
       container.current.appendChild(script);
     }
   }, []);
 
   return (
-    <div className="tradingview-widget-container" style={{ height: "400px", width: "100%" }}>
-      <div className="tradingview-widget-container__widget" ref={container} style={{ height: "calc(100% - 32px)", width: "100%" }}></div>
+    <div
+      className="tradingview-widget-container"
+      style={{ height: "325px", width: "100%" }}
+    >
+      <div
+        className="tradingview-widget-container__widget"
+        ref={container}
+        style={{ height: "calc(100% - 32px)", width: "100%" }}
+      ></div>
       <div className="tradingview-widget-copyright">
-        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+        <a
+          href="https://www.tradingview.com/"
+          rel="noopener nofollow"
+          target="_blank"
+        >
           <span className="blue-text">Track all markets on TradingView</span>
         </a>
       </div>

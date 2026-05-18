@@ -37,33 +37,44 @@ const home = () => {
 
       <Hero />
 
-      {/* 3 cols  */}
-      <div className="flex flex-col lg:flex-row justify-between gap-6 px-3 md:px-10 lg:px-12 py-8 mb-8">
-        {/* 1  */}
-        <div className="w-full lg:w-[24%] flex flex-col space-y-6">
-          <div>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 px-4">
+        <div className="col-span-1 md:col-span-3">
+          <div className="border rounded-md  px-3 py-4 ">
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Lithium Price Chart
             </h1>
             <TVUraniumCFD />
           </div>
         </div>
-
-        {/* 2  */}
-        <div className="w-full lg:w-[40%] flex flex-col space-y-6">
-          <div>
+        <div className="col-span-1 md:col-span-6">
+          <div className="border rounded-md  px-3 py-4 ">
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Prices
             </h1>
-            <DirectHomeUraniumPrice />
+            <div className="border rounded-md my-2">
+              <DirectHomeUraniumPrice />
+            </div>
           </div>
-          <div>
+        </div>
+        <div className="md:col-span-3">
+          <div className="border rounded-md  px-3 py-4 ">
+            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
+              Lithium Futures
+            </h1>
+            <TVUranium />
+          </div>
+        </div>
+      </div>
+
+      <div className=" grid grid-cols-1 md:grid-cols-9 px-4 gap-8 mt-8">
+        <div className="col-span-1 md:col-span-7">
+          <div className="border rounded-md  px-3 py-4 ">
             <div className="flex justify-between items-center mb-3 border-b border-black/10 pb-1">
               <h1 className="text-[21px] cambay font-bold">
                 Recent Canadian Company Insider Transactions
               </h1>
-              <a 
-                href="/investments" 
+              <a
+                href="/investments"
                 className="text-sm text-accent hover:text-accent/80 transition-colors"
               >
                 view all
@@ -72,46 +83,53 @@ const home = () => {
             <HomeInsiderTransactions />
           </div>
         </div>
-
-        {/* 3  */}
-        <div className="w-full lg:w-[24%] flex flex-col space-y-6">
-          <div>
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Lithium Futures
-            </h1>
-            <TVUranium />
+        <div className="col-span-1  md:col-span-2 flex flex-col gap-8 ">
+          <div className="border rounded-md  px-3 py-4 ">
+            <Substacks />
           </div>
-
-          <Substacks />
 
           <DailyNewsletterAd />
         </div>
       </div>
 
-      {/* 2 cols  */}
-      <div className="flex flex-col lg:flex-row justify-between gap-6 px-3 md:px-10 lg:px-12 py-8 mb-8">
-        {/* left  */}
-        <div className="w-full lg:w-[66%] flex flex-col space-y-12">
+      <div className="grid md:grid-cols-9 px-4 gap-8 mt-8">
+        <div className="md:col-span-7 border rounded-md  px-3 py-4 ">
           <LatestNews />
-          <PressReleaseNews />
-          <StockNews />
-          <MostPopularNews />
         </div>
-        {/* right  */}
-        <div className="w-full lg:w-[26%] space-y-12">
+        <div className="md:col-span-2 border rounded-md  px-3 py-4 ">
           <DirectUraniumPrice />
-          {/* <LithiumTradingviewChart /> */}
-          <PopularIntradayReturn />
-          <PopularTools />
-          {/* <DailyNewsletterAd /> */}
-          {/* <Substacks /> */}
         </div>
       </div>
-      
-      {/* Most Followed Stocks Table */}
-      <MostFollowedStocksTable />
-      
-      {/* Stay ahead section */}
+
+      <div className="grid md:grid-cols-9 px-4 gap-8 mt-8">
+        <div className="md:col-span-7 border rounded-md  px-3 py-4 ">
+          <PressReleaseNews />
+        </div>
+        <div className="md:col-span-2 border rounded-md  px-3 py-4 ">
+          <PopularTools />
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-9 px-4 gap-8 mt-8">
+        <div className="md:col-span-7 border rounded-md  px-3 py-4 ">
+          <StockNews />
+        </div>
+        <div className="md:col-span-2 border rounded-md  px-3 py-4 ">
+          <PopularIntradayReturn />
+        </div>
+      </div>
+
+      <div className="mx-4">
+        {" "}
+        <div className="border rounded-md py-4 mt-8 px-4 ">
+          <MostPopularNews />
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <MostFollowedStocksTable />
+      </div>
+
       <div className="mb-8">
         <StayAhead />
       </div>

@@ -1,13 +1,13 @@
-import { query } from '../../lib/database';
+import { query } from "../../lib/database";
 
 export default async function handler(req, res) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
+  if (req.method !== "GET") {
+    return res.status(405).json({ message: "Method not allowed" });
   }
 
   try {
-    console.log('Fetching most followed stocks from database...');
-    
+    console.log("Fetching most followed stocks from database...");
+
     // Query to fetch most followed stocks from our database
     const result = await query(`
       SELECT 
@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     console.log(`Found ${result.rows.length} most followed stock records`);
 
     // Transform the data to match frontend expectations
-    const stocks = result.rows.map(row => ({
+    const stocks = result.rows.map((row) => ({
       id: row.id,
       name: row.name,
       ticker: row.ticker,
@@ -54,39 +54,44 @@ export default async function handler(req, res) {
       volume: parseInt(row.volume || 0),
       country: row.country,
       stock_exchange: row.stock_exchange,
-      stock_type: row.stock_type
+      stock_type: row.stock_type,
     }));
 
     // Group stocks by category
     const groupedStocks = {
-      most_watched: stocks.filter(stock => stock.stock_type === 'most_watched').slice(0, 10),
-      north_american_leaders: stocks.filter(stock => stock.stock_type === 'north_american_leaders').slice(0, 10),
-      global_market_leaders: stocks.filter(stock => stock.stock_type === 'global_market_leaders').slice(0, 10)
+      most_watched: stocks
+        .filter((stock) => stock.stock_type === "most_watched")
+        .slice(0, 15),
+      north_american_leaders: stocks
+        .filter((stock) => stock.stock_type === "north_american_leaders")
+        .slice(0, 10),
+      global_market_leaders: stocks
+        .filter((stock) => stock.stock_type === "global_market_leaders")
+        .slice(0, 10),
     };
 
     res.status(200).json({
       success: true,
       data: groupedStocks,
       total_stocks: stocks.length,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
-    
   } catch (error) {
-    console.error('Database error:', error);
-    
+    console.error("Database error:", error);
+
     // Fallback data structure
     const fallbackData = {
       most_watched: [],
       north_american_leaders: [],
-      global_market_leaders: []
+      global_market_leaders: [],
     };
-    
+
     res.status(200).json({
       success: false,
       data: fallbackData,
       error: error.message,
-      message: 'Using fallback data - database error',
-      timestamp: new Date().toISOString()
+      message: "Using fallback data - database error",
+      timestamp: new Date().toISOString(),
     });
   }
 }

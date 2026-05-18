@@ -10,18 +10,21 @@ const HomeInsiderTransactions = () => {
         const response = await fetch("/api/insider-transactions/");
         // Gracefully handle non-200 — show empty state, don't crash
         if (!response.ok) {
-          console.warn(`Insider transactions API returned ${response.status} — showing empty state`);
+          console.warn(
+            `Insider transactions API returned ${response.status} — showing empty state`,
+          );
           setTransactions([]);
           setLoading(false);
           return;
         }
         const data = await response.json();
-        
+
         // Filter for Canadian transactions and limit to 10 most recent
-        const canadianTransactions = (Array.isArray(data) ? data : [])
-          .filter(t => t.country === "Canada")
-          .slice(0, 10);
-        
+        const canadianTransactions = (Array.isArray(data) ? data : []).slice(
+          0,
+          10,
+        );
+
         setTransactions(canadianTransactions);
       } catch (err) {
         console.error("Error fetching insider transactions:", err);
@@ -40,7 +43,7 @@ const HomeInsiderTransactions = () => {
     return date.toLocaleDateString("en-US", {
       year: "numeric",
       month: "short",
-      day: "numeric"
+      day: "numeric",
     });
   };
 
@@ -79,23 +82,34 @@ const HomeInsiderTransactions = () => {
         </thead>
         <tbody>
           {transactions.map((transaction, index) => (
-            <tr 
-              key={transaction.id || index} 
+            <tr
+              key={transaction.id || index}
               className="text-xs hover:bg-accent/10 transition-colors"
             >
               <td className="border-t px-2 py-2">
-                <span className="text-lg" title="Canada">🇨🇦</span>
+                <span className="text-lg" title="Canada">
+                  🇨🇦
+                </span>
               </td>
-              <td className="border-t px-2 py-2 max-w-[120px] truncate" title={transaction.company_name}>
+              <td
+                className="border-t px-2 py-2 max-w-[120px] truncate"
+                title={transaction.company_name}
+              >
                 {transaction.company_name || "N/A"}
               </td>
               <td className="border-t px-2 py-2 font-semibold text-accent">
                 {transaction.ticker || "N/A"}
               </td>
-              <td className="border-t px-2 py-2 max-w-[100px] truncate" title={transaction.insider_name}>
+              <td
+                className="border-t px-2 py-2 max-w-[100px] truncate"
+                title={transaction.insider_name}
+              >
                 {transaction.insider_name || "N/A"}
               </td>
-              <td className="border-t px-2 py-2 max-w-[100px] truncate" title={transaction.title}>
+              <td
+                className="border-t px-2 py-2 max-w-[100px] truncate"
+                title={transaction.title}
+              >
                 {transaction.title || "N/A"}
               </td>
               <td className="border-t px-2 py-2">
