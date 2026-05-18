@@ -1,43 +1,63 @@
 import Navbar from "@/components/Navbar";
-import React from "react";
-import { useRouter } from "next/router";
-import DataHero from "@/components/Data/DataHero";
-import DPricePremium from "@/components/Data/DPricePremium";
-import DDemandDatabase from "@/components/Data/DDemandDatabase";
-import TabsSection from "@/components/Data/TabSection";
 import Footer from "@/components/Footer";
-import DSupply from "@/components/Data/DSupply";
-import DWPICSupply from "@/components/Data/DWPICSupply";
 import SEO from "@/components/SEO";
+import DataHero from "@/components/Data/DataHero";
+import Breadcrumb from "@/components/Data/Breadcrumb";
+import SectionNav from "@/components/Data/SectionNav";
+import PriceSection from "@/components/Data/PriceSection";
+import FuelCycleSection from "@/components/Data/FuelCycleSection";
+import KazakhstanSection from "@/components/Data/KazakhstanSection";
+import ProjectPipeline from "@/components/Data/ProjectPipeline";
+import UtilitySection from "@/components/Data/UtilitySection";
+import ReactorSection from "@/components/Data/ReactorSection";
+import SecondarySection from "@/components/Data/SecondarySection";
+import BalanceSection from "@/components/Data/BalanceSection";
+import ProducersSection from "@/components/Data/ProducersSection";
+import HistorySection from "@/components/Data/HistorySection";
+import GeopoliticsSection from "@/components/Data/GeopoliticsSection";
+import DashboardSection from "@/components/Data/DashboardSection";
+import InstrumentsSection from "@/components/Data/InstrumentsSection";
+import UraniumCalculator from "@/components/Data/UraniumCalculator";
+import FAQSection from "@/components/Data/FAQSection";
+import EditorialNote from "@/components/Data/EditorialNote";
 
 const Data = () => {
-  const { query } = useRouter();
-  const currentTab = query.tab || "priceandpremiums";
-
   return (
-    <div>
+    <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
       <SEO
-        title="Lithium Market Data - Price Trends, Supply & Demand Insights"
-        description="Access comprehensive Lithium market data, including price trends, supply and demand metrics, and industry analysis. Our detailed datasets provide the insights you need for informed decision-making in the Lithium market."
-        keywords="Lithium market data, price trends, Lithium supply and demand, industry analysis, Lithium research, market insights, Lithium and Lithium Alloys, data analytics"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/data"
+        title="Uranium Market Data - Live Prices, Supply & Demand Intelligence"
+        description="Access comprehensive uranium market data including live spot prices, long-term contracts, supply-demand analytics, reactor intelligence, and exclusive market insights used by industry professionals."
+        keywords="uranium prices today, live uranium market data, nuclear reactor intelligence, uranium supply chain analytics, uranium demand forecasting, SMR market opportunities, nuclear energy statistics, uranium investment intelligence"
+        canonicalUrl="https://uraniumtracker.com/data"
       />
-      <Navbar />
+      
+      <nav id="navigation" role="navigation" aria-label="Main navigation">
+        <Navbar />
+      </nav>
+      
+      <Breadcrumb />
       <DataHero />
-      {/* tabs  */}
-      <div>
-        <TabsSection />
-        <div className="mt-6">
-          {currentTab === "priceandpremiums" && <DPricePremium />}
-          {currentTab === "demanddatabase" && <DDemandDatabase />}
-          {currentTab === "supply" && <DSupply />}
-          {currentTab === "wpicsupply" && <DWPICSupply />}
-        </div>
-      </div>
+      <SectionNav />
+      <PriceSection />
+      <FuelCycleSection />
+      <KazakhstanSection />
+      <ProjectPipeline />
+      <UtilitySection />
+      <ReactorSection />
+      <SecondarySection />
+      <BalanceSection />
+      <ProducersSection />
+      <HistorySection />
+      <GeopoliticsSection />
+      <DashboardSection />
+      <InstrumentsSection />
+      <UraniumCalculator />
+      <FAQSection />
+      <EditorialNote />
 
-      <div className="mt-24">
+      <footer role="contentinfo" aria-label="Site footer">
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 };
