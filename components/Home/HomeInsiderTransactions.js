@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { formatInsiderTitle, formatTradeType } from "@/lib/constants";
 
 const HomeInsiderTransactions = () => {
   const [transactions, setTransactions] = useState([]);
@@ -8,7 +9,6 @@ const HomeInsiderTransactions = () => {
     const fetchTransactions = async () => {
       try {
         const response = await fetch("/api/insider-transactions/");
-        // Gracefully handle non-200 — show empty state, don't crash
         if (!response.ok) {
           console.warn(
             `Insider transactions API returned ${response.status} — showing empty state`,
@@ -18,14 +18,7 @@ const HomeInsiderTransactions = () => {
           return;
         }
         const data = await response.json();
-
-        // Filter for Canadian transactions and limit to 10 most recent
-        const canadianTransactions = (Array.isArray(data) ? data : []).slice(
-          0,
-          10,
-        );
-
-        setTransactions(canadianTransactions);
+        setTransactions((Array.isArray(data) ? data : []).slice(0, 10));
       } catch (err) {
         console.error("Error fetching insider transactions:", err);
         setTransactions([]);
@@ -39,8 +32,7 @@ const HomeInsiderTransactions = () => {
 
   const formatDate = (dateString) => {
     if (!dateString) return "N/A";
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
+    return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
       month: "short",
       day: "numeric",
@@ -68,67 +60,70 @@ const HomeInsiderTransactions = () => {
       <table className="table-auto w-full border-collapse text-xs">
         <thead className="text-left">
           <tr className="text-black/60">
-            <th className="border-t px-2 py-2">Country</th>
-            <th className="border-t px-2 py-2">Company</th>
-            <th className="border-t px-2 py-2">Ticker</th>
-            <th className="border-t px-2 py-2">Insider</th>
-            <th className="border-t px-2 py-2">Title</th>
-            <th className="border-t px-2 py-2">Type</th>
-            <th className="border-t px-2 py-2">Price</th>
-            <th className="border-t px-2 py-2">Qty</th>
-            <th className="border-t px-2 py-2">Amount</th>
-            <th className="border-t px-2 py-2">Date</th>
+            <th className="border-t px-2 py-2 whitespace-nowrap">Country</th>
+            <th className="border-t px-2 py-2 min-w-[120px]">Company</th>
+            <th className="border-t px-2 py-2 whitespace-nowrap">Ticker</th>
+            <th className="border-t px-2 py-2 min-w-[100px]">Insider</th>
+            <th className="border-t px-2 py-2 min-w-[90px]">Title</th>
+            <th className="border-t px-2 py-2 min-w-[60px]">Type</th>
+            <th className="border-t px-2 py-2 whitespace-nowrap">Price</th>
+            <th className="border-t px-2 py-2 whitespace-nowrap">Qty</th>
+            <th className="border-t px-2 py-2 whitespace-nowrap">Amount</th>
+            <th className="border-t px-2 py-2 whitespace-nowrap">Date</th>
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction, index) => (
-            <tr
-              key={transaction.id || index}
-              className="text-xs hover:bg-accent/10 transition-colors"
-            >
-              <td className="border-t px-2 py-2">
-                <span className="text-lg" title="Canada">
-                  🇨🇦
-                </span>
-              </td>
-              <td
-                className="border-t px-2 py-2 max-w-[120px] truncate"
-                title={transaction.company_name}
+          {transactions.map((transaction, index) => {
+            const tradeType = formatTradeType(transaction.trade_type);
+            return (
+              <tr
+                key={transaction.id || index}
+                className="text-xs hover:bg-accent/10 transition-colors"
               >
-                {transaction.company_name || "N/A"}
-              </td>
-              <td className="border-t px-2 py-2 font-semibold text-accent">
-                {transaction.ticker || "N/A"}
-              </td>
-              <td
-                className="border-t px-2 py-2 max-w-[100px] truncate"
-                title={transaction.insider_name}
-              >
-                {transaction.insider_name || "N/A"}
-              </td>
-              <td
-                className="border-t px-2 py-2 max-w-[100px] truncate"
-                title={transaction.title}
-              >
-                {transaction.title || "N/A"}
-              </td>
-              <td className="border-t px-2 py-2">
-                {transaction.trade_type || "N/A"}
-              </td>
-              <td className="border-t px-2 py-2">
-                {transaction.price || "$0.00"}
-              </td>
-              <td className="border-t px-2 py-2 text-green-600 font-medium">
-                {transaction.qty || "0"}
-              </td>
-              <td className="border-t px-2 py-2 text-green-600 font-medium">
-                {transaction.value || "$0"}
-              </td>
-              <td className="border-t px-2 py-2 whitespace-nowrap">
-                {formatDate(transaction.transaction_date)}
-              </td>
-            </tr>
-          ))}
+                <td className="border-t px-2 py-2">
+                  <span className="text-lg" title="Canada">
+                    🇨🇦
+                  </span>
+                </td>
+                <td
+                  className="border-t px-2 py-2 max-w-[140px] truncate"
+                  title={transaction.company_name}
+                >
+                  {transaction.company_name || "N/A"}
+                </td>
+                <td className="border-t px-2 py-2 font-semibold text-accent whitespace-nowrap">
+                  {transaction.ticker || "N/A"}
+                </td>
+                <td
+                  className="border-t px-2 py-2 max-w-[110px] truncate"
+                  title={transaction.insider_name}
+                >
+                  {transaction.insider_name || "N/A"}
+                </td>
+                <td
+                  className="border-t px-2 py-2 max-w-[110px] truncate"
+                  title={transaction.title}
+                >
+                  {formatInsiderTitle(transaction.title)}
+                </td>
+                <td className={`border-t px-2 py-2 font-medium whitespace-nowrap ${tradeType.color}`}>
+                  {tradeType.label}
+                </td>
+                <td className="border-t px-2 py-2 whitespace-nowrap">
+                  {transaction.price || "$0.00"}
+                </td>
+                <td className={`border-t px-2 py-2 font-medium whitespace-nowrap ${tradeType.color}`}>
+                  {transaction.qty || "0"}
+                </td>
+                <td className={`border-t px-2 py-2 font-medium whitespace-nowrap ${tradeType.color}`}>
+                  {transaction.value || "$0"}
+                </td>
+                <td className="border-t px-2 py-2 whitespace-nowrap">
+                  {formatDate(transaction.transaction_date)}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

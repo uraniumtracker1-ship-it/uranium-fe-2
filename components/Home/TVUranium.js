@@ -1,7 +1,8 @@
-// TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from "react";
 
-function UraniumTradingViewWidget() {
+// Sprott Uranium Miners ETF (URNM) — used as a uranium equity proxy.
+// Note: there is no public TradingView ticker for U3O8 spot (OTC market).
+function UraniumMinersETFWidget() {
   const container = useRef();
 
   useEffect(() => {
@@ -10,24 +11,23 @@ function UraniumTradingViewWidget() {
       "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
     script.type = "text/javascript";
     script.async = true;
-    script.innerHTML = `
-        {
-          "autosize": true,
-          "symbol": "NYSE:ALB",
-          "interval": "D",
-          "timezone": "Etc/UTC",
-          "theme": "light",
-          "style": "1",
-          "locale": "en",
-          "enable_publishing": false,
-          "hide_top_toolbar": false,
-          "hide_legend": false,
-          "allow_symbol_change": true,
-          "save_image": false,
-          "calendar": false,
-          "hide_volume": false,
-          "support_host": "https://www.tradingview.com"
-        }`;
+    script.innerHTML = JSON.stringify({
+      autosize: true,
+      symbol: "AMEX:URNM",
+      interval: "D",
+      timezone: "Etc/UTC",
+      theme: "light",
+      style: "1",
+      locale: "en",
+      enable_publishing: false,
+      hide_top_toolbar: false,
+      hide_legend: false,
+      allow_symbol_change: true,
+      save_image: false,
+      calendar: false,
+      hide_volume: false,
+      support_host: "https://www.tradingview.com",
+    });
 
     if (container.current) {
       container.current.innerHTML = "";
@@ -44,18 +44,20 @@ function UraniumTradingViewWidget() {
         className="tradingview-widget-container__widget"
         ref={container}
         style={{ height: "calc(100% - 32px)", width: "100%" }}
-      ></div>
-      <div className="tradingview-widget-copyright">
+      />
+      <p className="text-[10px] text-gray-400 mt-1">
+        ETF proxy — not U3O8 spot price.{" "}
         <a
           href="https://www.tradingview.com/"
           rel="noopener nofollow"
           target="_blank"
+          className="underline"
         >
-          <span className="blue-text">Track all markets on TradingView</span>
+          TradingView
         </a>
-      </div>
+      </p>
     </div>
   );
 }
 
-export default memo(UraniumTradingViewWidget);
+export default memo(UraniumMinersETFWidget);

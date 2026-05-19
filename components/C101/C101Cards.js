@@ -59,10 +59,10 @@ const C101Cards = () => {
             <div className="w-full h-[50%] bg-accent/5 text-black1/80 flex flex-col justify-center pb-0 px-2 relative transition-all duration-200 group-hover:bg-accent/10 overflow-hidden">
               <div className="relative z-10">
                 <h2 className="text-[19px] capitalize font-semibold mb-2 frank">
-                  Copper Glossary
+                  Uranium Glossary
                 </h2>
                 <p className="text-[15px] text-left text-lightgray group-hover:text-lightgray transition-colors duration-500">
-                  Glossary of Terms for Copper and Lithium Alloys...
+                  Glossary of Terms for Uranium Markets and Nuclear Energy...
                 </p>
               </div>
             </div>

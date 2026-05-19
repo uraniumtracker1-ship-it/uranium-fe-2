@@ -15,7 +15,7 @@ const StayAhead = () => {
         "Use our Uranium Stock screener to find suitable Uranium stocks",
         "Search by Jurisdiction, stock exchange, marketcap",
       ],
-      link: "/investments?tab=stock-screener",
+      link: "/investments/screener",
     },
     {
       title: "Uranium News",
@@ -33,7 +33,7 @@ const StayAhead = () => {
         "See if insiders are buying or selling your Uranium stocks",
         "See recent insider trades so you can stay ahead of the game",
       ],
-      link: "/investments?tab=insider-transactions",
+      link: "/investments/insider-trades",
     },
   ];
 
@@ -73,8 +73,9 @@ const StayAhead = () => {
               Uranium news, price and analysis
             </h1>
             <p className="text-sm text-white/80 font-medium mb-4 sm:mb-8">
-              Sign up for Uranium Tracker's to gain access to Uranium Tracker's
-              full suite of research tools
+              Sign up for Uranium Tracker to access our full suite of research
+              tools — including the stock screener, insider trading tracker, ETF
+              holdings dashboard, and 419-asset uranium projects database.
             </p>
           </div>
           <Link

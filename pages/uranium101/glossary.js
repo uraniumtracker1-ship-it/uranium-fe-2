@@ -11,7 +11,7 @@ const Glossary = () => {
         title="Uranium Glossary - Uranium Industry Terms & Definitions"
         description="Comprehensive glossary of uranium industry terms, definitions, and technical vocabulary. Learn about uranium mining, processing, alloys, and market terminology."
         keywords="uranium glossary, uranium terms, uranium definitions, uranium industry vocabulary, metal terminology, uranium alloys, mining terms"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/uranium101/glossary"
+        canonicalPath="/uranium-investing-101/glossary"
       />
       <Navbar />
       <C101Breadcrumb link="/uranium101/glossary" title="Uranium Glossary" />

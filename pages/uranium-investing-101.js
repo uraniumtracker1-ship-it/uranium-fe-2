@@ -4,8 +4,9 @@ import C101Cards from "@/components/C101/C101Cards";
 import C101Hero from "@/components/C101/C101Hero";
 import React from "react";
 import SEO from "@/components/SEO";
+import { SEO_COPY } from "@/lib/constants";
 
-const C101 = () => {
+const UraniumInvesting101 = () => {
   return (
     <div>
       <SEO
@@ -17,12 +18,9 @@ const C101 = () => {
       <Navbar />
       <C101Hero />
       <C101Cards />
-
-      <div className="mt-24">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };
 
-export default C101;
+export default UraniumInvesting101;

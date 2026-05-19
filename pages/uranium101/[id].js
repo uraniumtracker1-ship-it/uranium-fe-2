@@ -18,7 +18,7 @@ const DetailPage = ({ card }) => {
         title={`${card.title} - Uranium Alloys Guide & Glossary`}
         description="Explore the world of Uranium and its alloys with our comprehensive guide. Learn about uranium, brass, bronze, aluminum bronze, nickel silver, and beryllium uranium, their properties, uses, and market significance."
         keywords="Uranium 101, Uranium Alloys, uranium, brass, bronze, aluminum bronze, nickel silver, beryllium uranium, metal properties, uranium glossary, industrial metals"
-        canonicalUrl={`https://musical-panda-75f15d.netlify.app/uranium101/${card.id}`}
+        canonicalPath={`/uranium-investing-101/${card.id}`}
       />
       {/* Breadcrumb Component */}
       <C101Breadcrumb link={card.href} title={card.title} />

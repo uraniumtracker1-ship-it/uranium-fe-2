@@ -8,10 +8,10 @@ export default function Custom404() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen  text-black">
       <SEO
-        title="Page Not Found - Lithium Tracker"
-        description="Oops! The page you're looking for doesn’t exist. Get back on track with the latest Lithium and Lithium Alloys market updates and insights."
-        keywords="404, page not found, Lithium market, Lithium prices, Lithium tracker"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/404"
+        title="Page Not Found — Uranium Tracker"
+        description="This page doesn’t exist. Head back to Uranium Tracker for live U3O8 prices, uranium stocks, and nuclear market news."
+        keywords="404, page not found, uranium tracker"
+        canonicalPath="/404"
       />
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -33,7 +33,7 @@ export default function Custom404() {
         className="flex flex-col items-center"
       >
         <p className="mb-4 text-gray-400">
-          Platinum prices don’t wait—head back to the dashboard!
+          Uranium prices don’t wait — head back to the homepage!
         </p>
         <div className="flex items-center space-x-2 hover:bg-gray-100 hover:text-secondary transition-all duration-500 ease-in-out p-2 rounded">
           <AiOutlineStock className="text-accent text-4xl" />
@@ -53,7 +53,7 @@ export default function Custom404() {
       >
         <p>
           If you're stuck, contact us at{" "}
-          <span className="text-accent">info@platinumtracker.com</span>.
+          <span className="text-accent">info@uraniumtracker.com</span>.
         </p>
       </motion.div>
     </div>

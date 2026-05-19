@@ -227,10 +227,10 @@ const StockDetailPage = () => {
     return (
       <div>
         <SEO
-          title="Stock Not Found"
-          description="Stock Not Found"
-          keywords="stock details, market insights, stock analysis, stock performance, investment, financial data, stock trends"
-          canonicalUrl="https://musical-panda-75f15d.netlify.app/stock-detail"
+          title="Stock Not Found — Uranium Tracker"
+          description="This uranium stock page is not available. Browse all uranium stocks and ETFs on Uranium Tracker."
+          keywords="uranium stock, stock not found, uranium tracker"
+          canonicalPath="/investments/leaders"
         />
         <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
           <div className="text-center">
@@ -255,10 +255,10 @@ const StockDetailPage = () => {
   return (
     <div>
       <SEO
-        title="Stock Details - Market Insights & Analysis"
-        description="Get in-depth stock details, real-time market data, historical performance, and expert analysis to make informed investment decisions."
-        keywords="stock details, market insights, stock analysis, stock performance, investment, financial data, stock trends"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/stock-detail"
+        title={`${ticker ? ticker.toUpperCase() + ' — ' : ''}Uranium Stock Data & Analysis | Uranium Tracker`}
+        description={`Live price, insider transactions, news, and fundamentals for ${ticker ? ticker.toUpperCase() : 'this uranium stock'} on Uranium Tracker.`}
+        keywords={`${ticker || 'uranium'} stock, uranium mining stock, uranium stock data, nuclear stock`}
+        canonicalPath={`/stock-detail/${ticker || ''}`}
       />
       <Navbar />
       <div className="flex flex-col md:flex-row justify-between px-2 md:px-12 my-10 pb-20 mt-24">

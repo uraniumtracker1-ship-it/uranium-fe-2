@@ -72,10 +72,10 @@ const Videos = () => {
   return (
     <div>
       <SEO
-        title="Lithium Video Hub - Market Updates, Education & Insights"
-        description="Enhance your Lithium market knowledge through our educational video content. From market fundamentals to advanced trading strategies, explore our comprehensive library of featured videos, company insights, podcasts, and educational resources."
-        keywords="Lithium videos, market updates, Lithium education, trading strategies, company insights, Lithium podcasts, investment knowledge, Lithium and Lithium Alloys"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/videos"
+        title="Uranium Analyst Videos — Market Updates & Nuclear Investment Insights | Uranium Tracker"
+        description="Watch uranium market videos from analysts and company executives — covering U3O8 price analysis, uranium stock picks, nuclear energy trends, and investor education."
+        keywords="uranium videos, uranium market analysis, nuclear energy videos, uranium investing education, uranium analyst"
+        canonicalPath="/videos"
       />
       <Navbar />
       <VideoHero />

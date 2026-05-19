@@ -69,6 +69,45 @@ const nextConfig = {
   },
   output: 'standalone',
   trailingSlash: true,
+  async redirects() {
+    return [
+      // Uranium 101 legacy paths
+      { source: '/U101', destination: '/uranium-investing-101', permanent: true },
+      { source: '/C101', destination: '/uranium-investing-101', permanent: true },
+      { source: '/P101', destination: '/uranium-investing-101', permanent: true },
+      // Investments ?tab= → real subroutes
+      {
+        source: '/investments',
+        has: [{ type: 'query', key: 'tab', value: 'snapshot' }],
+        destination: '/investments/leaders',
+        permanent: true,
+      },
+      {
+        source: '/investments',
+        has: [{ type: 'query', key: 'tab', value: 'stock-screener' }],
+        destination: '/investments/screener',
+        permanent: true,
+      },
+      {
+        source: '/investments',
+        has: [{ type: 'query', key: 'tab', value: 'insider-transactions' }],
+        destination: '/investments/insider-trades',
+        permanent: true,
+      },
+      {
+        source: '/investments',
+        has: [{ type: 'query', key: 'tab', value: 'etf-trust-holdings' }],
+        destination: '/investments/etfs',
+        permanent: true,
+      },
+      {
+        source: '/investments',
+        has: [{ type: 'query', key: 'tab', value: 'uranium-assets' }],
+        destination: '/investments/projects',
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

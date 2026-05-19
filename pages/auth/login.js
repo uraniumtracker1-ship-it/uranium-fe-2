@@ -289,10 +289,10 @@ const Login = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <SEO
-        title="Login - Access Your Account"
-        description="Log in to your account to access powerful tools, manage your watchlist, and stay updated with market trends."
-        keywords="login, sign in, account access, user login, stock market tools, investment platform"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/auth/login"
+        title="Login — Uranium Tracker"
+        description="Log in to Uranium Tracker to access your watchlist, uranium stock screener, insider trading tracker, and nuclear market data."
+        keywords="uranium tracker login, uranium tracker account, login uranium"
+        canonicalPath="/auth/login"
       />
 
       <Navbar />
@@ -307,11 +307,10 @@ const Login = () => {
             <div className="absolute inset-0 bg-black bg-opacity-75"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-10">
               <h1 className="text-4xl font-bold mb-4">
-                Welcome to Platinum Tracker
+                Welcome to Uranium Tracker
               </h1>
               <p className="text-base max-w-xl text-white/80 tracking-wide">
-                Track and manage your data effortlessly with Platinum Tracker.
-                Log in to access your account and stay organized.
+                Log in to access live U3O8 prices, uranium stock data, insider trades, ETF holdings, and 419 uranium projects globally.
               </p>
             </div>
           </div>

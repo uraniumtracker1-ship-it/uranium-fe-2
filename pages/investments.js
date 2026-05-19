@@ -111,10 +111,10 @@ const investments = ({ stockData }) => {
   return (
     <div>
       <SEO
-        title="Uranium Investment Insights - Market Trends & Stock Analysis"
-        description="Explore in-depth Uranium investment insights, stock analysis, and the latest market trends. Stay informed about financial updates, ETF holdings, insider transactions, and stock screening tools to make better investment decisions."
-        keywords="uranium investment insights, stock market trends, ETF holdings, stock analysis, insider transactions, stock screener, market updates, investment strategies, uranium investments"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/investments"
+        title="Uranium Stocks & ETFs — Screener, Insider Trades | Uranium Tracker"
+        description="Screen 60+ uranium mining stocks, track insider transactions, explore ETF holdings (URNM, URA, URNJ), and browse 419 uranium projects globally."
+        keywords="uranium stocks, uranium ETF, uranium stock screener, uranium insider trades, uranium projects, URNM holdings, URA holdings"
+        canonicalPath="/investments"
       />
 
       <Navbar />

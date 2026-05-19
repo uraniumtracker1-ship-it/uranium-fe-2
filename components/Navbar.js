@@ -167,6 +167,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { FaBars, FaTimes, FaUserCircle } from "react-icons/fa";
 import { GetUserData } from "@/src/utils/GetUserData";
+import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 
 const Navbar = () => {
   const router = useRouter();
@@ -175,14 +176,7 @@ const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "News", path: "/news" },
-    { name: "Uranium Investments", path: "/investments" },
-    { name: "Videos", path: "/videos" },
-    { name: "Data", path: "/data" },
-    { name: "Uranium 101", path: "/C101" },
-  ];
+  const navLinks = NAV_LINKS.map((link) => ({ name: link.label, path: link.href }));
 
   const navigateTo = (path) => {
     setMenuOpen(false);
@@ -214,7 +208,7 @@ const Navbar = () => {
         >
           <Image
             src="/logo.jpg"
-            alt="Platinum Logo"
+            alt={`${SITE_CONFIG.name} Logo`}
             fill
             className="object-contain"
             priority

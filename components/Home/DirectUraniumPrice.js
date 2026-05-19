@@ -1,181 +1,164 @@
 import React, { useState, useEffect } from "react";
+import { PRICE_FIELD_LABELS } from "@/lib/constants";
+
+const fmt = (val, decimals = 2) => {
+  const n = parseFloat(val);
+  return isNaN(n) ? null : n.toFixed(decimals);
+};
+
+const PriceRow = ({ label, value, suffix = "", colorClass = "" }) => (
+  <div className="flex justify-between items-center py-1.5 border-b border-black1/10 last:border-b-0">
+    <span className="text-[11px] text-black1/60 font-medium">{label}</span>
+    <span className={`text-[12px] font-semibold ${colorClass || "text-gray-900"}`}>
+      {value ?? "—"}
+      {value != null && suffix}
+    </span>
+  </div>
+);
 
 const DirectUraniumPrice = () => {
-  const [uraniumData, setUraniumData] = useState(null);
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchUraniumPrice = async () => {
+    const fetch_ = async () => {
       try {
         setLoading(true);
-        
-        // Fetch uranium price from CME Group API
-        const response = await fetch('/api/cme-uranium-spot');
-        
-        if (!response.ok) {
-          console.warn(`Uranium price API returned ${response.status} — showing empty state`);
-          setUraniumData(null);
-          setLoading(false);
-          return;
-        }
-        
-        const data = await response.json();
-        
-        if (!data.success || !data.data) {
-          setUraniumData(null);
-          setLoading(false);
-          return;
-        }
-        
-        // Use CME uranium data directly
-        const cmeData = data.data;
-        
-        setUraniumData({
-          price: parseFloat(cmeData.last_price),
-          price_change: parseFloat(cmeData.price_change),
-          price_change_percent: parseFloat(cmeData.price_change_percent),
-          source: "CME Group",
-          symbol: cmeData.globex_code,
-          last_updated: cmeData.scraped_at
+        const res = await fetch("/api/cme-uranium-spot");
+        if (!res.ok) throw new Error(`API ${res.status}`);
+        const raw = await res.json();
+
+        // API returns an array from the scraper — grab the first item
+        const item = Array.isArray(raw) ? raw[0] : raw?.data ?? raw;
+        if (!item) throw new Error("No data");
+
+        // Normalise field names — scraper uses several naming conventions
+        setData({
+          spot:        parseFloat(item.price ?? item.last_price ?? item.spot_price) || null,
+          change:      parseFloat(item.day_change ?? item.price_change ?? item.change) || 0,
+          changePct:   parseFloat(item.percent_change ?? item.price_change_percent ?? item.change_percent) || 0,
+          longTerm:    parseFloat(item.long_term_price ?? item.lt_price ?? item.long_term ?? item.longterm) || null,
+          high52w:     parseFloat(item.high_52w ?? item["52_week_high"] ?? item.week_52_high ?? item.high52) || null,
+          low52w:      parseFloat(item.low_52w  ?? item["52_week_low"]  ?? item.week_52_low  ?? item.low52)  || null,
+          ytdPct:      parseFloat(item.ytd_change ?? item.ytd_percent ?? item.ytd ?? item.year_to_date) || null,
+          updatedAt:   item.last_updated ?? item.scraped_at ?? item.updated_at ?? null,
         });
-        
-      } catch (error) {
-        console.error('Error fetching CME uranium spot price:', error);
-        setError(error.message);
-        
-        // No fallback data - set to null to show error state
-        setUraniumData(null);
+      } catch (e) {
+        console.error("DirectUraniumPrice fetch error:", e);
+        setError(e.message);
+        setData(null);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchUraniumPrice();
-    
-    // Refresh every 2 minutes
-    const interval = setInterval(fetchUraniumPrice, 2 * 60 * 1000);
-    return () => clearInterval(interval);
+    fetch_();
+    const id = setInterval(fetch_, 2 * 60 * 1000);
+    return () => clearInterval(id);
   }, []);
+
+  const title = (
+    <h2 className="text-[21px] md:text-[16px] lg:text-[21px] cambay font-bold text-black1/80 capitalize border-b border-black1/20 pb-2 mb-4">
+      Live Uranium Price
+    </h2>
+  );
 
   if (loading) {
     return (
-      <div className="text-center">
-        <h2 className="flex text-[21px] md:text-[16px] lg:text-[21px] cambay font-bold text-black1/80 capitalize border-b border-black1/20 pb-2 mb-6 lg:mb-4">
-          Live Uranium Price
-        </h2>
-        <div className="flex justify-center items-center h-32">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gray-800"></div>
-          <span className="ml-3 text-gray-800 font-semibold">Loading...</span>
+      <div>
+        {title}
+        <div className="flex justify-center items-center h-24">
+          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-gray-800" />
         </div>
       </div>
     );
   }
 
-  if (!uraniumData) {
+  if (!data) {
     return (
-      <div className="text-center">
-        <h2 className="flex text-[21px] md:text-[16px] lg:text-[21px] cambay font-bold text-black1/80 capitalize border-b border-black1/20 pb-2 mb-6 lg:mb-4">
-          Live Uranium Price
-        </h2>
-        <div className="text-center py-8 text-red-500">
-          <p>CME uranium spot price data unavailable</p>
-          <p className="text-sm text-gray-600 mt-2">Real-time data only - no fallback data</p>
-          {error && (
-            <p className="text-xs text-red-400 mt-2">
-              Error: {error}
-            </p>
-          )}
-        </div>
+      <div>
+        {title}
+        <p className="text-sm text-red-500 text-center py-4">
+          Price data unavailable
+          {error && <span className="block text-xs text-gray-500 mt-1">{error}</span>}
+        </p>
       </div>
     );
   }
 
-  const { price, price_change, price_change_percent, source } = uraniumData;
+  const { spot, change, changePct, longTerm, high52w, low52w, ytdPct, updatedAt } = data;
+  const spread = spot != null && longTerm != null ? (spot - longTerm).toFixed(2) : null;
 
-  // Format large numbers (CNY) with commas
-  const formattedPrice = price > 1000 
-    ? price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-    : price.toFixed(2);
-  
-  const changeValue = parseFloat(price_change || 0);
-  const formattedChange = Math.abs(changeValue) > 1000
-    ? Math.abs(changeValue).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-    : Math.abs(changeValue).toFixed(2);
-  
-  const formattedPercent = parseFloat(price_change_percent || 0).toFixed(2);
+  const changeColor = change >= 0 ? "text-green-600" : "text-red-500";
+  const ytdColor    = ytdPct != null ? (ytdPct >= 0 ? "text-green-600" : "text-red-500") : "";
+
+  const formattedUpdated = updatedAt
+    ? new Date(updatedAt).toLocaleString("en-US", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })
+    : new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
 
   return (
-    <div className="text-center">
-      <h2 className="flex text-[21px] md:text-[16px] lg:text-[21px] cambay font-bold text-black1/80 capitalize border-b border-black1/20 pb-2 mb-6 lg:mb-4">
-        Live Uranium Price
-      </h2>
+    <div>
+      {title}
 
-      {/* Single row with all data */}
-      <div className="bg-accent/30 p-4 md:p-3 lg:p-4 w-full border border-accent/30 rounded-md">
-        <div className="flex items-center justify-between gap-2">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <img
-              className="w-20 h-10 md:w-16 md:h-8 lg:w-20 lg:h-10 object-contain"
-              src="/logo.jpg"
-              alt="Uranium Tracker Logo"
-            />
-          </div>
-
-          {/* Price Data */}
-          <div className="flex-1 grid grid-cols-3 gap-2 text-center">
-            {/* Price */}
-            <div>
-              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">Price</p>
-              <p className="text-sm md:text-xs lg:text-sm font-bold text-green">
-                ¥{formattedPrice}
-              </p>
-            </div>
-
-            {/* Change */}
-            <div>
-              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">Change</p>
-              <p
-                className={`text-sm md:text-xs lg:text-sm font-bold ${
-                  changeValue >= 0 ? "text-green-600" : "text-red-500"
-                }`}
-              >
-                {changeValue >= 0 ? `¥+${formattedChange}` : `¥-${formattedChange}`}
-              </p>
-            </div>
-
-            {/* % Change */}
-            <div>
-              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">% Change</p>
-              <p
-                className={`text-sm md:text-xs lg:text-sm font-bold ${
-                  parseFloat(formattedPercent) >= 0 ? "text-green-600" : "text-red-500"
-                }`}
-              >
-                {parseFloat(formattedPercent) >= 0
-                  ? `+${formattedPercent}%`
-                  : `${formattedPercent}%`}
-              </p>
-            </div>
-          </div>
+      {/* Spot price hero row */}
+      <div className="bg-accent/10 border border-accent/30 rounded-md p-3 mb-3 flex items-center justify-between">
+        <div>
+          <p className="text-[10px] text-black1/60 font-medium mb-0.5">U3O8 Spot (USD/lb)</p>
+          <p className="text-xl font-extrabold text-accent">
+            {spot != null ? `$${fmt(spot)}` : "—"}
+          </p>
+        </div>
+        <div className="text-right">
+          <p className={`text-sm font-bold ${changeColor}`}>
+            {change >= 0 ? `+$${fmt(Math.abs(change))}` : `-$${fmt(Math.abs(change))}`}
+          </p>
+          <p className={`text-xs font-semibold ${changeColor}`}>
+            {changePct >= 0 ? `+${fmt(changePct)}%` : `${fmt(changePct)}%`}
+          </p>
         </div>
       </div>
 
-      <div className="mt-2 text-start">
-        <p className="text-xs text-gray-600">
-          Source: {source}
-        </p>
-        <p className="font-medium text-date text-sm md:text-xs lg:text-sm">
-          <a
-            target="_blank"
-            className="text-accent hover:text-accent/60 transition-all duration-200"
-            href="https://tradingeconomics.com/commodity/uranium"
-            rel="noopener noreferrer"
-          >
-            CME Group - Uranium Futures
-          </a>
-        </p>
+      {/* Extended fields */}
+      <div className="space-y-0">
+        {longTerm != null && (
+          <PriceRow label={PRICE_FIELD_LABELS.longTerm} value={`$${fmt(longTerm)}`} />
+        )}
+        {spread != null && (
+          <PriceRow
+            label={PRICE_FIELD_LABELS.spread}
+            value={`${parseFloat(spread) >= 0 ? "+" : ""}$${spread}`}
+            colorClass={parseFloat(spread) >= 0 ? "text-green-600" : "text-red-500"}
+          />
+        )}
+        {high52w != null && (
+          <PriceRow label={PRICE_FIELD_LABELS.high52w} value={`$${fmt(high52w)}`} />
+        )}
+        {low52w != null && (
+          <PriceRow label={PRICE_FIELD_LABELS.low52w} value={`$${fmt(low52w)}`} />
+        )}
+        {ytdPct != null && (
+          <PriceRow
+            label={PRICE_FIELD_LABELS.ytdPct}
+            value={`${ytdPct >= 0 ? "+" : ""}${fmt(ytdPct)}%`}
+            colorClass={ytdColor}
+          />
+        )}
+
+        {/* Always show these even if no extended data */}
+        {longTerm == null && high52w == null && low52w == null && ytdPct == null && (
+          <>
+            <PriceRow label={PRICE_FIELD_LABELS.longTerm} value={null} />
+            <PriceRow label={PRICE_FIELD_LABELS.high52w}  value={null} />
+            <PriceRow label={PRICE_FIELD_LABELS.low52w}   value={null} />
+            <PriceRow label={PRICE_FIELD_LABELS.ytdPct}   value={null} />
+          </>
+        )}
+      </div>
+
+      <div className="mt-3 space-y-0.5">
+        <p className="text-[10px] text-gray-500">{PRICE_FIELD_LABELS.sourceLabel}</p>
+        <p className="text-[10px] text-gray-400">Updated {formattedUpdated} · Auto-refresh 2 min</p>
       </div>
     </div>
   );

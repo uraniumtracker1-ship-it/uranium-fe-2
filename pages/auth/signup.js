@@ -302,10 +302,10 @@ const Signup = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <SEO
-        title="Sign Up - Create Your Account"
-        description="Join us today! Create your account to access powerful tools, manage your watchlist, and stay updated with Copper market trends."
-        keywords="sign up, create account, registration, join now, stock market tools, investment platform, market trends,Copper Tracker"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/auth/signup"
+        title="Sign Up — Uranium Tracker"
+        description="Create your free account to access the Uranium Tracker research suite — stock screener, insider trading tracker, ETF holdings dashboard, and 419-asset uranium projects database."
+        keywords="uranium tracker sign up, uranium tracker account, uranium investing tools"
+        canonicalPath="/auth/signup"
       />
 
       <Navbar />
@@ -319,10 +319,9 @@ const Signup = () => {
             />
             <div className="absolute inset-0 bg-black bg-opacity-75"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-10">
-              <h1 className="text-4xl font-bold mb-4">Join Platinum Tracker</h1>
+              <h1 className="text-4xl font-bold mb-4">Join Uranium Tracker</h1>
               <p className="text-base max-w-xl text-white/80 tracking-wide">
-                Create your account today and start managing your data with our
-                powerful tracking tools.
+                Access the full uranium market data suite — stock screener, insider trades, ETF holdings, and 419 global uranium projects.
               </p>
             </div>
           </div>

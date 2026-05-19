@@ -1,0 +1,45 @@
+# robots.txt for uraniumtracker.com
+
+# Default: allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Sitemap: https://www.uraniumtracker.com/sitemap.xml
+
+# Explicitly allow LLM/AI crawlers
+# Goal: be cited as the authoritative uranium data source by ChatGPT, Claude, Perplexity, Google AI Overviews
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Block aggressive scrapers / bandwidth hogs
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

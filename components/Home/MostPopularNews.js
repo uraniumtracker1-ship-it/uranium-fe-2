@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { STOCK_NEWS } from "@/src/api/uraniumAPI";
+import { isUraniumRelevant, SECTION_HEADERS } from "@/lib/constants";
 
 const MostPopularNews = () => {
   const [news, setNews] = useState([]);
@@ -22,10 +23,8 @@ const MostPopularNews = () => {
         }
         
         const data = await response.json();
-        console.log('Most Popular News data:', data);
-        
-        // Slice to get news starting from 6th item and limit to 8 items
-        setNews(Array.isArray(data) ? data.slice(10, 18) : []);
+        const filtered = (Array.isArray(data) ? data : []).filter(isUraniumRelevant);
+        setNews(filtered.slice(4, 12));
         setLoading(false);
       } catch (error) {
         console.error("Error fetching most popular news:", error);
@@ -42,7 +41,7 @@ const MostPopularNews = () => {
     return (
       <div className="mb-14 md:mb-10">
         <h2 className="text-[21px] font-bold cambay text-black1/80 border-b border-gray-300 pb-2 mb-4">
-          Most Popular
+          {SECTION_HEADERS.mostPopular}
         </h2>
         <div className="text-center py-8">Loading most popular news...</div>
       </div>
@@ -53,7 +52,7 @@ const MostPopularNews = () => {
     return (
       <div className="mb-14 md:mb-10">
         <h2 className="text-[21px] font-bold cambay text-black1/80 border-b border-gray-300 pb-2 mb-4">
-          Most Popular
+          {SECTION_HEADERS.mostPopular}
         </h2>
         <div className="text-center py-8 text-red-500">
           Error loading news: {error}
@@ -66,7 +65,7 @@ const MostPopularNews = () => {
     return (
       <div className="mb-14 md:mb-10">
         <h2 className="text-[21px] font-bold cambay text-black1/80 border-b border-gray-300 pb-2 mb-4">
-          Most Popular
+          {SECTION_HEADERS.mostPopular}
         </h2>
         <div className="text-center py-8 text-gray-500">
           No popular news available at this time
