@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { FaLink } from "react-icons/fa6";
 
@@ -12,9 +13,9 @@ const DirectHomeUraniumPrice = () => {
         setLoading(true);
 
         // Fetch metal prices from our database API
-        const response = await fetch("/api/uranium-prices");
+        const response = await axios("/api/uranium-prices");
 
-        if (!response.ok) {
+        if (!response.data) {
           console.warn(
             `Uranium prices API returned ${response.status} — showing empty state`,
           );
@@ -23,28 +24,27 @@ const DirectHomeUraniumPrice = () => {
           return;
         }
 
-        const data = await response.json();
+        const data = response.data;
+        //  setUraniumPrices(data);
+        // if (!data.success || !data.data) {
+        //   setUraniumPrices([]);
+        //   setLoading(false);
+        //   return;
+        // }
 
-        if (!data.success || !data.data) {
-          setUraniumPrices([]);
-          setLoading(false);
-          return;
-        }
+        // // Ensure data.data is an array
+        // const dataArray = Array.isArray(data.data) ? data.data : [data.data];
 
-        // Ensure data.data is an array
-        const dataArray = Array.isArray(data.data) ? data.data : [data.data];
-
-        if (dataArray.length === 0) {
-          throw new Error("No metal price data available from database");
-        }
+        // if (dataArray.length === 0) {
+        //   throw new Error("No metal price data available from database");
+        // }
 
         // Transform database data to component format
-        const metalPrices = dataArray.map((item) => ({
+        const metalPrices = data.slice(0, 4).map((item) => ({
           metal_name: item.metal_name,
           price: parseFloat(item.price),
           price_change: parseFloat(item.price_change),
           price_change_percent: parseFloat(item.price_change_percent),
-          source: "Database API",
         }));
 
         setUraniumPrices(metalPrices);
@@ -52,38 +52,7 @@ const DirectHomeUraniumPrice = () => {
         console.error("Error fetching prices from database:", err);
         setError(err.message);
 
-        // Fallback to mock data
-        const fallbackData = [
-          {
-            metal_name: "Uranium",
-            price: 4.15,
-            price_change: -0.08,
-            price_change_percent: -1.89,
-            source: "Fallback",
-          },
-          {
-            metal_name: "Aluminum",
-            price: 0.91,
-            price_change: -0.02,
-            price_change_percent: -1.51,
-            source: "Fallback",
-          },
-          {
-            metal_name: "Nickel",
-            price: 8.51,
-            price_change: -0.16,
-            price_change_percent: -2.27,
-            source: "Fallback",
-          },
-          {
-            metal_name: "Zinc",
-            price: 1.25,
-            price_change: -0.02,
-            price_change_percent: -1.7,
-            source: "Fallback",
-          },
-        ];
-        setUraniumPrices(fallbackData);
+        setUraniumPrices([]);
       } finally {
         setLoading(false);
       }

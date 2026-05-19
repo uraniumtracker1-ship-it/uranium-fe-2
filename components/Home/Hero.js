@@ -43,9 +43,9 @@ const Hero = () => {
           className="w-full h-full object-cover md:object-left pl-0 md:pl-0"
         ></video>
         {/* Black overlay */}
-        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
-
+    
       {/* Text content */}
       <div className="relative z-10 text-white w-full sm:w-[90%] md:w-[80%] lg:w-[77%]">
         {/* Heading */}

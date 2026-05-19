@@ -70,11 +70,11 @@ const StayAhead = () => {
         <div className="md:w-2/6 sm:p-8 rounded-lg flex flex-col justify-between">
           <div>
             <h1 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-6 cambay text-white">
-              Stay ahead with real-time Uranium news, price and analysis
+              Uranium news, price and analysis
             </h1>
             <p className="text-sm text-white/80 font-medium mb-4 sm:mb-8">
-              Sign up for Uranium Tracker's to gain access to Uranium Tracker's full
-              suite of research tools
+              Sign up for Uranium Tracker's to gain access to Uranium Tracker's
+              full suite of research tools
             </p>
           </div>
           <Link
