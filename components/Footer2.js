@@ -27,6 +27,24 @@ const Footer2 = () => {
           </a>
         </div>
 
+        <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-xs md:text-sm">
+          {[
+            { label: "Lithium Tracker", href: "https://www.lithiumtracker.com/" },
+            { label: "Copper Tracker", href: "https://www.coppertracker.com/" },
+            { label: "Nickel Metal Tracker", href: "https://www.nickelmetaltracker.com/" },
+            { label: "Uranium Tracker", href: "https://www.uraniumtracker.com/" },
+            { label: "PGM Tracker", href: "https://www.pgmtracker.com/" },
+            { label: "Gold & Silver Tracker", href: "https://www.goldandsilvertracker.com/" },
+          ].map((link, i, arr) => (
+            <React.Fragment key={link.href}>
+              <a href={link.href} target="_blank" rel="noopener noreferrer" className="hover:underline whitespace-nowrap">
+                {link.label}
+              </a>
+              {i < arr.length - 1 && <span className="opacity-50">|</span>}
+            </React.Fragment>
+          ))}
+        </div>
+
         <div className="w-full md:w-2/3 lg:w-1/2 mx-auto border-t border-white/40 my-4"></div>
 
         <div className="text-xs md:text-sm lg:text-base flex flex-wrap justify-center space-x-2">
