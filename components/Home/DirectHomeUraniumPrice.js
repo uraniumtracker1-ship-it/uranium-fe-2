@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { FaLink } from "react-icons/fa6";
 
 const DirectHomeUraniumPrice = () => {
   const [uraniumPrices, setUraniumPrices] = useState([]);
@@ -24,22 +23,7 @@ const DirectHomeUraniumPrice = () => {
           return;
         }
 
-        const data = response.data;
-        //  setUraniumPrices(data);
-        // if (!data.success || !data.data) {
-        //   setUraniumPrices([]);
-        //   setLoading(false);
-        //   return;
-        // }
-
-        // // Ensure data.data is an array
-        // const dataArray = Array.isArray(data.data) ? data.data : [data.data];
-
-        // if (dataArray.length === 0) {
-        //   throw new Error("No metal price data available from database");
-        // }
-
-        // Transform database data to component format
+        const data = response.data; 
         const metalPrices = data.slice(0, 4).map((item) => ({
           metal_name: item.metal_name,
           price: parseFloat(item.price),
