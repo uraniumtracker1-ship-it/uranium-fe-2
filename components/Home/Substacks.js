@@ -96,7 +96,7 @@ const Substacks = () => {
     <div>
       {header}
       <div className="space-y-5">
-        {posts.slice(0, 5).map((post) => (
+        {posts.slice(0, 4).map((post) => (
           <Link
             key={post.id}
             href={post.url}
