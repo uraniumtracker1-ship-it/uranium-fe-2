@@ -9,7 +9,6 @@ import PressReleaseNews from "@/components/Home/PressReleaseNews";
 import PopularTools from "@/components/Home/PopularTools";
 import MostPopularNews from "@/components/Home/MostPopularNews";
 import Substacks from "@/components/Home/Substacks";
-import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import Footer from "@/components/Footer";
 import TVUraniumCFD from "@/components/Home/TVUraniumCFD";
 import TVUranium from "@/components/Home/TVUranium";
@@ -86,7 +85,6 @@ const home = () => {
           <div className="border rounded-md px-3 py-4">
             <Substacks />
           </div>
-          <DailyNewsletterAd />
         </div>
       </div>
 
