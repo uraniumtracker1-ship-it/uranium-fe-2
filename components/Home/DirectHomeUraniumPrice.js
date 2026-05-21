@@ -25,27 +25,16 @@ const DirectHomeUraniumPrice = () => {
         }
 
         const data = response.data;
-        //  setUraniumPrices(data);
-        // if (!data.success || !data.data) {
-        //   setUraniumPrices([]);
-        //   setLoading(false);
-        //   return;
-        // }
 
-        // // Ensure data.data is an array
-        // const dataArray = Array.isArray(data.data) ? data.data : [data.data];
-
-        // if (dataArray.length === 0) {
-        //   throw new Error("No metal price data available from database");
-        // }
-
-        // Transform database data to component format
-        const metalPrices = data.slice(0, 4).map((item) => ({
-          metal_name: item.metal_name,
-          price: parseFloat(item.price),
-          price_change: parseFloat(item.price_change),
-          price_change_percent: parseFloat(item.price_change_percent),
-        }));
+        // Filter to uranium-only rows, then map to component format
+        const metalPrices = (Array.isArray(data) ? data : [])
+          .filter((item) => item.metal_name?.toLowerCase() === "uranium")
+          .map((item) => ({
+            metal_name: item.metal_name,
+            price: parseFloat(item.price),
+            price_change: parseFloat(item.price_change),
+            price_change_percent: parseFloat(item.price_change_percent),
+          }));
 
         setUraniumPrices(metalPrices);
       } catch (err) {
@@ -65,16 +54,27 @@ const DirectHomeUraniumPrice = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const formatValue = (value) => {
-    if (value === null || value === undefined || isNaN(value)) {
-      return "0.00";
-    }
-    return parseFloat(value).toFixed(4);
+  // Format price to 2 decimal places with en-US locale (comma thousands separator)
+  const fmtPrice = (value) => {
+    const n = parseFloat(value);
+    if (isNaN(n)) return "0.00";
+    return new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(n);
+  };
+
+  // Format percentage to exactly 2 decimal places
+  const fmtPct = (value) => {
+    const n = parseFloat(value);
+    if (isNaN(n)) return "0.00";
+    return n.toFixed(2);
   };
 
   const getChangeClass = (value) => {
-    if (value > 0) return "text-green-500";
-    if (value < 0) return "text-red-500";
+    const n = parseFloat(value);
+    if (n > 0) return "text-green-500";
+    if (n < 0) return "text-red-500";
     return "text-black";
   };
 
@@ -88,24 +88,20 @@ const DirectHomeUraniumPrice = () => {
           </span>
         )}
       </td>
-      <td className="border-t px-4 py-5">${formatValue(metalData.price)}</td>
+      <td className="border-t px-4 py-5">${fmtPrice(metalData.price)}</td>
       <td
-        className={`border-t px-4 py-5 ${getChangeClass(
-          parseFloat(metalData.price_change),
-        )}`}
+        className={`border-t px-4 py-5 ${getChangeClass(metalData.price_change)}`}
       >
         {metalData.price_change > 0
-          ? `$+${formatValue(metalData.price_change)}`
+          ? `$+${fmtPrice(metalData.price_change)}`
           : metalData.price_change < 0
-            ? `${formatValue(metalData.price_change)}`
-            : `$0.0000`}
+            ? `${fmtPrice(metalData.price_change)}`
+            : `$0.00`}
       </td>
       <td
-        className={`border-t px-4 py-5 ${getChangeClass(
-          parseFloat(metalData.price_change_percent),
-        )}`}
+        className={`border-t px-4 py-5 ${getChangeClass(metalData.price_change_percent)}`}
       >
-        {formatValue(metalData.price_change_percent)}%
+        {fmtPct(metalData.price_change_percent)}%
       </td>
     </tr>
   );
@@ -128,6 +124,25 @@ const DirectHomeUraniumPrice = () => {
     );
   }
 
+  // Empty state: no uranium rows after filtering
+  if (uraniumPrices.length === 0) {
+    return (
+      <div className="text-center py-4 text-gray-500">
+        No uranium price data available
+      </div>
+    );
+  }
+
+  const now = new Date();
+  const displayTime = now.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZoneName: "short",
+  });
+
   return (
     <div className="overflow-x-auto custom-scrollbar-hidden">
       <table className="table-auto w-full border-collapse text-sm">
@@ -140,15 +155,7 @@ const DirectHomeUraniumPrice = () => {
           </tr>
         </thead>
         <tbody>
-          {Array.isArray(uraniumPrices) && uraniumPrices.length > 0 ? (
-            uraniumPrices.map((metalData) => renderRow(metalData))
-          ) : (
-            <tr>
-              <td colSpan="5" className="text-center py-4 text-gray-500">
-                No price data available
-              </td>
-            </tr>
-          )}
+          {uraniumPrices.map((metalData) => renderRow(metalData))}
         </tbody>
       </table>
 
@@ -158,8 +165,10 @@ const DirectHomeUraniumPrice = () => {
         </div>
       )}
 
-      <div className="mt-2 mb-3  text-xs text-gray-500 text-center">
-        Last updated: {new Date().toLocaleTimeString()} • Auto-refresh: 2 min
+      <div className="mt-2 mb-3 text-xs text-gray-500 text-center">
+        <time dateTime={now.toISOString()}>
+          Last updated: {displayTime} · Auto-refresh: 2 min
+        </time>
       </div>
     </div>
   );

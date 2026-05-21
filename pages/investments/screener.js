@@ -5,7 +5,7 @@ import IStockScreener from "@/components/Investment/IStockScreener";
 import SEO from "@/components/SEO";
 import React from "react";
 
-const Screener = ({ stockData }) => {
+const Screener = ({ stockData, hasData }) => {
   return (
     <div>
       <SEO
@@ -13,10 +13,14 @@ const Screener = ({ stockData }) => {
         description="Screen 60+ uranium mining stocks by jurisdiction, stock exchange, market cap, mine location, and development stage. Find the right uranium investment for your portfolio."
         keywords="uranium stock screener, uranium stock filter, uranium mining stocks, uranium stock comparison"
         canonicalPath="/investments/screener"
+        robots={hasData ? undefined : "noindex,follow"}
       />
       <Navbar />
       <div className="pt-[80px]">
-        <InvestmentHero />
+        <InvestmentHero
+          title="Uranium Stock Screener"
+          description="Filter 60+ uranium mining stocks by jurisdiction, exchange, market cap, and development stage."
+        />
       </div>
       <IStockScreener stockData={stockData} />
       <div className="mb-24" />
@@ -38,9 +42,9 @@ export async function getServerSideProps() {
       ...row,
       last_updated: row.last_updated ? row.last_updated.toISOString() : null,
     }));
-    return { props: { stockData } };
+    return { props: { stockData, hasData: stockData.length > 0 } };
   } catch {
-    return { props: { stockData: [] } };
+    return { props: { stockData: [], hasData: false } };
   }
 }
 

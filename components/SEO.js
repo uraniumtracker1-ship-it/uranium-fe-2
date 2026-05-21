@@ -11,6 +11,7 @@ import { SITE_CONFIG } from "@/lib/constants";
  * @param {string} [props.h1]              - page H1 for JSON-LD WebPage name
  * @param {object} [props.jsonLdExtra]     - additional JSON-LD @graph entries
  * @param {number} [props.spotPrice]       - current U3O8 spot price for Dataset schema
+ * @param {string} [props.robots]          - robots meta content, defaults to "index, follow, max-image-preview:large"
  */
 const SEO = ({
   title,
@@ -21,6 +22,7 @@ const SEO = ({
   h1,
   jsonLdExtra = [],
   spotPrice,
+  robots = "index, follow, max-image-preview:large",
 }) => {
   const canonicalUrl = `${SITE_CONFIG.url}${canonicalPath}`;
   const ogImage = ogImagePath
@@ -58,6 +60,11 @@ const SEO = ({
         width: SITE_CONFIG.logoWidth,
         height: SITE_CONFIG.logoHeight,
       },
+      sameAs: [
+        "https://goldtracker.io",
+        "https://silvertracker.io",
+        "https://coppertracker.io",
+      ],
     },
     {
       "@type": "WebPage",
@@ -67,6 +74,7 @@ const SEO = ({
       description,
       isPartOf: { "@id": `${SITE_CONFIG.url}/#website` },
       about: { "@id": `${SITE_CONFIG.url}/#organization` },
+      datePublished: "2024-01-01",
       dateModified: today,
       inLanguage: "en-US",
     },
@@ -102,7 +110,7 @@ const SEO = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="robots" content="index, follow, max-image-preview:large" />
+      <meta name="robots" content={robots} />
       <meta charset="UTF-8" />
       <html lang="en-US" dir="ltr" />
 

@@ -32,8 +32,8 @@ const Hero = ({ spotPrice }) => {
         if (!res.ok) return;
         const data = await res.json();
         const p = Array.isArray(data)
-          ? data.find((d) => d.name?.toLowerCase().includes("uranium"))?.price
-          : data.uranium ?? data.price ?? data.spot_price;
+          ? data.find((d) => d.metal_name?.toLowerCase().includes("uranium"))?.price
+          : data.uranium ?? data.price ?? data.spot_price ?? null;
         if (p) setClientPrice(p);
       } catch {
         /* non-fatal */

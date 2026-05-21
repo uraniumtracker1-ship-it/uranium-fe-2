@@ -8,8 +8,6 @@ import StayAhead from "@/components/Home/StayAhead";
 import PressReleaseNews from "@/components/Home/PressReleaseNews";
 import PopularTools from "@/components/Home/PopularTools";
 import MostPopularNews from "@/components/Home/MostPopularNews";
-import Substacks from "@/components/Home/Substacks";
-import DailyNewsletterAd from "@/components/Home/DailyNewsletterAd";
 import Footer from "@/components/Footer";
 import TVUraniumCFD from "@/components/Home/TVUraniumCFD";
 import TVUranium from "@/components/Home/TVUranium";
@@ -44,9 +42,10 @@ const Home = ({ spotPrice }) => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 px-4">
         <div className="col-span-1 md:col-span-3">
           <div className="border rounded-md px-3 py-4">
-            <h2 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
+            <h2 className="text-[21px] cambay font-bold mb-1 border-b border-black/10 pb-1">
               Uranium ETF (URA)
             </h2>
+            <p className="text-[11px] text-gray-400 mb-3">ETF proxy — not U3O8 spot price</p>
             <TVUraniumCFD />
           </div>
         </div>
@@ -62,16 +61,17 @@ const Home = ({ spotPrice }) => {
         </div>
         <div className="md:col-span-3">
           <div className="border rounded-md px-3 py-4">
-            <h2 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
+            <h2 className="text-[21px] cambay font-bold mb-1 border-b border-black/10 pb-1">
               Uranium Miners ETF (URNM)
             </h2>
+            <p className="text-[11px] text-gray-400 mb-3">ETF proxy — not U3O8 spot price</p>
             <TVUranium />
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-9 px-4 gap-8 mt-8">
-        <div className="col-span-1 md:col-span-7">
+        <div className="col-span-1 md:col-span-9">
           <div className="border rounded-md px-3 py-4">
             <div className="flex justify-between items-center mb-3 border-b border-black/10 pb-1">
               <h2 className="text-[21px] cambay font-bold">
@@ -86,12 +86,6 @@ const Home = ({ spotPrice }) => {
             </div>
             <HomeInsiderTransactions />
           </div>
-        </div>
-        <div className="col-span-1 md:col-span-2 flex flex-col gap-8">
-          <div className="border rounded-md px-3 py-4">
-            <Substacks />
-          </div>
-          <DailyNewsletterAd />
         </div>
       </div>
 
@@ -154,11 +148,9 @@ export async function getServerSideProps({ req }) {
       // Normalise: the API returns either { uranium: price } or an array
       if (Array.isArray(data)) {
         const entry = data.find(
-          (d) =>
-            d.name?.toLowerCase().includes("uranium") ||
-            d.symbol?.toLowerCase().includes("uranium")
+          (d) => d.metal_name?.toLowerCase().includes("uranium")
         );
-        spotPrice = entry?.price ?? entry?.last_price ?? null;
+        spotPrice = entry?.price ?? null;
       } else {
         spotPrice =
           data.uranium ?? data.price ?? data.spot_price ?? null;

@@ -23,6 +23,9 @@ export default async function handler(req, res) {
         transaction_date,
         country
       FROM api_app_insidertransactions 
+      WHERE 
+        LOWER(ticker) NOT IN ('test', 'tesdt')
+        AND insider_name NOT ILIKE '%test%'
       ORDER BY transaction_date DESC
       LIMIT 1000
     `);

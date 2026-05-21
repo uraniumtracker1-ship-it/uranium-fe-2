@@ -82,14 +82,7 @@ const LatestNews = () => {
   }
 
   if (newsData.length === 0) {
-    return (
-      <div>
-        <Header />
-        <div className="text-center py-8 text-gray-500">
-          No uranium news available at this time.
-        </div>
-      </div>
-    );
+    return null;
   }
 
   const [featured, ...rest] = newsData;

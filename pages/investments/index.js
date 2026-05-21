@@ -44,7 +44,10 @@ const InvestmentsHub = () => {
       />
       <Navbar />
       <div className="pt-[80px]">
-        <InvestmentHero />
+        <InvestmentHero
+          title="Uranium Stocks, ETFs & Projects"
+          description="The complete uranium investment data suite — live stock screener, insider transaction tracker, ETF holdings, and 419 global uranium projects."
+        />
       </div>
 
       <div className="px-3 md:px-12 mt-10 mb-24">

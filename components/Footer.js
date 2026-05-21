@@ -21,14 +21,6 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-full max-w-[500px]">
-            <img
-              src="/mockup.png"
-              alt="Uranium Tracker platform mockup"
-              className="w-full h-auto block"
-            />
-          </div>
-
         </div>
 
         {/* Disclaimer + source attribution */}

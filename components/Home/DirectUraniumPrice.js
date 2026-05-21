@@ -16,8 +16,12 @@ const PriceRow = ({ label, value, suffix = "", colorClass = "" }) => (
   </div>
 );
 
-const DirectUraniumPrice = () => {
-  const [data, setData] = useState(null);
+const DirectUraniumPrice = ({ spotPrice: initialSpotPrice }) => {
+  const [data, setData] = useState(
+    initialSpotPrice
+      ? { spot: parseFloat(initialSpotPrice), change: 0, changePct: 0, longTerm: null, high52w: null, low52w: null, ytdPct: null, updatedAt: null }
+      : null
+  );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -143,16 +147,6 @@ const DirectUraniumPrice = () => {
             value={`${ytdPct >= 0 ? "+" : ""}${fmt(ytdPct)}%`}
             colorClass={ytdColor}
           />
-        )}
-
-        {/* Always show these even if no extended data */}
-        {longTerm == null && high52w == null && low52w == null && ytdPct == null && (
-          <>
-            <PriceRow label={PRICE_FIELD_LABELS.longTerm} value={null} />
-            <PriceRow label={PRICE_FIELD_LABELS.high52w}  value={null} />
-            <PriceRow label={PRICE_FIELD_LABELS.low52w}   value={null} />
-            <PriceRow label={PRICE_FIELD_LABELS.ytdPct}   value={null} />
-          </>
         )}
       </div>
 

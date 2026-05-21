@@ -62,16 +62,7 @@ const MostPopularNews = () => {
   }
 
   if (news.length === 0) {
-    return (
-      <div className="mb-14 md:mb-10">
-        <h2 className="text-[21px] font-bold cambay text-black1/80 border-b border-gray-300 pb-2 mb-4">
-          {SECTION_HEADERS.mostPopular}
-        </h2>
-        <div className="text-center py-8 text-gray-500">
-          No popular news available at this time
-        </div>
-      </div>
-    );
+    return null;
   }
 
   return (
