@@ -430,7 +430,7 @@ const MostFollowedStocksTable = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {renderColumn(
             stocksData.most_watched,
-            "Most Watched Lithium",
+            "Most Watched Uranium",
             "Live Performance",
           )}
           {renderColumn(
@@ -440,7 +440,7 @@ const MostFollowedStocksTable = () => {
           )}
           {renderColumn(
             stocksData.global_market_leaders,
-            "Australian Lithium Leaders",
+            "Australian Uranium Leaders",
             "Live Tracking",
           )}
         </div>

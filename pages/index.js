@@ -24,9 +24,9 @@ const home = () => {
   return (
     <div>
       <SEO
-        title="Lithium Tracker - Real-time News, Prices & Analysis"
-        description="Stay ahead with real-time Lithium market news, price updates, and in-depth analysis. Get accurate insights into the lithium market trends."
-        keywords="Lithium prices, Lithium news, Lithium market analysis, Industrial metals, Lithium trading, Lithium updates, Lithium investment, Real-time Lithium updates,investment"
+        title="Uranium Tracker - Real-time News, Prices & Analysis"
+        description="Stay ahead with real-time Uranium market news, price updates, and in-depth analysis. Get accurate insights into the uranium market trends."
+        keywords="Uranium prices, Uranium news, Uranium market analysis, Nuclear energy, Uranium trading, Uranium updates, Uranium investment, Real-time Uranium updates,investment"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/"
       />
 
@@ -41,7 +41,7 @@ const home = () => {
         <div className="col-span-1 md:col-span-3">
           <div className="border rounded-md  px-3 py-4 ">
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Lithium Price Chart
+              Uranium Price Chart
             </h1>
             <TVUraniumCFD />
           </div>
@@ -59,7 +59,7 @@ const home = () => {
         <div className="md:col-span-3">
           <div className="border rounded-md  px-3 py-4 ">
             <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
-              Lithium Futures
+              Uranium Futures
             </h1>
             <TVUranium />
           </div>

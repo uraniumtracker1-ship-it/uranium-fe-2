@@ -9,9 +9,9 @@ const C101 = () => {
   return (
     <div>
       <SEO
-        title="Lithium 101 - Lithium Alloys Guide & Glossary"
-        description="Explore the world of Lithium and its alloys with our comprehensive guide. Learn about lithium, brass, bronze, aluminum bronze, nickel silver, and beryllium lithium, their properties, uses, and market significance."
-        keywords="Lithium 101, Lithium Alloys, lithium, brass, bronze, aluminum bronze, nickel silver, beryllium lithium, metal properties, lithium glossary, industrial metals"
+        title="Uranium 101 - Uranium Guide & Glossary"
+        description="Explore the world of Uranium with our comprehensive guide. Learn about uranium mining, nuclear fuel cycles, enrichment, yellowcake, U3O8, and the uranium market, their properties, uses, and market significance."
+        keywords="Uranium 101, uranium guide, uranium glossary, nuclear fuel cycle, U3O8, yellowcake, uranium mining, uranium enrichment, nuclear energy, uranium market"
         canonicalUrl="https://musical-panda-75f15d.netlify.app/C101"
       />
       <Navbar />

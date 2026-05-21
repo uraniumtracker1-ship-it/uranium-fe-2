@@ -206,7 +206,7 @@ const StockNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Lithium Stock News
+          Uranium Stock News
         </h1>
         <div className="text-center py-8">Loading stock news...</div>
       </div>
@@ -217,7 +217,7 @@ const StockNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Lithium Stock News
+          Uranium Stock News
         </h1>
         <div className="text-center py-8 text-red-500">
           Error loading stock news: {error}
@@ -234,7 +234,7 @@ const StockNews = () => {
     return (
       <div>
         <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-          Lithium Stock News
+          Uranium Stock News
         </h1>
         <div className="text-center py-12 text-gray-600">
           No stock news available at this time
@@ -249,7 +249,7 @@ const StockNews = () => {
   return (
     <div>
       <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
-        Lithium Stock News
+        Uranium Stock News
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-9 gap-6">
