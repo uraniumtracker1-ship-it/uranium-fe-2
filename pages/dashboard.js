@@ -39,10 +39,10 @@ const DashboardLayout = () => {
   return (
     <div className="h-screen w-full bg-gray-100 overflow-hidden">
       <SEO
-        title="Dashboard - Stock Screener, Watchlist, Market News & More"
-        description="Access a powerful stock screener, manage your watchlist, stay updated with market news, and analyze stock trends with our advanced dashboard."
-        keywords="dashboard, stock screener, watchlist, stock market, stock analysis, financial news, market trends, investment tools"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/dashboard"
+        title="Dashboard — Stock Screener, Watchlist & Market Tools"
+        description="Access your uranium investment dashboard — manage your watchlist, screen uranium stocks, track insider trades, and stay updated with the latest market data."
+        keywords="uranium dashboard, uranium stock screener, uranium watchlist, uranium market tools, uranium investment tracker"
+        canonicalUrl="https://www.uraniumtracker.com/dashboard"
       />
       <div className="flex h-full">
         {/* Mobile Sidebar Overlay */}

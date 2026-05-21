@@ -100,63 +100,38 @@ const DirectUraniumPrice = () => {
         Live Uranium Price
       </h2>
 
-      {/* Single row with all data */}
-      <div className="bg-accent/30 p-4 md:p-3 lg:p-4 w-full border border-accent/30 rounded-md">
-        <div className="flex items-center justify-between gap-2">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <img
-              className="w-24 md:w-28 lg:w-32 h-auto object-contain"
-              src="/logo.jpg"
-              alt="Uranium Tracker Logo"
-            />
+      {/* Price card */}
+      <div className="bg-accent/30 p-4 w-full border border-accent/30 rounded-md">
+        {/* Logo */}
+        <div className="flex justify-center mb-3">
+          <img
+            className="w-28 h-auto object-contain"
+            src="/logo.jpg"
+            alt="Uranium Tracker Logo"
+          />
+        </div>
+
+        {/* Price Data — stacked rows, no overlap */}
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] text-black1/60 font-medium">Price</span>
+            <span className="text-sm font-bold text-green">
+              ${formattedPrice}
+            </span>
           </div>
 
-          {/* Price Data */}
-          <div className="flex-1 grid grid-cols-3 gap-1 text-center">
-            {/* Price */}
-            <div>
-              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">
-                Price
-              </p>
-              <p className="text-sm md:text-xs lg:text-sm font-bold text-green">
-                ${formattedPrice}
-              </p>
-            </div>
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] text-black1/60 font-medium">Change</span>
+            <span className={`text-sm font-bold ${changeValue >= 0 ? "text-green-600" : "text-red-500"}`}>
+              {changeValue >= 0 ? `+${formattedChange}` : `-${formattedChange}`}
+            </span>
+          </div>
 
-            {/* Change */}
-            <div>
-              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">
-                Change
-              </p>
-              <p
-                className={`text-sm md:text-xs lg:text-sm font-bold ${
-                  changeValue >= 0 ? "text-green-600" : "text-red-500"
-                }`}
-              >
-                {changeValue >= 0
-                  ? `+${formattedChange}`
-                  : `-${formattedChange}`}
-              </p>
-            </div>
-
-            {/* % Change */}
-            <div>
-              <p className="text-[10px] md:text-[9px] lg:text-[10px] text-black1/60 font-medium mb-1">
-                % Change
-              </p>
-              <p
-                className={`text-sm md:text-xs lg:text-sm font-bold ${
-                  parseFloat(formattedPercent) >= 0
-                    ? "text-green-600"
-                    : "text-red-500"
-                }`}
-              >
-                {parseFloat(formattedPercent) >= 0
-                  ? `+${formattedPercent}%`
-                  : `${formattedPercent}%`}
-              </p>
-            </div>
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] text-black1/60 font-medium">% Change</span>
+            <span className={`text-sm font-bold ${parseFloat(formattedPercent) >= 0 ? "text-green-600" : "text-red-500"}`}>
+              {parseFloat(formattedPercent) >= 0 ? `+${formattedPercent}%` : `${formattedPercent}%`}
+            </span>
           </div>
         </div>
       </div>

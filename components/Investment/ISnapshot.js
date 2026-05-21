@@ -214,11 +214,19 @@ const ISnapshot = ({ stockData = [] }) => {
                       return null;
                     })}
 
-                    <div className="flex flex-wrap justify-center items-center gap-x-4 font-semibold text-[12px] lg:text-[13.8px] mt-2 text-black1/90">
+                    {/* Ticker symbol — bold and prominent */}
+                    <span className="text-[13px] font-bold text-black1 mt-1 tracking-wide">
+                      {stock.ticker?.split(".")[0] ?? ""}
+                    </span>
+                    {/* Company name — smaller, secondary */}
+                    <span className="text-[10px] text-gray-500 text-center leading-tight mt-0.5 max-w-[100px] truncate" title={stock.name}>
+                      {stock.name ?? ""}
+                    </span>
+
+                    <div className="flex flex-wrap justify-center items-center gap-x-2 font-semibold text-[11px] lg:text-[12px] mt-2 text-black1/90">
                       <span className="inline-flex">
                         ${stock.current_price?.toFixed(2) ?? "0.00"}
                       </span>
-
                       <span
                         className={`inline-flex ${
                           stock.intraday_change >= 0
@@ -226,7 +234,7 @@ const ISnapshot = ({ stockData = [] }) => {
                             : "text-red-500"
                         }`}
                       >
-                        ${stock.intraday_change?.toFixed(2) ?? "0.00"}
+                        {stock.intraday_change >= 0 ? "+" : ""}${stock.intraday_change?.toFixed(2) ?? "0.00"}
                       </span>
                       <span
                         className={`inline-flex ${
@@ -235,9 +243,11 @@ const ISnapshot = ({ stockData = [] }) => {
                             : "text-red-500"
                         }`}
                       >
-                        {stock.intraday_percentage?.toFixed(2) ?? "0.00"}%
+                        ({stock.intraday_percentage >= 0 ? "+" : ""}{stock.intraday_percentage?.toFixed(2) ?? "0.00"}%)
                       </span>
                     </div>
+                    {/* Timeframe label */}
+                    <span className="text-[9px] text-gray-400 mt-1">1D Change</span>
                   </div>
                 ))
               ) : (

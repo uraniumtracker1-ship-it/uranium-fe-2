@@ -23,7 +23,7 @@ const Footer2 = () => {
         <div className="flex flex-wrap justify-center items-center space-x-2 text-sm md:text-base">
           <MdEmail className="text-lg md:text-xl" />{" "}
           {/* Icon size adjusts with screen */}
-          <span>info@pgmtracker.com</span>
+          <span>info@uraniumtracker.com</span>
         </div>
 
         {/* Divider */}
@@ -31,7 +31,7 @@ const Footer2 = () => {
 
         {/* Bottom Links */}
         <div className="text-xs md:text-sm lg:text-base flex flex-wrap justify-center space-x-2">
-          <span>© 2026 Lithium Tracker</span>
+          <span>© 2026 Uranium Tracker</span>
           <span>|</span>
           <span className="cursor-pointer hover:underline">Privacy Policy</span>
           <span>|</span>

@@ -25,10 +25,10 @@ const Data = () => {
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
       <SEO
-        title="Uranium Market Data - Live Prices, Supply & Demand Intelligence"
+        title="Uranium Market Data — Live Prices, Supply & Demand Intelligence"
         description="Access comprehensive uranium market data including live spot prices, long-term contracts, supply-demand analytics, reactor intelligence, and exclusive market insights used by industry professionals."
         keywords="uranium prices today, live uranium market data, nuclear reactor intelligence, uranium supply chain analytics, uranium demand forecasting, SMR market opportunities, nuclear energy statistics, uranium investment intelligence"
-        canonicalUrl="https://uraniumtracker.com/data"
+        canonicalUrl="https://www.uraniumtracker.com/data"
       />
       
       <nav id="navigation" role="navigation" aria-label="Main navigation">

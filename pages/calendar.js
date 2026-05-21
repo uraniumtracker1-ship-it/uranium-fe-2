@@ -8,10 +8,10 @@ const calendar = () => {
   return (
     <div>
       <SEO
-        title="Uranium Market Calendar - Key Events & Industry Updates"
-        description="Stay informed with the latest Uranium market events in 2025. Track key industry conferences, financial updates, and supply-demand shifts with our comprehensive market calendar."
-        keywords="Uranium market calendar 2025, Uranium events, Uranium industry conferences, nuclear energy events, market updates, financial events, supply and demand trends"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/calendar"
+        title="Uranium Market Calendar — Key Events & Industry Updates"
+        description="Stay informed with the latest uranium market events in 2026. Track key industry conferences, financial updates, and supply-demand shifts with our comprehensive market calendar."
+        keywords="uranium market calendar 2026, uranium events, uranium industry conferences, nuclear energy events, uranium market updates, supply and demand trends"
+        canonicalUrl="https://www.uraniumtracker.com/calendar"
       />
       <Navbar />
       <CalendarPage />

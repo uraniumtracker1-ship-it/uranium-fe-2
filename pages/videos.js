@@ -72,10 +72,10 @@ const Videos = () => {
   return (
     <div>
       <SEO
-        title="Uranium Video Hub - Market Updates, Education & Insights"
-        description="Enhance your Uranium market knowledge through our educational video content. From market fundamentals to advanced trading strategies, explore our comprehensive library of featured videos, company insights, podcasts, and educational resources."
-        keywords="Uranium videos, market updates, Uranium education, trading strategies, company insights, Uranium podcasts, investment knowledge, Uranium market"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/videos"
+        title="Uranium Video Hub — Market Updates, Education & Insights"
+        description="Enhance your uranium market knowledge through our educational video content. From market fundamentals to advanced trading strategies, explore analyst interviews, company insights, and uranium investing guides."
+        keywords="uranium videos, uranium market updates, uranium education, uranium investing guide, nuclear energy videos, uranium analyst interviews, uranium trading strategies"
+        canonicalUrl="https://www.uraniumtracker.com/videos"
       />
       <Navbar />
       <VideoHero />

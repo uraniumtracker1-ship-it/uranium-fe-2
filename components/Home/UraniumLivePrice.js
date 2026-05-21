@@ -101,63 +101,41 @@ const UraniumLivePrice = () => {
         Live Uranium Price
       </h2>
 
-      <div className="bg-accent/30 p-3 md:p-2 lg:p-3 py-4 w-full border border-accent/30 rounded-md flex justify-between items-center">
-        <div className="w-[35%] md:w-[30%] h-8 md:h-6 lg:h-8">
+      {/* Price card — stacked rows, no overlap */}
+      <div className="bg-accent/30 p-4 w-full border border-accent/30 rounded-md">
+        {/* Logo */}
+        <div className="flex justify-center mb-3">
           <img
-            className="w-16 md:w-12 lg:w-28 h-16 md:h-6 lg:h-10 sm:h-10 sm:w-28"
+            className="w-28 h-auto object-contain"
             src="/logo.jpg"
             alt="Uranium Tracker Logo"
           />
         </div>
 
-        <div className="w-[65%] md:w-[70%] pr-1">
-          <ul className="flex items-center gap-x-3 md:gap-x-2 lg:gap-x-3 text-xs md:text-[10px] lg:text-sm">
-            <li className="w-[33%] text-black1/80 font-medium text-right">
-              Price
-            </li>
-            <li className="w-[33%] text-black1/80 font-medium text-right">
-              Change
-            </li>
-            <li className="w-[33%] text-black1/80 font-medium text-right">
-              % Change
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="mt-1 bg-accent/30 p-3 md:p-2 lg:p-3 py-4 w-full border border-accent/30 rounded-md flex justify-between items-center">
-        <div className="w-[35%] md:w-[30%]">
-          <h3 className="text-xs md:text-[9px] lg:text-sm font-bold text-green">
-            Uranium Spot Price
-          </h3>
+        {/* Header row */}
+        <div className="flex items-center justify-between border-b border-accent/20 pb-2 mb-2">
+          <span className="text-[11px] text-black1/50 font-semibold uppercase tracking-wide w-1/3">Metric</span>
+          <span className="text-[11px] text-black1/50 font-semibold uppercase tracking-wide text-right w-2/3">Value</span>
         </div>
 
-        <div className="w-[65%] md:w-[70%]">
-          <ul className="flex items-center gap-x-3 md:gap-x-2 lg:gap-x-3 text-xs md:text-[9px] lg:text-sm font-semibold text-green">
-            <li className="w-[33%] text-right">
-              <p>{uraniumSpotPrice}</p>
-            </li>
-            <li className="w-[33%] text-right">
-              <p
-                className={`${changeValue >= 0 ? "text-green-600" : "text-red-500"}`}
-              >
-                {changeValue >= 0 ? `¥+${change}` : `¥${change}`}
-              </p>
-            </li>
-            <li className="w-[33%] text-right">
-              <p
-                className={`${
-                  parseFloat(changePercentage) >= 0
-                    ? "text-green-600"
-                    : "text-red-500"
-                }`}
-              >
-                {parseFloat(changePercentage) >= 0
-                  ? `+${changePercentage}%`
-                  : `${changePercentage}%`}
-              </p>
-            </li>
-          </ul>
+        {/* Data rows */}
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] text-black1/60 font-medium">Price</span>
+            <span className="text-sm font-bold text-green">{uraniumSpotPrice}</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] text-black1/60 font-medium">Change</span>
+            <span className={`text-sm font-bold ${changeValue >= 0 ? "text-green-600" : "text-red-500"}`}>
+              {changeValue >= 0 ? `+${change}` : `${change}`}
+            </span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] text-black1/60 font-medium">% Change</span>
+            <span className={`text-sm font-bold ${parseFloat(changePercentage) >= 0 ? "text-green-600" : "text-red-500"}`}>
+              {parseFloat(changePercentage) >= 0 ? `+${changePercentage}%` : `${changePercentage}%`}
+            </span>
+          </div>
         </div>
       </div>
 

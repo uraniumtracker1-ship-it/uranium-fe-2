@@ -3,6 +3,32 @@ import { uraniumAssetsData } from "@/public/static-data/uraniumAssetsData";
 
 const PAGE_SIZE = 15;
 
+// Normalize Company Type to a controlled vocabulary
+const normalizeCompanyType = (raw) => {
+  if (!raw) return "N/A";
+  const lower = raw.toLowerCase().trim();
+  if (lower.includes("produc")) return "Producer";
+  if (lower.includes("construct")) return "Construction";
+  if (lower.includes("develop")) return "Developer";
+  if (lower.includes("near") || lower.includes("planned")) return "Near-term Producer";
+  if (lower.includes("care") || lower.includes("maintenance")) return "Care & Maintenance";
+  if (lower.includes("explo")) return "Explorer";
+  if (lower.includes("royalt") || lower.includes("stream")) return "Royalty";
+  if (lower.includes("etf") || lower.includes("trust") || lower.includes("fund")) return "ETF / Trust";
+  return raw.trim();
+};
+
+const COMPANY_TYPE_COLORS = {
+  "Producer": "bg-green-100 text-green-800",
+  "Near-term Producer": "bg-emerald-100 text-emerald-800",
+  "Construction": "bg-teal-100 text-teal-800",
+  "Developer": "bg-yellow-100 text-yellow-800",
+  "Explorer": "bg-blue-100 text-blue-800",
+  "Care & Maintenance": "bg-orange-100 text-orange-800",
+  "Royalty": "bg-purple-100 text-purple-800",
+  "ETF / Trust": "bg-gray-100 text-gray-800",
+};
+
 const IUraniumAssets = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filters, setFilters] = useState({
@@ -95,7 +121,7 @@ const IUraniumAssets = () => {
         <div className="w-full bg-accent/10 border border-date/20 p-2 py-4 md:p-8 rounded-lg mb-24">
           <div className="mb-4">
             <p className="text-sm text-gray-600">
-              Showing {filteredAndSortedData.length} assets
+              Showing {filteredAndSortedData.length} of {uraniumAssetsData.length} total assets
             </p>
           </div>
 
@@ -103,7 +129,7 @@ const IUraniumAssets = () => {
           <div className="mb-4">
             <input
               type="text"
-              placeholder="Search by company, asset, ticker, or country..."
+              placeholder='Try: "Cameco", "Saskatchewan", "NXE", or "Australia"...'
               className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm"
               value={searchTerm}
               onChange={(e) => {
@@ -256,13 +282,15 @@ const IUraniumAssets = () => {
                       {asset["Mine Location State/Region"] || "N/A"}
                     </td>
                     <td className="px-4 py-[12px]">
-                      <span className={`px-2 py-1 rounded text-xs ${
-                        asset["Company Type"] === "Producer" ? "bg-green-100 text-green-800" :
-                        asset["Company Type"] === "Developer" ? "bg-yellow-100 text-yellow-800" :
-                        "bg-blue-100 text-blue-800"
-                      }`}>
-                        {asset["Company Type"] || "N/A"}
-                      </span>
+                      {(() => {
+                        const normalized = normalizeCompanyType(asset["Company Type"]);
+                        const colorClass = COMPANY_TYPE_COLORS[normalized] || "bg-gray-100 text-gray-700";
+                        return (
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${colorClass}`}>
+                            {normalized}
+                          </span>
+                        );
+                      })()}
                     </td>
                     <td className="px-4 py-[12px]">
                       {asset["Primary Assets"] || "N/A"}

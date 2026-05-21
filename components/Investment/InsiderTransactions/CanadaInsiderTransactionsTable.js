@@ -1,6 +1,54 @@
 import React, { useState } from "react";
 import { flags } from "../../../public/static-data/flagsData";
 
+// Map SEDI insider type codes to readable labels
+const parseSEDITitle = (raw) => {
+  if (!raw) return "N/A";
+  const map = {
+    "1": "Issuer",
+    "2": "Subsidiary",
+    "3": "10% Holder",
+    "4": "Director",
+    "5": "Officer",
+    "6": "Director / Officer",
+    "7": "Subsidiary Director",
+    "8": "Other Insider",
+  };
+  // Try to extract leading number(s) from strings like "4 - Director of Issuer"
+  const cleaned = raw.replace(/\d+\s*-\s*/g, (match) => {
+    const num = match.match(/\d+/)[0];
+    return map[num] ? map[num] + " / " : "";
+  }).replace(/\s*\/\s*$/, "").trim();
+  // If nothing matched, return the original trimmed
+  return cleaned || raw.trim();
+};
+
+// Map SEDI Nature of Transaction codes to readable labels
+const parseSEDITradeType = (raw) => {
+  if (!raw) return "N/A";
+  const lower = raw.toLowerCase().trim();
+  const map = {
+    "10": "Buy / Sell (Market)",
+    "11": "Private Buy / Sell",
+    "30": "Gift",
+    "40": "Stock Split",
+    "50": "Option Grant",
+    "51": "Option Exercise",
+    "52": "Option Expiration",
+    "70": "Other Buy / Sell",
+  };
+  // Match leading code like "52 - expiration of options"
+  const codeMatch = raw.match(/^(\d+)\s*-/);
+  if (codeMatch && map[codeMatch[1]]) return map[codeMatch[1]];
+  // Plain text fallbacks
+  if (lower.includes("acquisition") || lower.includes("disposition")) return "Buy / Sell";
+  if (lower.includes("exercise")) return "Option Exercise";
+  if (lower.includes("expir")) return "Option Expiration";
+  if (lower.includes("grant")) return "Option Grant";
+  if (lower.includes("gift")) return "Gift";
+  return raw.trim();
+};
+
 const TableCanadaInsiderTransactions = ({
   homeData,
   rows,
@@ -121,8 +169,8 @@ const TableCanadaInsiderTransactions = ({
                 <td className="px-4 py-[10px]">{data.company_name || "N/A"}</td>
                 <td className="px-4 py-[10px]">{data.ticker || "N/A"}</td>
                 <td className="px-4 py-[10px]">{data.insider_name || "N/A"}</td>
-                <td className="px-5 py-[10px]">{data.title || "N/A"}</td>
-                <td className="px-5 py-[10px]">{data.trade_type || "N/A"}</td>
+                <td className="px-5 py-[10px]">{parseSEDITitle(data.title)}</td>
+                <td className="px-5 py-[10px]">{parseSEDITradeType(data.trade_type)}</td>
                 <td className="px-4 py-[10px] text-black">
                   {formatLargeNumber(data.price || "0.00")}
                 </td>

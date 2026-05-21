@@ -10,11 +10,11 @@ const Footer = () => {
 
           <div className="w-full">
             <h1 className="text-[clamp(1.4rem,5vw,2.5rem)] font-semibold leading-snug mb-4 text-white frank">
-              Everything You Need to Navigate the Platinum Market – All in One Place
+              Everything You Need to Navigate the Uranium Market – All in One Place
             </h1>
             <p className="text-[clamp(0.8rem,2.5vw,0.95rem)] text-white/70 leading-7 max-w-[600px]">
               With demand for clean energy on the rise, many investors are
-              looking for the next big opportunity in Platinum. We're here to help.
+              looking for the next big opportunity in Uranium. We're here to help.
             </p>
           </div>
 

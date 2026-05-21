@@ -15,10 +15,10 @@ const news = () => {
   return (
     <div>
       <SEO
-        title="Uranium News - Latest Industry News, Stock Trends & Press Releases"
-        description="Stay updated with the latest news on Uranium, featuring company press releases, stock market trends, and real-time industry developments. Get accurate insights into financial updates, market movements, and key events shaping the Uranium sector."
-        keywords="Uranium news, Company Press Releases, Stock news, Market news, Trending stock news, Company news"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/news/"
+        title="Uranium News — Daily Nuclear Market Updates & Analysis"
+        description="Latest uranium news, nuclear industry updates, mining press releases, and market analysis. Daily ingest from World Nuclear News, IAEA, NUCNET and others."
+        keywords="uranium news, nuclear industry news, uranium mining news, uranium market analysis, World Nuclear News, IAEA, nuclear energy updates"
+        canonicalUrl="https://www.uraniumtracker.com/news"
       />
       <Navbar />
       <div className="mt-14">

@@ -24,10 +24,10 @@ const home = () => {
   return (
     <div>
       <SEO
-        title="Uranium Tracker - Real-time News, Prices & Analysis"
-        description="Stay ahead with real-time Uranium market news, price updates, and in-depth analysis. Get accurate insights into the uranium market trends."
-        keywords="Uranium prices, Uranium news, Uranium market analysis, Nuclear energy, Uranium trading, Uranium updates, Uranium investment, Real-time Uranium updates,investment"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/"
+        title="Uranium Tracker — Live U3O8 Price, Stocks & Nuclear News"
+        description="Live U3O8 spot price, top uranium stocks (CCJ, NXE, UEC), ETFs (URNM, URA, URNJ), insider trades, and nuclear news. The data hub for uranium investors."
+        keywords="uranium price today, U3O8 spot price, uranium stocks, uranium ETFs, URNM, URA, CCJ, NexGen, uranium news, nuclear energy"
+        canonicalUrl="https://www.uraniumtracker.com/"
       />
 
       <Navbar />

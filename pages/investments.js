@@ -111,10 +111,10 @@ const investments = ({ stockData }) => {
   return (
     <div>
       <SEO
-        title="Uranium Investment Insights - Market Trends & Stock Analysis"
-        description="Explore in-depth Uranium investment insights, stock analysis, and the latest market trends. Stay informed about financial updates, ETF holdings, insider transactions, and stock screening tools to make better investment decisions."
-        keywords="uranium investment insights, stock market trends, ETF holdings, stock analysis, insider transactions, stock screener, market updates, investment strategies, uranium investments"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/investments"
+        title="Uranium Stocks, ETFs & Insider Trading | Uranium Tracker"
+        description="Uranium investment data hub — top stocks, ETF holdings (URNM, URA, URNJ), insider trading (US/Canada/Australia), stock screener, and uranium projects database."
+        keywords="uranium stocks, uranium ETFs, URNM, URA, uranium insider trading, uranium stock screener, uranium projects database, CCJ, NexGen, uranium investment"
+        canonicalUrl="https://www.uraniumtracker.com/investments"
       />
 
       <Navbar />
@@ -131,7 +131,7 @@ const investments = ({ stockData }) => {
             href="/investments?tab=snapshot"
             className={`py-2 px-4 ${currentTab === "snapshot" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
-            Snapshot
+            Market Leaders
           </a>
           <a 
             href="/investments?tab=stock-screener"
@@ -143,19 +143,19 @@ const investments = ({ stockData }) => {
             href="/investments?tab=insider-transactions"
             className={`py-2 px-4 ${currentTab === "insider-transactions" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
-            Insider Transactions
+            Insider Trading
           </a>
           <a 
             href="/investments?tab=etf-trust-holdings"
             className={`py-2 px-4 ${currentTab === "etf-trust-holdings" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
-            ETF Trust Holdings
+            ETF Holdings
           </a>
           <a 
             href="/investments?tab=uranium-assets"
             className={`py-2 px-4 ${currentTab === "uranium-assets" ? "border-b-2 border-accent text-accent" : "text-gray-600 hover:text-accent"}`}
           >
-            Uranium Assets
+            Projects Database
           </a>
         </div>
         
@@ -172,8 +172,7 @@ const investments = ({ stockData }) => {
                 <div className="w-full bg-accent/10 border border-date/20 p-2 py-4 md:p-8 rounded-lg mb-24">
                   {/* Filter Section */}
                   <div className="overflow-x-auto pb-2 custom-scrollbar-hidden mb-4">
-                    <div className="flex gap-x-4 mt-3">
-                      <div className="min-w-[120px]">
+                    <div className="flex gap-x-4 mt-3">                      <div className="min-w-[120px]">
                         <label className="block text-xs font-medium text-teal-600 mb-1">Stock Type</label>
                         <select 
                           className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md"
