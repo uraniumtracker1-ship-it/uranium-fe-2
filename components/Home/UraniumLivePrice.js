@@ -14,10 +14,11 @@ const UraniumLivePrice = () => {
           throw new Error("Failed to fetch data");
         }
         const data = await response.json();
-        
+
         // Find the Uranium data from the response
-        const uraniumInfo = data.find((item) => 
-          item.metal_name === "Uranium" || item.pgm_name === "Uranium"
+        const uraniumInfo = data.find(
+          (item) =>
+            item.metal_name === "Uranium" || item.pgm_name === "Uranium",
         );
         setUraniumData(uraniumInfo);
       } catch (error) {
@@ -73,16 +74,26 @@ const UraniumLivePrice = () => {
 
   // Format large numbers (CNY) with commas, small numbers (USD) with decimals
   const price = parseFloat(uraniumData.price || 0);
-  const uraniumSpotPrice = price > 1000 
-    ? price.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-    : price.toFixed(2);
-  
+  const uraniumSpotPrice =
+    price > 1000
+      ? price.toLocaleString("en-US", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        })
+      : price.toFixed(2);
+
   const changeValue = parseFloat(uraniumData.price_change || 0);
-  const change = changeValue > 1000
-    ? changeValue.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-    : changeValue.toFixed(2);
-  
-  const changePercentage = parseFloat(uraniumData.price_change_percent || 0).toFixed(2);
+  const change =
+    changeValue > 1000
+      ? changeValue.toLocaleString("en-US", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        })
+      : changeValue.toFixed(2);
+
+  const changePercentage = parseFloat(
+    uraniumData.price_change_percent || 0,
+  ).toFixed(2);
 
   return (
     <div className="text-center">
@@ -101,9 +112,15 @@ const UraniumLivePrice = () => {
 
         <div className="w-[65%] md:w-[70%] pr-1">
           <ul className="flex items-center gap-x-3 md:gap-x-2 lg:gap-x-3 text-xs md:text-[10px] lg:text-sm">
-            <li className="w-[33%] text-black1/80 font-medium text-right">Price</li>
-            <li className="w-[33%] text-black1/80 font-medium text-right">Change</li>
-            <li className="w-[33%] text-black1/80 font-medium text-right">% Change</li>
+            <li className="w-[33%] text-black1/80 font-medium text-right">
+              Price
+            </li>
+            <li className="w-[33%] text-black1/80 font-medium text-right">
+              Change
+            </li>
+            <li className="w-[33%] text-black1/80 font-medium text-right">
+              % Change
+            </li>
           </ul>
         </div>
       </div>
@@ -118,7 +135,7 @@ const UraniumLivePrice = () => {
         <div className="w-[65%] md:w-[70%]">
           <ul className="flex items-center gap-x-3 md:gap-x-2 lg:gap-x-3 text-xs md:text-[9px] lg:text-sm font-semibold text-green">
             <li className="w-[33%] text-right">
-              <p>¥{uraniumSpotPrice}</p>
+              <p>{uraniumSpotPrice}</p>
             </li>
             <li className="w-[33%] text-right">
               <p
@@ -130,7 +147,9 @@ const UraniumLivePrice = () => {
             <li className="w-[33%] text-right">
               <p
                 className={`${
-                  parseFloat(changePercentage) >= 0 ? "text-green-600" : "text-red-500"
+                  parseFloat(changePercentage) >= 0
+                    ? "text-green-600"
+                    : "text-red-500"
                 }`}
               >
                 {parseFloat(changePercentage) >= 0
