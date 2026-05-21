@@ -36,45 +36,45 @@ const home = () => {
 
       <Hero />
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 px-4">
-        <div className="col-span-1 md:col-span-3">
-          <div className="border rounded-md  px-3 py-4 ">
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
+      {/* ── Row 1: Charts + Prices ── */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 px-4 mt-6">
+        <div className="md:col-span-3">
+          <div className="border rounded-md px-3 py-4 h-full">
+            <h2 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Uranium Price Chart
-            </h1>
+            </h2>
             <TVUraniumCFD />
           </div>
         </div>
-        <div className="col-span-1 md:col-span-6">
-          <div className="border rounded-md  px-3 py-4 ">
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
+        <div className="md:col-span-6">
+          <div className="border rounded-md px-3 py-4 h-full">
+            <h2 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Prices
-            </h1>
-            <div className="border rounded-md my-2">
-              <DirectHomeUraniumPrice />
-            </div>
+            </h2>
+            <DirectHomeUraniumPrice />
           </div>
         </div>
         <div className="md:col-span-3">
-          <div className="border rounded-md  px-3 py-4 ">
-            <h1 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
+          <div className="border rounded-md px-3 py-4 h-full">
+            <h2 className="text-[21px] cambay font-bold mb-3 border-b border-black/10 pb-1">
               Uranium Futures
-            </h1>
+            </h2>
             <TVUranium />
           </div>
         </div>
       </div>
 
-      <div className=" grid grid-cols-1 md:grid-cols-9 px-4 gap-8 mt-8">
-        <div className="col-span-1 md:col-span-7">
-          <div className="border rounded-md  px-3 py-4 ">
+      {/* ── Row 2: Insider Transactions + Sidebar ── */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 px-4 mt-6">
+        <div className="md:col-span-9">
+          <div className="border rounded-md px-3 py-4">
             <div className="flex justify-between items-center mb-3 border-b border-black/10 pb-1">
-              <h1 className="text-[21px] cambay font-bold">
+              <h2 className="text-[21px] cambay font-bold">
                 Recent Canadian Company Insider Transactions
-              </h1>
+              </h2>
               <a
                 href="/investments"
-                className="text-sm text-accent hover:text-accent/80 transition-colors"
+                className="text-sm text-accent hover:text-accent/80 transition-colors shrink-0 ml-4"
               >
                 view all
               </a>
@@ -82,47 +82,53 @@ const home = () => {
             <HomeInsiderTransactions />
           </div>
         </div>
-        <div className="col-span-1  md:col-span-2 flex flex-col gap-8 ">
-          <div className="border rounded-md  px-3 py-4 ">
+        <div className="md:col-span-3 flex flex-col gap-6">
+          <div className="border rounded-md px-3 py-4">
             <Substacks />
           </div>
-
           <DailyNewsletterAd />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-9 px-4 gap-8 mt-8">
-        <div className="md:col-span-9 border rounded-md  px-3 py-4 ">
+      {/* ── Row 3: Latest News (full width) ── */}
+      <div className="px-4 mt-6">
+        <div className="border rounded-md px-3 py-4">
           <LatestNews />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-9 px-4 gap-8 mt-8">
-        <div className="md:col-span-7 border rounded-md  px-3 py-4 ">
-          <PressReleaseNews />
+      {/* ── Rows 4 + 5: Main content + sticky right sidebar ── */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 px-4 mt-6 items-start">
+        {/* Left: Press Release + Stock News stacked */}
+        <div className="md:col-span-9 flex flex-col gap-6">
+          <div className="border rounded-md px-3 py-4">
+            <PressReleaseNews />
+          </div>
+          <div className="border rounded-md px-3 py-4">
+            <StockNews />
+          </div>
         </div>
-        <div className="md:col-span-2 border rounded-md  px-3 py-4 ">
-          <PopularTools />
+
+        {/* Right: sticky sidebar with Popular Tools + Most Watched */}
+        <div className="md:col-span-3 flex flex-col gap-6 md:sticky md:top-[88px]">
+          <div className="border rounded-md px-3 py-4">
+            <PopularTools />
+          </div>
+          <div className="border rounded-md px-3 py-4">
+            <PopularIntradayReturn />
+          </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-9 px-4 gap-8 mt-8">
-        <div className="md:col-span-7 border rounded-md  px-3 py-4 ">
-          <StockNews />
-        </div>
-        <div className="md:col-span-2 border rounded-md  px-3 py-4 ">
-          <PopularIntradayReturn />
-        </div>
-      </div>
-
-      <div className="mx-4">
-        {" "}
-        <div className="border rounded-md py-4 mt-8 px-4 ">
+      {/* ── Most Popular News (full width) ── */}
+      <div className="px-4 mt-6">
+        <div className="border rounded-md py-4 px-4">
           <MostPopularNews />
         </div>
       </div>
 
-      <div className="mt-8">
+      {/* ── Most Followed Stocks Table ── */}
+      <div className="mt-6">
         <MostFollowedStocksTable />
       </div>
 
@@ -130,7 +136,6 @@ const home = () => {
         <StayAhead />
       </div>
 
-      {/* footer -------------------------------------------------------------------------------------------- */}
       <Footer />
     </div>
   );
