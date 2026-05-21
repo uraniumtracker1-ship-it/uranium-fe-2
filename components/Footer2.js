@@ -1,70 +1,72 @@
 import React from "react";
 import Image from "next/image";
-import { MdEmail } from "react-icons/md";
 
 const trackers = [
-  { label: "Lithium Tracker",      href: "https://www.lithiumtracker.com/" },
-  { label: "Copper Tracker",       href: "https://www.coppertracker.com/" },
-  { label: "Nickel Metal Tracker", href: "https://www.nickelmetaltracker.com/" },
-  { label: "Uranium Tracker",      href: "https://www.uraniumtracker.com/" },
-  { label: "PGM Tracker",          href: "https://www.pgmtracker.com/" },
-  { label: "Gold & Silver Tracker",href: "https://www.goldandsilvertracker.com/" },
+  { label: "Lithium Tracker",       href: "https://www.lithiumtracker.com/" },
+  { label: "Copper Tracker",        href: "https://www.coppertracker.com/" },
+  { label: "Nickel Metal Tracker",  href: "https://www.nickelmetaltracker.com/" },
+  { label: "Uranium Tracker",       href: "https://www.uraniumtracker.com/" },
+  { label: "PGM Tracker",           href: "https://www.pgmtracker.com/" },
+  { label: "Gold & Silver Tracker", href: "https://www.goldandsilvertracker.com/" },
 ];
 
 const Footer2 = () => {
   return (
     <div>
-      <div className="bg-accent text-white w-full py-8 pb-10">
-        <div className="container flex flex-col justify-center items-center mx-auto text-center px-3 space-y-4">
-          {/* Logo and Title */}
-          <div className="w-full flex justify-center items-center mb-4">
+      <div className="bg-accent text-white w-full py-10 pb-12">
+        <div className="container flex flex-col justify-center items-center mx-auto text-center px-4 space-y-6">
+
+          {/* Logo */}
+          <div className="w-full flex justify-center items-center">
             <Image
               src="/logo.jpg"
-              alt="Logo"
-              width={140}
-              height={10}
+              alt="Uranium Tracker Logo"
+              width={200}
+              height={40}
               priority
             />
           </div>
 
-          {/* Contact Email */}
-          <div className="flex flex-wrap justify-center items-center space-x-2 text-sm md:text-base">
-            <MdEmail className="text-lg md:text-xl" />
-            <span>info@uraniumtracker.com</span>
+          {/* Tagline */}
+          <div className="space-y-1">
+            <p className="text-white/50 text-xs uppercase tracking-[0.25em] font-semibold">
+              Part of the
+            </p>
+            <h2 className="cambay text-2xl md:text-3xl font-bold text-white tracking-wide">
+              Commodities Tracker Network
+            </h2>
+            <p className="text-white/60 text-sm md:text-base max-w-md mx-auto leading-relaxed">
+              Explore our suite of real-time commodity trackers — built for investors who move fast.
+            </p>
           </div>
 
-          {/* Divider */}
-          <div className="w-full md:w-2/3 lg:w-1/2 mx-auto border-t border-white/40 my-4"></div>
-
-          {/* Bottom Links */}
-          <div className="text-xs md:text-sm lg:text-base flex flex-wrap justify-center space-x-2">
-            <span>© 2026 Uranium Tracker</span>
-            <span>|</span>
-            <span className="cursor-pointer hover:underline">Privacy Policy</span>
-            <span>|</span>
-            <span className="cursor-pointer hover:underline">Disclaimer</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Tracker Network Bar */}
-      <div className="w-full bg-[#b5a46a] py-3">
-        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 px-4 text-white text-xs md:text-sm">
-          {trackers.map((t, i) => (
-            <React.Fragment key={t.href}>
+          {/* Tracker Pills */}
+          <div className="flex flex-wrap justify-center gap-2 pt-2">
+            {trackers.map((t) => (
               <a
+                key={t.href}
                 href={t.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline whitespace-nowrap"
+                className="px-4 py-1.5 rounded-full border border-white/30 text-white/80 text-xs md:text-sm font-medium hover:bg-white hover:text-accent transition-all duration-200 whitespace-nowrap"
               >
                 {t.label}
               </a>
-              {i < trackers.length - 1 && (
-                <span className="opacity-50">|</span>
-              )}
-            </React.Fragment>
-          ))}
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div className="w-full md:w-2/3 lg:w-1/2 mx-auto border-t border-white/20 pt-4" />
+
+          {/* Bottom Links */}
+          <div className="text-xs md:text-sm flex flex-wrap justify-center gap-x-3 gap-y-1 text-white/60">
+            <span>© 2026 Uranium Tracker</span>
+            <span>|</span>
+            <span className="cursor-pointer hover:text-white transition-colors">Privacy Policy</span>
+            <span>|</span>
+            <span className="cursor-pointer hover:text-white transition-colors">Disclaimer</span>
+          </div>
+
         </div>
       </div>
     </div>
