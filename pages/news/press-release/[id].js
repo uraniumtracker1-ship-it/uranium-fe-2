@@ -170,10 +170,15 @@ const PressReleasePage = () => {
   return (
     <>
       <SEO
-        title="Press Release - Latest News & Updates"
-        description="Read the latest press releases and stay informed with important news and updates from the industry."
-        keywords="press release, latest news, industry updates, company announcements, financial news, market insights"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/press-release"
+        title={`${newsData.title} | Uranium Tracker`}
+        description={
+          newsData.content
+            ? newsData.content.slice(0, 155).replace(/\n/g, " ") + "…"
+            : "Read the latest uranium industry press release on Uranium Tracker."
+        }
+        keywords="uranium press release, uranium news, nuclear industry announcement, uranium market update"
+        canonicalUrl={`https://www.uraniumtracker.com/news/press-release/${id}`}
+        ogType="article"
       />
 
       <Navbar />

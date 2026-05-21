@@ -10,10 +10,11 @@ const EmailSent = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="Email Sent - Confirmation & Next Steps"
-        description="Your email has been sent successfully. Check your inbox for confirmation and further instructions."
-        keywords="email sent, confirmation, inbox, message delivered, email success, verification email, next steps"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/emailsent"
+        title="Email Sent — Check Your Inbox | Uranium Tracker"
+        description="Your verification email has been sent. Check your inbox to confirm your account and start tracking uranium markets."
+        keywords="email sent, confirmation, inbox, verification email"
+        canonicalUrl="https://www.uraniumtracker.com/emailsent"
+        noindex={true}
       />
 
       <main className="flex-grow mt-16">

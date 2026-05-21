@@ -9,6 +9,7 @@ import PopularIntradayReturn from "@/components/Home/MostFollowed";
 import MoreNews from "@/components/News/MoreNews";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import SEO from "@/components/SEO";
 
 const StockNewsPage = () => {
   const router = useRouter();
@@ -65,6 +66,17 @@ const StockNewsPage = () => {
 
   return (
     <>
+      <SEO
+        title={`${newsData.title} | Uranium Tracker`}
+        description={
+          newsData.content
+            ? newsData.content.slice(0, 155).replace(/\n/g, " ") + "…"
+            : "Read the latest uranium stock news on Uranium Tracker."
+        }
+        keywords="uranium stock news, uranium market news, nuclear energy stocks, uranium investing"
+        canonicalUrl={`https://www.uraniumtracker.com/news/stock-news/${id}`}
+        ogType="article"
+      />
       <Navbar />
       <div className="mt-16 w-full flex justify-between px-3 md:px-20 py-8 md:py-16">
         {/* news  */}

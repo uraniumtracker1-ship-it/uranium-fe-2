@@ -227,10 +227,10 @@ const StockDetailPage = () => {
     return (
       <div>
         <SEO
-          title="Stock Not Found"
-          description="Stock Not Found"
-          keywords="stock details, market insights, stock analysis, stock performance, investment, financial data, stock trends"
-          canonicalUrl="https://musical-panda-75f15d.netlify.app/stock-detail"
+          title="Stock Not Found — Uranium Tracker"
+          description="We couldn't find data for this uranium stock ticker. Browse all uranium stocks and ETFs on Uranium Tracker."
+          canonicalUrl="https://www.uraniumtracker.com/investments"
+          noindex={true}
         />
         <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
           <div className="text-center">
@@ -255,10 +255,11 @@ const StockDetailPage = () => {
   return (
     <div>
       <SEO
-        title="Stock Details - Market Insights & Analysis"
-        description="Get in-depth stock details, real-time market data, historical performance, and expert analysis to make informed investment decisions."
-        keywords="stock details, market insights, stock analysis, stock performance, investment, financial data, stock trends"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/stock-detail"
+        title={`${data[0].stock_name} (${data[0].stock_ticker}) — Stock Price, Chart & Analysis | Uranium Tracker`}
+        description={`Live price, chart, financials, and technical analysis for ${data[0].stock_name} (${data[0].stock_ticker}) on ${data[0].stock_exchange}. Track uranium stocks on Uranium Tracker.`}
+        keywords={`${data[0].stock_ticker}, ${data[0].stock_name}, uranium stock, ${data[0].stock_exchange}, uranium investing, nuclear energy stock`}
+        canonicalUrl={`https://www.uraniumtracker.com/stock-detail/${data[0].stock_ticker}`}
+        ogType="article"
       />
       <Navbar />
       <div className="flex flex-col md:flex-row justify-between px-2 md:px-12 my-10 pb-20 mt-24">

@@ -16,10 +16,17 @@ import TVUranium from "@/components/Home/TVUranium";
 import PlainNews from "@/components/Home/PlainNews";
 import HomeUraniumPrice from "@/components/Home/HomeUraniumPrice";
 import HomeInsiderTransactions from "@/components/Home/HomeInsiderTransactions";
+import SEO from "@/components/SEO";
 
 const home = () => {
   return (
     <div>
+      <SEO
+        title="Uranium Tracker — Live U3O8 Price, Stocks & Nuclear News"
+        description="Live U3O8 spot price, top uranium stocks, ETFs, insider trades, and nuclear news."
+        canonicalUrl="https://www.uraniumtracker.com/"
+        noindex={true}
+      />
       <Navbar />
       <Hero />
 

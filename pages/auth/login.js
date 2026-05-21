@@ -289,10 +289,11 @@ const Login = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <SEO
-        title="Login - Access Your Account"
-        description="Log in to your account to access powerful tools, manage your watchlist, and stay updated with market trends."
-        keywords="login, sign in, account access, user login, stock market tools, investment platform"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/auth/login"
+        title="Login — Access Your Uranium Tracker Account"
+        description="Log in to your Uranium Tracker account to manage your watchlist, screen uranium stocks, and stay updated with live U3O8 prices and nuclear market news."
+        keywords="login, sign in, uranium tracker account, uranium watchlist, uranium stock screener"
+        canonicalUrl="https://www.uraniumtracker.com/auth/login"
+        noindex={true}
       />
 
       <Navbar />

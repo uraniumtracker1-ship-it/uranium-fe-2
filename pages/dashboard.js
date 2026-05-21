@@ -43,6 +43,7 @@ const DashboardLayout = () => {
         description="Access your uranium investment dashboard — manage your watchlist, screen uranium stocks, track insider trades, and stay updated with the latest market data."
         keywords="uranium dashboard, uranium stock screener, uranium watchlist, uranium market tools, uranium investment tracker"
         canonicalUrl="https://www.uraniumtracker.com/dashboard"
+        noindex={true}
       />
       <div className="flex h-full">
         {/* Mobile Sidebar Overlay */}

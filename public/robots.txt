@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Private / auth pages — no indexing needed
+Disallow: /dashboard
+Disallow: /auth/
+Disallow: /emailsent
+Disallow: /home
+
+# API routes
+Disallow: /api/
+
+Sitemap: https://www.uraniumtracker.com/sitemap.xml

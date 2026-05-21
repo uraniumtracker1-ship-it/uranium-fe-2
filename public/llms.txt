@@ -1,0 +1,21 @@
+# Uranium Tracker — llms.txt
+# https://llmstxt.org
+
+> Uranium Tracker is the leading data hub for uranium investors. We provide live U3O8 spot prices, uranium stock and ETF data, insider trading records, nuclear reactor intelligence, supply-demand analytics, and daily nuclear industry news.
+
+## Key Pages
+
+- [Home](https://www.uraniumtracker.com/): Live U3O8 price, top uranium stocks, ETFs, insider trades, and nuclear news feed.
+- [Market Data](https://www.uraniumtracker.com/data): Comprehensive uranium market data — live spot prices, long-term contract prices, supply-demand analytics, reactor intelligence, Kazakhstan production, project pipeline, and geopolitics.
+- [Investments](https://www.uraniumtracker.com/investments): Uranium stocks screener, ETF holdings (URNM, URA, URNJ), insider trading database (US, Canada, Australia), and uranium projects database.
+- [News](https://www.uraniumtracker.com/news): Daily uranium and nuclear industry news from World Nuclear News, IAEA, NUCNET, and company press releases.
+- [Uranium 101](https://www.uraniumtracker.com/C101): Educational guide covering the nuclear fuel cycle, U3O8 spot price mechanics, uranium mining, enrichment, and investment fundamentals.
+- [Calendar](https://www.uraniumtracker.com/calendar): Uranium market events calendar — industry conferences, earnings dates, and key supply-demand milestones.
+- [Community](https://www.uraniumtracker.com/community): Investor forum for uranium market discussions, stock insights, and industry analysis.
+- [Videos](https://www.uraniumtracker.com/videos): Uranium market video content — analyst interviews, company presentations, educational content, and podcasts.
+
+## About
+
+Uranium Tracker aggregates and presents uranium market data for retail and institutional investors. The site covers the full uranium investment universe including miners (CCJ, NXE, UEC, PDN, BOE, DYL), royalty companies, physical uranium trusts (SPUT, YCA), and ETFs (URNM, URA, URNJ, HURA).
+
+Contact: info@uraniumtracker.com

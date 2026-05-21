@@ -302,10 +302,11 @@ const Signup = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <SEO
-        title="Sign Up - Create Your Account"
-        description="Join us today! Create your account to access powerful tools, manage your watchlist, and stay updated with Copper market trends."
-        keywords="sign up, create account, registration, join now, stock market tools, investment platform, market trends,Copper Tracker"
-        canonicalUrl="https://musical-panda-75f15d.netlify.app/auth/signup"
+        title="Sign Up — Create Your Uranium Tracker Account"
+        description="Join Uranium Tracker today. Create your free account to access live U3O8 prices, uranium stock screener, ETF holdings, insider trades, and nuclear market news."
+        keywords="sign up, create account, uranium tracker, uranium investing, uranium stocks, nuclear energy"
+        canonicalUrl="https://www.uraniumtracker.com/auth/signup"
+        noindex={true}
       />
 
       <Navbar />
