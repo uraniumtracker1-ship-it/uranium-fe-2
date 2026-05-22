@@ -4,16 +4,16 @@ import React, { useEffect, useRef, memo } from "react";
 const URANIUM_TICKERS = [
   { symbol: "NYSE:CCJ",      label: "Cameco" },
   { symbol: "NYSE:NXE",      label: "NexGen Energy" },
-  { symbol: "NYSE:UEC",      label: "Uranium Energy" },
-  { symbol: "NYSE:DNN",      label: "Denison Mines" },
+  { symbol: "AMEX:UEC",      label: "Uranium Energy" },
+  { symbol: "AMEX:DNN",      label: "Denison Mines" },
   { symbol: "NASDAQ:EU",     label: "enCore Energy" },
   { symbol: "ASX:PDN",       label: "Paladin Energy" },
   { symbol: "ASX:BOE",       label: "Boss Energy" },
   { symbol: "ASX:DYL",       label: "Deep Yellow" },
   { symbol: "AMEX:URNM",     label: "URNM ETF" },
   { symbol: "AMEX:URA",      label: "URA ETF" },
-  { symbol: "LSE:KAP",       label: "Kazatomprom" },
-  { symbol: "COMEX:UX1!",    label: "Uranium Futures" },
+  { symbol: "AMEX:URNJ",     label: "URNJ ETF" },
+  { symbol: "NYSE:LEU",      label: "Centrus Energy" },
 ];
 
 // Single TradingView single-quote widget
