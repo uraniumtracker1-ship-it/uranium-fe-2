@@ -75,7 +75,7 @@ const UraniumPrice = () => {
               parseFloat(change) > 0 ? "text-green-400" : "text-red-400"
             }`}
           >
-            ¥{formattedChange}
+            ${formattedChange}
           </p>
         </div>
         {/* Change Percentage */}
@@ -97,7 +97,7 @@ const UraniumPrice = () => {
       <div className="lg:hidden space-y-2">
         <p className="text-base font-bold text-white">
           Uranium Spot Price:{" "}
-          <span className="font-normal">¥{uraniumSpotPrice}</span>
+          <span className="font-normal">${uraniumSpotPrice}</span>
         </p>
 
         <p className="text-base font-bold text-white">
@@ -107,7 +107,7 @@ const UraniumPrice = () => {
               parseFloat(change) > 0 ? "text-green-400" : "text-red-400"
             } font-normal`}
           >
-            ¥{formattedChange}
+            ${formattedChange}
           </span>
         </p>
         <p className="text-base font-bold text-white">
