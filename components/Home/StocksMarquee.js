@@ -124,19 +124,18 @@ const StocksMarquee = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbols: [
-        { description: "", proName: "COMEX:HG1!" }, // Lithium Futures
-        { description: "", proName: "NASDAQ:COPX" }, // Global X Lithium Miners ETF
-        { description: "", proName: "NYSE:FCX" }, // Freeport-McMoRan - Major lithium producer
-        { description: "", proName: "NYSE:SCCO" }, // Southern Lithium Corporation
-        { description: "", proName: "NYSE:TECK" }, // Teck Resources - Lithium mining
-        { description: "", proName: "NYSE:BHP" }, // BHP Group - Mining company
-        { description: "", proName: "NYSE:RIO" }, // Rio Tinto - Mining company
-        { description: "", proName: "NYSE:VALE" }, // Vale S.A. - Mining company
-        { description: "", proName: "NYSE:AA" }, // Alcoa Corporation
-        { description: "", proName: "NYSE:NEM" }, // Newmont Corporation
-        { description: "", proName: "NYSE:GOLD" }, // Barrick Gold Corporation
-        { description: "", proName: "OTC:GLCNF" }, // Glencore plc
-        { description: "", proName: "LSE:ANTO" }, // Antofagasta plc
+        { description: "Uranium Spot", proName: "COMEX:UX1!" },
+        { description: "Cameco",       proName: "NYSE:CCJ" },
+        { description: "NexGen",       proName: "NYSE:NXE" },
+        { description: "Uranium Energy", proName: "NYSE:UEC" },
+        { description: "Paladin",      proName: "ASX:PDN" },
+        { description: "Boss Energy",  proName: "ASX:BOE" },
+        { description: "Deep Yellow",  proName: "ASX:DYL" },
+        { description: "URNM ETF",     proName: "AMEX:URNM" },
+        { description: "URA ETF",      proName: "AMEX:URA" },
+        { description: "Kazatomprom", proName: "LSE:KAP" },
+        { description: "Denison Mines", proName: "NYSE:DNN" },
+        { description: "enCore Energy", proName: "NASDAQ:EU" },
       ],
       showSymbolLogo: true,
       isTransparent: false,
