@@ -60,9 +60,9 @@ const PressRelease = () => {
   if (loading) {
     return (
       <div>
-        <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
+        <h2 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
           Uranium Company Press Release
-        </h1>
+        </h2>
         <div className="text-center py-8">Loading press releases...</div>
       </div>
     );
@@ -71,9 +71,9 @@ const PressRelease = () => {
   if (error) {
     return (
       <div>
-        <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
+        <h2 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
           Uranium Company Press Release
-        </h1>
+        </h2>
         <div className="text-center py-8 text-red-500">
           Error loading press releases: {error}
         </div>
@@ -84,9 +84,9 @@ const PressRelease = () => {
   if (pressReleases.length === 0) {
     return (
       <div>
-        <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
+        <h2 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
           Uranium Company Press Release
-        </h1>
+        </h2>
         <div className="text-center py-8 text-gray-500">
           No press releases available at this time
         </div>
@@ -97,9 +97,9 @@ const PressRelease = () => {
   return (
     <div>
       {/* Heading */}
-      <h1 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
+      <h2 className="text-[21px] cambay font-bold mb-5 border-b border-black/10 pb-2">
         Uranium Company Press Release
-      </h1>
+      </h2>
 
       {/* Press Release Layout */}
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">

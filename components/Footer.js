@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="w-full max-w-[500px]">
             <img
               src="/mockup.png"
-              alt="mockup"
+              alt="Uranium Tracker platform — live uranium price dashboard and market data"
               className="w-full h-auto block"
             />
           </div>

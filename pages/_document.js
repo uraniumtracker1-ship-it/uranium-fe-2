@@ -9,7 +9,7 @@ export default function Document() {
         <link rel="shortcut icon" href="/Uranium thumbnail.png" type="image/png" />
         <link rel="apple-touch-icon" href="/Uranium thumbnail.png" />
         {/* Default OG image — must be absolute for social crawlers */}
-        <meta property="og:image" content="https://www.uraniumtracker.com/og-home.jpg" />
+        <meta property="og:image" content="https://www.uraniumtracker.com/logo.jpg" />
         {/* Google Fonts - DM Sans and DM Mono */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

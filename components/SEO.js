@@ -12,7 +12,7 @@ const SEO = ({
 }) => {
   const siteUrl = "https://www.uraniumtracker.com";
   const canonical = canonicalUrl || siteUrl;
-  const image = ogImage || `${siteUrl}/og-home.jpg`;
+  const image = ogImage || `${siteUrl}/logo.jpg`;
 
   return (
     <Head>
