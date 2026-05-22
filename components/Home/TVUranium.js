@@ -13,7 +13,7 @@ function UraniumTradingViewWidget() {
     script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "NYSE:ALB",
+          "symbol": "NYSE:CCJ",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",

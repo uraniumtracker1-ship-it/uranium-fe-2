@@ -13,7 +13,7 @@ function UraniumCFDTradingViewWidget() {
     script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "AMEX:LIT",
+          "symbol": "AMEX:URNM",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
