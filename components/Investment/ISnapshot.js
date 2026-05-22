@@ -12,7 +12,7 @@ const URANIUM_TICKERS = [
   { symbol: "ASX:DYL",       label: "Deep Yellow" },
   { symbol: "AMEX:URNM",     label: "URNM ETF" },
   { symbol: "AMEX:URA",      label: "URA ETF" },
-  { symbol: "AMEX:URNJ",     label: "URNJ ETF" },
+  { symbol: "NASDAQ:URNJ",   label: "URNJ ETF" },
   { symbol: "NYSE:LEU",      label: "Centrus Energy" },
 ];
 

@@ -133,7 +133,7 @@ const StocksMarquee = () => {
         { description: "Deep Yellow",  proName: "ASX:DYL" },
         { description: "URNM ETF",     proName: "AMEX:URNM" },
         { description: "URA ETF",      proName: "AMEX:URA" },
-        { description: "URNJ ETF",     proName: "AMEX:URNJ" },
+        { description: "URNJ ETF",     proName: "NASDAQ:URNJ" },
         { description: "Denison Mines", proName: "AMEX:DNN" },
         { description: "enCore Energy", proName: "NASDAQ:EU" },
       ],
