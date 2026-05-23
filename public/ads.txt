@@ -1,0 +1,6 @@
+# ads.txt - Authorized Digital Sellers
+# https://iabtechlab.com/ads-txt/
+# Uranium Tracker - uraniumtracker.com
+# No programmatic advertising currently authorized.
+# This file is intentionally minimal.
+placeholder.example.com, placeholder, DIRECT, placeholder

@@ -25,18 +25,40 @@ export default function Document() {
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Uranium Tracker",
+              alternateName: "UraniumTracker",
               url: "https://www.uraniumtracker.com",
               description:
                 "Live U3O8 spot price, uranium stocks, ETFs, insider trades, and nuclear industry news. The data hub for uranium investors.",
+              inLanguage: "en-US",
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
                   urlTemplate:
-                    "https://www.uraniumtracker.com/investments?q={search_term_string}",
+                    "https://www.uraniumtracker.com/news?search={search_term_string}",
                 },
                 "query-input": "required name=search_term_string",
               },
+            }),
+          }}
+        />
+        {/* SiteNavigationElement schema — helps search engines understand site structure */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              name: "Uranium Tracker Navigation",
+              itemListElement: [
+                { "@type": "SiteLinksSearchBox", url: "https://www.uraniumtracker.com/" },
+                { "@type": "ListItem", position: 1, name: "Home", url: "https://www.uraniumtracker.com/" },
+                { "@type": "ListItem", position: 2, name: "Uranium News", url: "https://www.uraniumtracker.com/news" },
+                { "@type": "ListItem", position: 3, name: "Market Data", url: "https://www.uraniumtracker.com/data" },
+                { "@type": "ListItem", position: 4, name: "Investments", url: "https://www.uraniumtracker.com/investments" },
+                { "@type": "ListItem", position: 5, name: "Uranium 101", url: "https://www.uraniumtracker.com/C101" },
+                { "@type": "ListItem", position: 6, name: "Calendar", url: "https://www.uraniumtracker.com/calendar" },
+              ],
             }),
           }}
         />

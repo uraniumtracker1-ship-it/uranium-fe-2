@@ -1,13 +1,31 @@
 User-agent: *
 Allow: /
 
-# Private / auth pages — no indexing needed
+# Private user pages — no public value
 Disallow: /dashboard
 Disallow: /auth/
 Disallow: /emailsent
+
+# Duplicate of homepage — canonical is /
 Disallow: /home
 
-# API routes
+# API routes — not crawlable content
 Disallow: /api/
+
+# Allow all major crawlers explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
 
 Sitemap: https://www.uraniumtracker.com/sitemap.xml

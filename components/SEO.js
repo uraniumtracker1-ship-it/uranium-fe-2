@@ -1,5 +1,33 @@
 import Head from "next/head";
 
+const SITE_URL = "https://www.uraniumtracker.com";
+
+// Rich Organization schema used on every page
+const ORG_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Uranium Tracker",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/logo.jpg`,
+    width: 200,
+    height: 60,
+  },
+  description:
+    "Uranium Tracker is the leading data hub for uranium investors — providing live U3O8 spot prices, uranium stock and ETF data, insider trading records, nuclear reactor intelligence, and daily nuclear industry news.",
+  foundingDate: "2023",
+  areaServed: "Worldwide",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "info@uraniumtracker.com",
+    contactType: "customer support",
+  },
+  sameAs: [
+    "https://twitter.com/uraniumtracker",
+  ],
+};
+
 const SEO = ({
   title,
   description,
@@ -10,9 +38,8 @@ const SEO = ({
   noindex = false,
   jsonLd,
 }) => {
-  const siteUrl = "https://www.uraniumtracker.com";
-  const canonical = canonicalUrl || siteUrl;
-  const image = ogImage || `${siteUrl}/logo.jpg`;
+  const canonical = canonicalUrl || SITE_URL;
+  const image = ogImage || `${SITE_URL}/logo.jpg`;
 
   return (
     <Head>
@@ -53,23 +80,11 @@ const SEO = ({
 
       <link rel="canonical" href={canonical} />
 
-      {/* Default Organisation schema — overridden per-page via jsonLd prop */}
+      {/* Per-page JSON-LD — falls back to rich Organization schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            jsonLd || {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Uranium Tracker",
-              url: siteUrl,
-              logo: `${siteUrl}/logo.jpg`,
-              description,
-              sameAs: [
-                "https://twitter.com/uraniumtracker",
-              ],
-            }
-          ),
+          __html: JSON.stringify(jsonLd || ORG_SCHEMA),
         }}
       />
     </Head>
