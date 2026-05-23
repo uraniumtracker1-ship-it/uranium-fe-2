@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="flex flex-col xl:flex-row  gap-8">
 
           <div className="w-full">
-            <h1 className="text-[clamp(1.4rem,5vw,2.5rem)] font-semibold leading-snug mb-4 text-white frank">
+            <h2 className="text-[clamp(1.4rem,5vw,2.5rem)] font-semibold leading-snug mb-4 text-white frank">
               Everything You Need to Navigate the Uranium Market – All in One Place
-            </h1>
+            </h2>
             <p className="text-[clamp(0.8rem,2.5vw,0.95rem)] text-white/70 leading-7 max-w-[600px]">
               With demand for clean energy on the rise, many investors are
               looking for the next big opportunity in Uranium. We're here to help.

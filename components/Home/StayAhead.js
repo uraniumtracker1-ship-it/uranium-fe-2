@@ -69,9 +69,9 @@ const StayAhead = () => {
         {/* Left Section - Subscription */}
         <div className="md:w-2/6 sm:p-8 rounded-lg flex flex-col justify-between">
           <div>
-            <h1 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-6 cambay text-white">
+            <h2 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-6 cambay text-white">
               Uranium news, price and analysis
-            </h1>
+            </h2>
             <p className="text-sm text-white/80 font-medium mb-4 sm:mb-8">
               Sign up for Uranium Tracker to access our full suite of research tools — including the stock screener, insider trading tracker, ETF holdings dashboard, and uranium projects database.
             </p>

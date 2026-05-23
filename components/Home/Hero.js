@@ -55,13 +55,9 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          Stay ahead with real-time{" "}
-          {/* <span className="text-accent">Platinum news, price And analysis</span> */}
-          <span
-            className="text-accent"
-            // style={{ textShadow: "1px 1px 2px rgba(255, 255, 255, 0.8)" }}
-          >
-            Uranium market news, price and analysis
+          Uranium Tracker — Live U3O8 Price,{" "}
+          <span className="text-accent">
+            Stocks, ETFs &amp; Nuclear News
           </span>
         </motion.h1>
 

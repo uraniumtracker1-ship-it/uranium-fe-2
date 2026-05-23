@@ -130,6 +130,41 @@ const home = () => {
         <MostFollowedStocksTable />
       </div>
 
+      {/* ── SEO Content Section ── */}
+      <div className="px-4 md:px-12 py-10 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="cambay text-2xl font-bold mb-4 text-gray-800">
+            About Uranium Tracker
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600 leading-7">
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">Live U3O8 Spot Price & Market Data</h3>
+              <p>
+                Uranium Tracker provides real-time U3O8 spot prices sourced from the CME Group, alongside long-term contract price benchmarks. The uranium spot price reflects the current market rate for physical uranium oxide concentrate — the primary feedstock for nuclear fuel. Our live price feed updates continuously so investors can track intraday movements, daily changes, and percentage shifts at a glance.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">Top Uranium Stocks & ETFs</h3>
+              <p>
+                Track the world's leading uranium mining companies including Cameco (CCJ), NexGen Energy (NXE), Uranium Energy Corp (UEC), Paladin Energy (PDN), Boss Energy (BOE), Deep Yellow (DYL), and Denison Mines (DNN). Monitor uranium ETFs including URNM (Sprott Uranium Miners ETF), URA (Global X Uranium ETF), and URNJ (Sprott Junior Uranium Miners ETF) — all in one place.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">Uranium Insider Trading Database</h3>
+              <p>
+                Our insider trading tracker aggregates Form 4 filings from the SEC (US), SEDI filings from Canada, and ASX disclosures from Australia. Monitor when company directors, officers, and major shareholders buy or sell uranium stocks — a key signal for retail and institutional investors tracking the uranium investment thesis.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">Nuclear Energy & Uranium Market Outlook</h3>
+              <p>
+                Nuclear energy is experiencing a global renaissance driven by decarbonisation targets, energy security concerns, and the rise of small modular reactors (SMRs). Uranium demand is forecast to grow significantly through 2030 and beyond as new reactor builds accelerate in the US, Europe, China, India, and the Middle East. Uranium Tracker covers the full supply-demand picture — from Kazakh production to US enrichment capacity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="mb-8">
         <StayAhead />
       </div>
