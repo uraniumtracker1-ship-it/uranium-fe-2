@@ -63,16 +63,15 @@ const InvestmentHero = () => {
             </h1>
 
             <p className="text-sm md:text-base mb-10">
-              Discover the potential of Uranium investments through our
-              comprehensive range of investment options. From physical Uranium to
-              ETFs and mining stocks, we offer diverse ways to incorporate this
-              precious metal into your portfolio.
+              Discover uranium investment opportunities across the full spectrum —
+              from physical uranium trusts (SPUT, YCA) and pure-play miners (CCJ, NXE, UEC)
+              to diversified ETFs (URNM, URA, URNJ). Uranium is a critical energy metal
+              powering the global nuclear renaissance.
             </p>
 
             <div className="text-xs text-gray-300">
               <p className="text-gray-300">
-                Secure your financial future with timeless value and strategic
-                investments.
+                Track stocks, ETFs, insider trades, and market data — all in one place.
               </p>
             </div>
           </div>
