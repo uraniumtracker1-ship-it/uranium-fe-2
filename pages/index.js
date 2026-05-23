@@ -357,7 +357,7 @@ export async function getServerSideProps() {
           price: parseFloat(uranium.price || 0).toFixed(4),
           price_change: parseFloat(uranium.day_change || 0).toFixed(4),
           price_change_percent: uranium.percent_change
-            ? `${uranium.percent_change}%`
+            ? `${parseFloat(uranium.percent_change).toFixed(2)}%`
             : "0.00%",
           date: dateModified,
         };
