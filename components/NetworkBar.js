@@ -1,12 +1,12 @@
 import React from "react";
 
 const TRACKERS = [
-  { label: "Platinum",        href: "https://www.pgmtracker.com/",              color: "#a0a0a0" },
-  { label: "Lithium",         href: "https://www.lithiumtracker.com/",           color: "#4ade80" },
-  { label: "Copper",          href: "https://www.coppertracker.com/",            color: "#f97316" },
-  { label: "Nickel",          href: "https://www.nickelmetaltracker.com/",       color: "#60a5fa" },
-  { label: "Uranium",         href: "https://www.uraniumtracker.com/",           color: "#facc15" },
-  { label: "Gold & Silver",   href: "https://www.goldandsilvertracker.com/",     color: "#fbbf24" },
+  { label: "Platinum",        href: "https://www.pgmtracker.com/",              color: "#a0a0a0", active: false },
+  { label: "Lithium",         href: "https://www.lithiumtracker.com/",           color: "#4ade80", active: false },
+  { label: "Copper",          href: "https://www.coppertracker.com/",            color: "#f97316", active: false },
+  { label: "Nickel",          href: "https://www.nickelmetaltracker.com/",       color: "#60a5fa", active: false },
+  { label: "Uranium",         href: "https://www.uraniumtracker.com/",           color: "#4ade80", active: true  },
+  { label: "Gold & Silver",   href: "https://www.goldandsilvertracker.com/",     color: "#fbbf24", active: false },
 ];
 
 const NetworkBar = () => {
@@ -23,14 +23,19 @@ const NetworkBar = () => {
           href={t.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 flex items-center gap-x-1.5 text-gray-600 hover:text-accent transition-colors whitespace-nowrap"
+          className={`shrink-0 flex items-center gap-x-1.5 transition-colors whitespace-nowrap ${
+            t.active
+              ? "bg-[#4ade80]/15 text-[#16a34a] font-semibold px-2 py-0.5 rounded-full"
+              : "text-gray-600 hover:text-accent"
+          }`}
         >
           <span
             className="inline-block w-2 h-2 rounded-full"
             style={{ backgroundColor: t.color }}
           />
           <span className="text-[12px] font-medium">{t.label}</span>
-          <span className="text-gray-300 text-[10px]">/</span>
+          {t.active && <span className="text-[11px]">✓</span>}
+          {!t.active && <span className="text-gray-300 text-[10px]">/</span>}
         </a>
       ))}
     </div>
